@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Local Restaurant Website",
     description: "Modern website with online ordering system for a family-owned restaurant",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "/lovable-uploads/7d075a52-1332-4fb3-a7c2-1ee21e93afd8.png",
     category: "Web Development",
   },
   {
