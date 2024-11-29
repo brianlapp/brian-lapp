@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Local Restaurant Website",
     description: "Modern website with online ordering system for a family-owned restaurant",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     category: "Web Development",
   },
   {
@@ -19,19 +19,19 @@ const projects = [
   {
     title: "Dental Practice Website",
     description: "Patient-focused website with appointment scheduling system",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     category: "Web Design",
   },
   {
     title: "Real Estate CMS",
     description: "Custom content management system for a local real estate agent to manage their listings",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     category: "Web Development",
   },
   {
     title: "Law Firm Website",
     description: "Professional website with client portal and case management",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     category: "Web Development",
   },
   {
