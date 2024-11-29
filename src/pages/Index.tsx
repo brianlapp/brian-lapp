@@ -1,15 +1,5 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
-import { Button } from "@/components/
-
-Let's update the design to adjust the services, change the accent color, and add creative SVG elements while maintaining the professional look.
-
-<lov-code>
-We'll update the Index page to reflect these changes:
-
-<lov-write file_path="src/pages/Index.tsx">
-import { useState } from "react";
-import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Monitor, ShoppingCart, Sparkles } from "lucide-react";
 
