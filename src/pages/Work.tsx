@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Dental Practice Website",
     description: "Patient-focused website with appointment scheduling system",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "/lovable-uploads/add6edef-3b4a-4de3-aea2-016876855066.png",
     category: "Web Design",
   },
   {
