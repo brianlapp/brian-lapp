@@ -35,10 +35,10 @@ const projects = [
     category: "Web Development",
   },
   {
-    title: "Retail Analytics Dashboard",
-    description: "Sales tracking and inventory management for local retail chain",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    category: "Web Development",
+    title: "Retail Digital Marketing",
+    description: "Social media integration, email marketing setup, and analytics implementation",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a",
+    category: "Digital Marketing",
   },
 ];
 
