@@ -23,9 +23,9 @@ const projects = [
     category: "Web Design",
   },
   {
-    title: "Real Estate CRM",
-    description: "Custom client relationship management system for realtors",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+    title: "Real Estate CMS",
+    description: "Custom content management system for a local real estate agent to manage their listings",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
     category: "Web Development",
   },
   {
