@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Real Estate CMS",
     description: "Custom content management system for a local real estate agent to manage their listings",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    image: "/lovable-uploads/498af03f-ee74-488c-a3cb-5d0ee42de219.png",
     category: "Web Development",
   },
   {
