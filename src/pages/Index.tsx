@@ -40,39 +40,27 @@ const services = [
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Decorative SVG Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 -z-10">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="opacity-10">
-          <path fill="#0EA5E9" d="M44.7,-76.4C58.8,-69.2,71.8,-57.9,79.6,-43.9C87.4,-29.9,90,-13.2,87.6,2.4C85.2,18,77.8,32.5,68.4,45.3C59,58.1,47.6,69.2,34.1,75.6C20.6,82,5,83.7,-10.2,81.1C-25.4,78.5,-40.2,71.6,-52.7,62.1C-65.2,52.6,-75.4,40.4,-79.9,26.4C-84.4,12.4,-83.2,-3.4,-78.7,-17.8C-74.2,-32.1,-66.4,-45,-55.6,-53.8C-44.8,-62.6,-31,-67.3,-17.8,-76.5C-4.6,-85.7,8,-99.5,22.9,-97.9C37.8,-96.4,54.9,-79.5,44.7,-76.4Z" transform="translate(100 100)" />
-        </svg>
-      </div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 -z-10">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="opacity-10">
-          <path fill="#0EA5E9" d="M39.3,-65.6C54.4,-60.9,72.6,-56.3,81.5,-44.7C90.4,-33.1,90,-14.4,85.9,2.9C81.8,20.2,74.1,36.1,63.7,48.7C53.3,61.3,40.3,70.7,25.9,75.4C11.5,80.2,-4.3,80.4,-19.6,76.6C-34.9,72.8,-49.8,65,-61.1,53.5C-72.4,41.9,-80.2,26.6,-83.7,9.8C-87.2,-7,-86.4,-25.4,-79.1,-40.5C-71.8,-55.7,-58,-67.7,-43,-71.8C-28,-75.9,-11.7,-72.1,1.3,-74.4C14.3,-76.7,28.6,-85.1,39.3,-65.6Z" transform="translate(100 100)" />
-        </svg>
-      </div>
-      
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-fade-down">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white animate-fade-down">
               We Build Websites That
-              <span className="text-[#0EA5E9] block mt-2">Drive Results</span>
+              <span className="text-accent block mt-2">Drive Results</span>
             </h1>
-            <p className="mt-6 text-lg text-gray-600 animate-fade-up">
+            <p className="mt-6 text-lg text-white/80 animate-fade-up">
               Transform your online presence with our expert web design and development services. 
               We create stunning, functional websites that help your business grow.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-up">
-              <Button size="lg" className="bg-gradient-to-r from-[#0EA5E9] to-[#3B82F6] hover:from-[#0284C7] hover:to-[#2563EB]">
+              <Button size="lg" className="bg-accent hover:bg-accent/90">
                 Start Your Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Link to="/work">
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
                   View Our Work
                 </Button>
               </Link>
