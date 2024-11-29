@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Accounting Firm Portal",
     description: "Client management dashboard for a growing accounting practice",
-    image: "/lovable-uploads/0ce2f112-87d1-477b-b89f-b134d5f044b1.png",
+    image: "/lovable-uploads/62644382-2cd2-40d0-ba6a-97167ed84ad7.png",
     category: "Web Development",
   },
   {
