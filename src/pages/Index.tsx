@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Monitor, ShoppingCart, Sparkles, Wrench, Code, PaintBucket } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -70,9 +71,11 @@ const Index = () => {
                 Start Your Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg">
-                View Our Work
-              </Button>
+              <Link to="/work">
+                <Button variant="outline" size="lg">
+                  View Our Work
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
