@@ -44,7 +44,9 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-emerald-500 hover:bg-emerald-600">Get Started</Button>
+            <Button className="bg-gradient-to-r from-[#0EA5E9] to-[#3B82F6] hover:from-[#0284C7] hover:to-[#2563EB]">
+              Get Started
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,7 +73,9 @@ const Navigation = () => {
                   {link.name}
                 </a>
               ))}
-              <Button className="w-full bg-emerald-500 hover:bg-emerald-600">Get Started</Button>
+              <Button className="w-full bg-gradient-to-r from-[#0EA5E9] to-[#3B82F6] hover:from-[#0284C7] hover:to-[#2563EB]">
+                Get Started
+              </Button>
             </div>
           </div>
         )}

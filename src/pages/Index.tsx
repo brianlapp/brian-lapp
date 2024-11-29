@@ -66,7 +66,7 @@ const Index = () => {
               We create stunning, functional websites that help your business grow.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-up">
-              <Button size="lg" className="bg-[#0EA5E9] hover:bg-[#0284C7]">
+              <Button size="lg" className="bg-gradient-to-r from-[#0EA5E9] to-[#3B82F6] hover:from-[#0284C7] hover:to-[#2563EB]">
                 Start Your Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
