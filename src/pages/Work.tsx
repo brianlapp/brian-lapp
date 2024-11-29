@@ -6,37 +6,37 @@ const projects = [
   {
     title: "Local Restaurant Website",
     description: "Modern website with online ordering system for a family-owned restaurant",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
     category: "Web Development",
   },
   {
     title: "Accounting Firm Portal",
     description: "Client management dashboard for a growing accounting practice",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c",
     category: "Web Development",
   },
   {
     title: "Dental Practice Website",
     description: "Patient-focused website with appointment scheduling system",
-    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
     category: "Web Design",
   },
   {
     title: "Real Estate CRM",
     description: "Custom client relationship management system for realtors",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
     category: "Web Development",
   },
   {
     title: "Law Firm Website",
     description: "Professional website with client portal and case management",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f",
     category: "Web Development",
   },
   {
     title: "Retail Analytics Dashboard",
     description: "Sales tracking and inventory management for local retail chain",
-    image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     category: "Web Development",
   },
 ];
