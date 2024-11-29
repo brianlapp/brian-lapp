@@ -1,23 +1,38 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Monitor, ShoppingCart, Sparkles } from "lucide-react";
+import { ArrowRight, Mail, Monitor, ShoppingCart, Sparkles, Wrench, Code, PaintBucket } from "lucide-react";
 
 const services = [
   {
     icon: Monitor,
     title: "Website Design & Development",
-    description: "Custom websites that perfectly align with your brand and goals.",
+    description: "Custom websites that perfectly align with your brand and goals, built with modern technologies.",
   },
   {
     icon: Mail,
     title: "Email Marketing Solutions",
-    description: "Strategic email campaigns that drive engagement and conversions.",
+    description: "Strategic email campaigns that drive engagement and conversions using platforms like Mailchimp and Klaviyo.",
   },
   {
     icon: ShoppingCart,
     title: "E-Commerce Solutions",
-    description: "Professional online stores that drive sales and growth.",
+    description: "Professional online stores built with Shopify or WooCommerce that drive sales and growth.",
+  },
+  {
+    icon: Wrench,
+    title: "Maintenance & Support",
+    description: "Regular updates, bug fixes, and performance monitoring to keep your site running smoothly.",
+  },
+  {
+    icon: Code,
+    title: "Custom Web Features",
+    description: "Integration with CRMs, booking systems, and other third-party tools to enhance functionality.",
+  },
+  {
+    icon: PaintBucket,
+    title: "Branding & Identity",
+    description: "Complete branding solutions including logo design, color palettes, and brand guidelines.",
   },
 ];
 
@@ -51,7 +66,7 @@ const Index = () => {
               We create stunning, functional websites that help your business grow.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-up">
-              <Button size="lg" className="bg-[#0EA5E9] hover:bg-[#0284C7]">
+              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600">
                 Start Your Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -70,7 +85,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Our Services</h2>
             <p className="mt-4 text-gray-600">Comprehensive solutions for your digital needs</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
