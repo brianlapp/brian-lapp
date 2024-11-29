@@ -29,9 +29,9 @@ const projects = [
     category: "Web Development",
   },
   {
-    title: "Law Firm Website",
+    title: "Local Lawyer",
     description: "Professional website with client portal and case management",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "/lovable-uploads/a7385c9c-44cf-47c9-9ef9-61466de979e4.png",
     category: "Web Development",
   },
   {
