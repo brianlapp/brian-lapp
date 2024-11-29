@@ -29,7 +29,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold tracking-tight">
+          <a href="/" className="text-2xl font-bold tracking-tight text-primary">
             SureSites
           </a>
 
@@ -39,12 +39,12 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <Button className="bg-gradient-to-r from-[#0EA5E9] to-[#3B82F6] hover:from-[#0284C7] hover:to-[#2563EB]">
+            <Button className="bg-primary hover:bg-primary/90 text-white">
               Get Started
             </Button>
           </div>
@@ -67,13 +67,13 @@ const Navigation = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <Button className="w-full bg-gradient-to-r from-[#0EA5E9] to-[#3B82F6] hover:from-[#0284C7] hover:to-[#2563EB]">
+              <Button className="w-full bg-primary hover:bg-primary/90 text-white">
                 Get Started
               </Button>
             </div>
