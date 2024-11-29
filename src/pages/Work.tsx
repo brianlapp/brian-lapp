@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const projects = [
   {
@@ -57,25 +58,22 @@ const Work = () => {
         <h1 className="text-4xl font-bold text-center mb-12">Our Work</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-            >
+            <Card key={index} className="overflow-hidden">
               <div className="aspect-video w-full overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="absolute bottom-0 p-6 text-white">
-                  <p className="text-sm font-medium text-blue-400">{project.category}</p>
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-sm opacity-90">{project.description}</p>
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-medium text-blue-400">{project.category}</span>
                 </div>
-              </div>
-            </div>
+                <CardTitle className="text-xl">{project.title}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+              </CardHeader>
+            </Card>
           ))}
         </div>
       </div>
