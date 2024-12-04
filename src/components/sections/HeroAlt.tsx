@@ -12,14 +12,16 @@ const HeroAlt = () => (
     <div className="container relative z-10 max-w-6xl mx-auto px-4 lg:px-8">
       <div className="flex flex-col gap-12 items-center">
         {/* Top - Illustration */}
-        <div className="relative z-10 w-full max-w-2xl mx-auto">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-2xl blur-2xl" />
-            <img
-              src="/lovable-uploads/ff0015e7-a8be-48bb-8eaf-c13b17ebf62f.png"
-              alt="Digital Marketing Illustration"
-              className="relative w-full h-auto rounded-2xl"
-            />
+        <div className="relative z-10 w-full max-w-[400px] mx-auto">
+          <div className="relative aspect-square rounded-full overflow-hidden bg-gradient-to-tr from-primary/20 to-secondary/20 p-1">
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 blur-2xl" />
+            <div className="relative w-full h-full rounded-full overflow-hidden">
+              <img
+                src="/lovable-uploads/ff0015e7-a8be-48bb-8eaf-c13b17ebf62f.png"
+                alt="Digital Marketing Illustration"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
 
