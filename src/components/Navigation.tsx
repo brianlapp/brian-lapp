@@ -12,6 +12,12 @@ const Navigation = () => {
       href: "#services",
       subLinks: [
         { name: "Branding & Logo", href: "/services/branding-and-logo" },
+        { name: "Website Development", href: "/services/website-development" },
+        { name: "Email Setup", href: "/services/email-setup" },
+        { name: "Newsletter Setup", href: "/services/newsletter-setup" },
+        { name: "Social Media", href: "/services/social-media" },
+        { name: "Business Cards", href: "/services/business-cards" },
+        { name: "Print Media", href: "/services/print-media" },
       ]
     },
     { name: "Work", href: "/work" },
