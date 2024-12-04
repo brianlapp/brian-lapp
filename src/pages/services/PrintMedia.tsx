@@ -27,12 +27,23 @@ const PrintMedia = () => {
                 </Link>
               </div>
               <div className="relative">
-                <div className="bg-white p-8 rounded-lg shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <img
-                    src="/placeholder.svg"
-                    alt="Print Media Examples"
-                    className="w-full h-64 object-cover rounded"
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white p-4 rounded-lg shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <img
+                      src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+                      alt="Sample Brochure"
+                      className="w-full h-48 object-cover rounded"
+                    />
+                    <p className="text-center mt-2 text-sm text-gray-600">Brochure Design</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <img
+                      src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb"
+                      alt="Sample Flyer"
+                      className="w-full h-48 object-cover rounded"
+                    />
+                    <p className="text-center mt-2 text-sm text-gray-600">Flyer Design</p>
+                  </div>
                 </div>
                 {/* Decorative Elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 rounded-full blur-xl"></div>
