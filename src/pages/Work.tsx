@@ -1,114 +1,106 @@
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const projects = [
   {
     title: "Local Restaurant Website",
-    description: "Modern website with online ordering system for a family-owned restaurant",
-    image: "/lovable-uploads/7d075a52-1332-4fb3-a7c2-1ee21e93afd8.png",
-    category: "Web Development",
+    description: "Complete digital presence overhaul including website, social media management, and local SEO optimization",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    category: "Full Service Digital Marketing",
   },
   {
-    title: "Accounting Firm Portal",
-    description: "Client management dashboard for a growing accounting practice",
-    image: "/lovable-uploads/62644382-2cd2-40d0-ba6a-97167ed84ad7.png",
-    category: "Web Development",
+    title: "Accounting Firm Growth",
+    description: "Lead generation campaign and content marketing strategy that increased qualified leads by 150%",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    category: "Lead Generation",
   },
   {
-    title: "Dental Practice Website",
-    description: "Patient-focused website with appointment scheduling system",
-    image: "/lovable-uploads/add6edef-3b4a-4de3-aea2-016876855066.png",
-    category: "Web Design",
-  },
-  {
-    title: "Real Estate CMS",
-    description: "Custom content management system for a local real estate agent to manage their listings",
-    image: "/lovable-uploads/498af03f-ee74-488c-a3cb-5d0ee42de219.png",
-    category: "Web Development",
-  },
-  {
-    title: "Local Lawyer",
-    description: "Professional website with client portal and case management",
-    image: "/lovable-uploads/a7385c9c-44cf-47c9-9ef9-61466de979e4.png",
-    category: "Web Development",
-  },
-  {
-    title: "Retail Digital Marketing",
-    description: "Social media integration, email marketing setup, and analytics implementation",
-    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a",
+    title: "Dental Practice Marketing",
+    description: "Comprehensive digital marketing campaign resulting in 200% increase in new patient appointments",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
     category: "Digital Marketing",
+  },
+  {
+    title: "Real Estate Marketing",
+    description: "Social media strategy and content creation that doubled property viewing requests",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+    category: "Social Media Marketing",
+  },
+  {
+    title: "Law Firm Digital Presence",
+    description: "Website redesign and SEO optimization that increased organic traffic by 180%",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    category: "SEO & Web Design",
+  },
+  {
+    title: "Retail Digital Strategy",
+    description: "Integrated digital marketing campaign that increased online sales by 250%",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+    category: "Digital Strategy",
   },
 ];
 
 const Work = () => {
   return (
-    <div className="min-h-screen">
-      {/* Back Navigation */}
-      <div className="container mx-auto px-4 py-8">
-        <Link to="/" className="inline-flex items-center text-gray-600 hover:text-gray-900">
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
-        </Link>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 pt-32 pb-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Success Stories</h1>
+          <p className="text-xl text-gray-600 mb-12">
+            Discover how we've helped small businesses achieve remarkable growth through strategic digital marketing.
+          </p>
+        </div>
 
-      {/* Projects Grid */}
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Work</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden">
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="aspect-video w-full overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardHeader>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium text-blue-400">{project.category}</span>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-sm font-medium text-primary">{project.category}</span>
                 </div>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
+                <CardDescription className="text-gray-600">{project.description}</CardDescription>
               </CardHeader>
             </Card>
           ))}
         </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="bg-gray-50 py-20 mt-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's create something amazing together. Our team is ready to bring your vision to life.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#0EA5E9] to-[#3B82F6] hover:from-[#0284C7] hover:to-[#2563EB]"
-              >
-                Start Your Project
-              </Button>
-              <Button size="lg" variant="outline">
-                Contact Us
-              </Button>
-            </div>
-          </div>
+        {/* CTA Section */}
+        <div className="bg-white rounded-2xl p-12 text-center shadow-lg">
+          <h2 className="text-3xl font-bold mb-4">Ready to Be Our Next Success Story?</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Let's create a digital marketing strategy that will help your business reach new heights.
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              Start Your Success Story
+            </Button>
+          </Link>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12 mt-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">SureSites</h3>
               <p className="text-gray-400">
-                Creating stunning digital experiences that drive results.
+                Your partner in digital marketing excellence.
               </p>
             </div>
             <div>
@@ -130,9 +122,9 @@ const Work = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

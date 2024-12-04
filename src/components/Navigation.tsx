@@ -32,7 +32,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button className="bg-primary hover:bg-primary/90 text-white">
-              Get Started
+              Free Consultation
             </Button>
           </div>
 
@@ -61,7 +61,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                Get Started
+                Free Consultation
               </Button>
             </div>
           </div>
