@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -32,16 +32,12 @@ const HeroAlt = () => (
           </div>
         </div>
 
-        {/* Right Column - Image/Illustration */}
+        {/* Right Column - SVG Illustration */}
         <div className="relative z-10 lg:ml-auto">
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl blur-xl" />
-            <div className="relative bg-white/50 backdrop-blur-sm border border-gray-200/50 rounded-xl p-8 shadow-xl">
-              <img
-                src="/lovable-uploads/498af03f-ee74-488c-a3cb-5d0ee42de219.png"
-                alt="Digital Marketing Excellence"
-                className="w-full h-auto rounded-lg"
-              />
+            <div className="relative bg-white/50 backdrop-blur-sm border border-gray-200/50 rounded-xl p-16 shadow-xl flex items-center justify-center">
+              <Building2 className="w-full h-full text-primary/80 max-w-[400px]" strokeWidth={1.25} />
             </div>
           </div>
         </div>
