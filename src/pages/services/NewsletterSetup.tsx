@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import CallToAction from "@/components/sections/CallToAction";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 import { Mail, Users, Repeat, DollarSign, Database, Gift } from "lucide-react";
 
@@ -29,22 +30,55 @@ const NewsletterSetup = () => {
               </div>
               <div className="relative">
                 {/* Newsletter Preview Mock */}
-                <div className="bg-white rounded-lg shadow-xl p-6">
-                  <div className="mb-6">
-                    <div className="w-32 h-8 bg-gray-200 rounded mb-4"></div>
-                    <div className="w-3/4 h-6 bg-gray-100 rounded mb-2"></div>
-                    <div className="w-2/3 h-6 bg-gray-100 rounded"></div>
+                <div className="bg-white rounded-lg shadow-xl p-8">
+                  <div className="mb-8 text-center">
+                    <h3 className="text-2xl font-semibold mb-2">Join Our Newsletter</h3>
+                    <p className="text-gray-600">Stay updated with our latest news and exclusive offers!</p>
                   </div>
-                  <div className="space-y-4">
-                    <div className="flex gap-4 items-center">
-                      <div className="w-12 h-12 bg-primary/10 rounded"></div>
-                      <div>
-                        <div className="w-40 h-4 bg-gray-200 rounded mb-2"></div>
-                        <div className="w-32 h-4 bg-gray-100 rounded"></div>
-                      </div>
+                  <form className="space-y-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                        Full Name
+                      </label>
+                      <Input
+                        type="text"
+                        id="name"
+                        placeholder="John Doe"
+                        className="w-full"
+                        disabled
+                      />
                     </div>
-                    <div className="w-full h-10 bg-primary/20 rounded"></div>
-                  </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        Email Address
+                      </label>
+                      <Input
+                        type="email"
+                        id="email"
+                        placeholder="john@example.com"
+                        className="w-full"
+                        disabled
+                      />
+                    </div>
+                    <div className="flex items-start mb-4">
+                      <div className="flex items-center h-5">
+                        <input
+                          type="checkbox"
+                          className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary/25"
+                          disabled
+                        />
+                      </div>
+                      <label className="ml-2 text-sm text-gray-600">
+                        I agree to receive marketing emails and can unsubscribe at any time
+                      </label>
+                    </div>
+                    <Button className="w-full bg-primary hover:bg-primary/90" disabled>
+                      Subscribe Now
+                    </Button>
+                  </form>
+                  <p className="text-xs text-center text-gray-500 mt-4">
+                    We respect your privacy. Unsubscribe at any time.
+                  </p>
                 </div>
                 {/* Decorative Elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 rounded-full blur-xl"></div>
