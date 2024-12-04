@@ -58,7 +58,7 @@ const Services = () => (
   <section className="py-24 bg-gradient-to-b from-white to-gray-50" id="services">
     <div className="container mx-auto px-4">
       <div className="text-center mb-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent pb-2 leading-tight">
           Complete Digital Marketing Solutions
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
