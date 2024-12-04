@@ -9,30 +9,20 @@ export const NewsletterPreview = () => {
         <p className="text-gray-600">Stay updated with our latest news and exclusive offers!</p>
       </div>
       <form className="space-y-4">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-            Full Name
-          </label>
-          <Input
-            type="text"
-            id="name"
-            placeholder="John Doe"
-            className="w-full"
-            disabled
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            Email Address
-          </label>
-          <Input
-            type="email"
-            id="email"
-            placeholder="john@example.com"
-            className="w-full"
-            disabled
-          />
-        </div>
+        <Input
+          type="text"
+          id="name"
+          placeholder="Full Name"
+          className="w-full"
+          disabled
+        />
+        <Input
+          type="email"
+          id="email"
+          placeholder="Email Address"
+          className="w-full"
+          disabled
+        />
         <Button className="w-full bg-primary hover:bg-primary/90" disabled>
           Subscribe Now
         </Button>
