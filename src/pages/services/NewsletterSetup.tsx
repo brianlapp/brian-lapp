@@ -1,10 +1,10 @@
 import Navigation from "@/components/Navigation";
 import CallToAction from "@/components/sections/CallToAction";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
-import { Mail, Users, Repeat, DollarSign, Database, Gift } from "lucide-react";
+import { Database, Gift } from "lucide-react";
+import { NewsletterPreview } from "@/components/newsletter/NewsletterPreview";
+import { NewsletterBenefits } from "@/components/newsletter/NewsletterBenefits";
 
 const NewsletterSetup = () => {
   return (
@@ -29,57 +29,7 @@ const NewsletterSetup = () => {
                 </Link>
               </div>
               <div className="relative">
-                {/* Newsletter Preview Mock */}
-                <div className="bg-white rounded-lg shadow-xl p-8">
-                  <div className="mb-8 text-center">
-                    <h3 className="text-2xl font-semibold mb-2">Join Our Newsletter</h3>
-                    <p className="text-gray-600">Stay updated with our latest news and exclusive offers!</p>
-                  </div>
-                  <form className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        Full Name
-                      </label>
-                      <Input
-                        type="text"
-                        id="name"
-                        placeholder="John Doe"
-                        className="w-full"
-                        disabled
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email Address
-                      </label>
-                      <Input
-                        type="email"
-                        id="email"
-                        placeholder="john@example.com"
-                        className="w-full"
-                        disabled
-                      />
-                    </div>
-                    <div className="flex items-start mb-4">
-                      <div className="flex items-center h-5">
-                        <input
-                          type="checkbox"
-                          className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary/25"
-                          disabled
-                        />
-                      </div>
-                      <label className="ml-2 text-sm text-gray-600">
-                        I agree to receive marketing emails and can unsubscribe at any time
-                      </label>
-                    </div>
-                    <Button className="w-full bg-primary hover:bg-primary/90" disabled>
-                      Subscribe Now
-                    </Button>
-                  </form>
-                  <p className="text-xs text-center text-gray-500 mt-4">
-                    We respect your privacy. Unsubscribe at any time.
-                  </p>
-                </div>
+                <NewsletterPreview />
                 {/* Decorative Elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 rounded-full blur-xl"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
@@ -88,81 +38,16 @@ const NewsletterSetup = () => {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Benefits Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">What's Included in Our Newsletter Setup Service</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Mail className="w-10 h-10 text-primary" />,
-                  title: "Email List Integration",
-                  description: "We'll set up a system that collects and organizes email addresses effectively."
-                },
-                {
-                  icon: <Users className="w-10 h-10 text-primary" />,
-                  title: "Custom Signup Forms",
-                  description: "Attractive, easy-to-use forms for your website and social media platforms."
-                },
-                {
-                  icon: <Gift className="w-10 h-10 text-primary" />,
-                  title: "Lead Magnets",
-                  description: "Strategic offerings to incentivize customers to join your list."
-                }
-              ].map((service, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                  <CardContent className="pt-6">
-                    <div className="mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">The Benefits of Building an Email List</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: <Mail className="w-8 h-8 text-primary" />,
-                  title: "Direct Communication",
-                  description: "Connect directly with your audience, bypassing algorithms."
-                },
-                {
-                  icon: <Users className="w-8 h-8 text-primary" />,
-                  title: "Increased Engagement",
-                  description: "Keep customers informed and interested in your offerings."
-                },
-                {
-                  icon: <Repeat className="w-8 h-8 text-primary" />,
-                  title: "Customer Retention",
-                  description: "Nurture relationships for repeat business."
-                },
-                {
-                  icon: <DollarSign className="w-8 h-8 text-primary" />,
-                  title: "Cost-Effective",
-                  description: "Best ROI compared to other marketing channels."
-                }
-              ].map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
+            <NewsletterBenefits />
           </div>
         </section>
 
         {/* Lead Magnet Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Prompting Users to Register</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
