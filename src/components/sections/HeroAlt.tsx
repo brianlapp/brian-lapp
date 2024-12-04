@@ -7,8 +7,8 @@ const HeroAlt = () => (
     <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50/50" />
     
     <div className="container mx-auto px-4">
-      <div className="flex justify-center">
-        {/* Content */}
+      <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
+        {/* Left Column - Content */}
         <div className="relative z-10 max-w-xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -30,6 +30,15 @@ const HeroAlt = () => (
               View Our Work
             </Button>
           </div>
+        </div>
+
+        {/* Right Column - Illustration */}
+        <div className="relative z-10 flex justify-center md:justify-end">
+          <img
+            src="/lovable-uploads/ff0015e7-a8be-48bb-8eaf-c13b17ebf62f.png"
+            alt="Digital Marketing Illustration"
+            className="w-full max-w-[500px] h-auto"
+          />
         </div>
       </div>
     </div>
