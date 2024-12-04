@@ -55,11 +55,13 @@ const services = [
 ];
 
 const Services = () => (
-  <section className="py-20 bg-white" id="services">
+  <section className="py-24 bg-gradient-to-b from-white to-gray-50" id="services">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Complete Digital Marketing Solutions</h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+      <div className="text-center mb-20">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          Complete Digital Marketing Solutions
+        </h2>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Everything your small business needs to succeed online, all in one place.
         </p>
       </div>
@@ -68,17 +70,20 @@ const Services = () => (
           <Link
             key={index}
             to={service.link}
-            className="group p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="group relative p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
           >
-            <div className="mb-6 transform transition-transform group-hover:scale-110">
-              {service.icon}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative">
+              <div className="mb-6 transform transition-transform group-hover:scale-110 duration-300">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {service.description}
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
-              {service.title}
-            </h3>
-            <p className="text-gray-600">
-              {service.description}
-            </p>
           </Link>
         ))}
       </div>
