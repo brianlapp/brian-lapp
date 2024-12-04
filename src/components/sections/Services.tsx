@@ -1,21 +1,57 @@
-import { Globe, Megaphone, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { 
+  Globe, 
+  PenTool, 
+  Mail, 
+  Megaphone, 
+  ScrollText, 
+  CreditCard, 
+  Printer 
+} from "lucide-react";
 
 const services = [
+  {
+    icon: <PenTool className="w-12 h-12 text-primary" />,
+    title: "Branding & Logo Design",
+    description: "Create a memorable brand identity that sets you apart from competitors.",
+    link: "/services/branding-and-logo"
+  },
   {
     icon: <Globe className="w-12 h-12 text-primary" />,
     title: "Website Development",
     description: "Custom-built, responsive websites that convert visitors into customers.",
+    link: "/services/website-development"
+  },
+  {
+    icon: <Mail className="w-12 h-12 text-primary" />,
+    title: "Email Setup",
+    description: "Professional email solutions with Google Workspace integration.",
+    link: "/services/email-setup"
+  },
+  {
+    icon: <ScrollText className="w-12 h-12 text-primary" />,
+    title: "Newsletter Setup",
+    description: "Build and grow your email list with engaging newsletter campaigns.",
+    link: "/services/newsletter-setup"
   },
   {
     icon: <Megaphone className="w-12 h-12 text-primary" />,
-    title: "Social Media Marketing",
-    description: "Strategic social media management to build your brand and engage your audience.",
+    title: "Social Media",
+    description: "Strategic social media management to build your brand presence.",
+    link: "/services/social-media"
   },
   {
-    icon: <BarChart3 className="w-12 h-12 text-primary" />,
-    title: "SEO & Analytics",
-    description: "Data-driven SEO strategies to improve your visibility and track success.",
+    icon: <CreditCard className="w-12 h-12 text-primary" />,
+    title: "Business Cards",
+    description: "Professional business card designs that make lasting impressions.",
+    link: "/services/business-cards"
   },
+  {
+    icon: <Printer className="w-12 h-12 text-primary" />,
+    title: "Print Media",
+    description: "High-quality brochures, flyers, and marketing materials.",
+    link: "/services/print-media"
+  }
 ];
 
 const Services = () => (
@@ -27,16 +63,23 @@ const Services = () => (
           Everything your small business needs to succeed online, all in one place.
         </p>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {services.map((service, index) => (
-          <div
+          <Link
             key={index}
-            className="p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+            to={service.link}
+            className="group p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           >
-            <div className="mb-6">{service.icon}</div>
-            <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-            <p className="text-gray-600">{service.description}</p>
-          </div>
+            <div className="mb-6 transform transition-transform group-hover:scale-110">
+              {service.icon}
+            </div>
+            <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
+              {service.title}
+            </h3>
+            <p className="text-gray-600">
+              {service.description}
+            </p>
+          </Link>
         ))}
       </div>
     </div>
