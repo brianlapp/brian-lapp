@@ -47,7 +47,7 @@ const Navigation = () => {
                     {link.name}
                     <ChevronDown className="h-4 w-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent>
+                  <DropdownMenuContent className="bg-white border-none shadow-lg">
                     {link.subLinks.map((subLink) => (
                       <DropdownMenuItem key={subLink.href} asChild>
                         <Link
