@@ -27,7 +27,7 @@ const PrintMedia = () => {
                 </Link>
               </div>
               <div className="relative">
-                {/* Tri-fold Flyer CSS Graphic */}
+                {/* Tri-fold Flyer CSS Graphic with more visual elements */}
                 <div className="relative w-full aspect-[4/3] perspective-1000">
                   <div className="absolute inset-0 grid grid-cols-3 gap-2 transform hover:-rotate-y-12 transition-transform duration-500">
                     {/* Left Panel */}
@@ -56,6 +56,10 @@ const PrintMedia = () => {
                         <div className="h-2 bg-gray-200 rounded w-3/4"></div>
                         <div className="h-2 bg-gray-200 rounded w-1/2"></div>
                       </div>
+                      {/* Added decorative elements */}
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div className="w-20 h-20 rounded-full bg-primary/5 animate-pulse"></div>
+                      </div>
                     </div>
                     {/* Right Panel */}
                     <div className="bg-white rounded-r-lg shadow-lg p-4 transform hover:rotate-y-12 transition-transform duration-300">
@@ -73,16 +77,15 @@ const PrintMedia = () => {
                       </div>
                     </div>
                   </div>
+                  {/* Added floating decorative elements */}
+                  <div className="absolute -top-8 -right-8 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
+                  <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-secondary/10 rounded-full blur-xl animate-pulse"></div>
                 </div>
-                {/* Decorative Elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Grid */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">What We Offer</h2>
@@ -147,6 +150,7 @@ const PrintMedia = () => {
             </div>
           </div>
         </section>
+
       </main>
       <CallToAction />
     </div>

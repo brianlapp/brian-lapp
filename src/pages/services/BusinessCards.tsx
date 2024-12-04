@@ -30,11 +30,14 @@ const BusinessCards = () => {
                 <div className="bg-white p-8 rounded-lg shadow-xl transform perspective-1000 group hover:rotate-y-180 transition-transform duration-1000 cursor-pointer h-64">
                   <div className="absolute inset-0 backface-hidden">
                     {/* Front of card */}
-                    <div className="p-6 flex items-center justify-center h-full">
-                      <div className="text-center">
+                    <div className="p-6 flex items-center justify-between h-full">
+                      <div className="text-center flex-1">
                         <UserRound className="w-16 h-16 text-primary mx-auto mb-4" />
                         <h3 className="text-xl font-bold text-gray-800">John Smith</h3>
                         <p className="text-gray-600">Marketing Director</p>
+                      </div>
+                      <div className="border-l border-gray-200 h-full flex items-center pl-6">
+                        <UserRound className="w-24 h-24 text-primary/20" />
                       </div>
                     </div>
                   </div>
@@ -122,6 +125,7 @@ const BusinessCards = () => {
             </div>
           </div>
         </section>
+
       </main>
       <CallToAction />
     </div>
