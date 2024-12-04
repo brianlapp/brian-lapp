@@ -23,12 +23,16 @@ const HeroAlt = () => (
             We help small businesses thrive in the digital world with comprehensive marketing solutions tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="text-lg">
-              Get Started <ArrowRight className="ml-2" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg">
-              View Our Work
-            </Button>
+            <Link to="/services">
+              <Button size="lg" className="text-lg">
+                View Our Services <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="text-lg">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
 

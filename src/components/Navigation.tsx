@@ -15,7 +15,7 @@ const Navigation = () => {
   const navLinks = [
     { 
       name: "Services",
-      href: "#services",
+      href: "/services",
       subLinks: [
         { name: "Branding & Logo", href: "/services/branding-and-logo" },
         { name: "Website Development", href: "/services/website-development" },
@@ -26,7 +26,6 @@ const Navigation = () => {
         { name: "Print Media", href: "/services/print-media" },
       ]
     },
-    { name: "Work", href: "/work" },
     { name: "Contact", href: "/contact" },
   ];
 
