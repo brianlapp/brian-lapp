@@ -27,22 +27,33 @@ const PrintMedia = () => {
                 </Link>
               </div>
               <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white p-4 rounded-lg shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <img
-                      src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-                      alt="Sample Brochure"
-                      className="w-full h-48 object-cover rounded"
-                    />
-                    <p className="text-center mt-2 text-sm text-gray-600">Brochure Design</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <img
-                      src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb"
-                      alt="Sample Flyer"
-                      className="w-full h-48 object-cover rounded"
-                    />
-                    <p className="text-center mt-2 text-sm text-gray-600">Flyer Design</p>
+                {/* Tri-fold Flyer CSS Graphic */}
+                <div className="relative w-full aspect-[4/3] perspective-1000">
+                  <div className="absolute inset-0 grid grid-cols-3 gap-2 transform hover:-rotate-y-12 transition-transform duration-500">
+                    {/* Left Panel */}
+                    <div className="bg-white rounded-l-lg shadow-lg p-4 transform hover:-rotate-y-12 transition-transform duration-300">
+                      <FileText className="w-8 h-8 text-primary mb-3" />
+                      <div className="space-y-2">
+                        <div className="h-2 bg-gray-200 rounded w-3/4"></div>
+                        <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                      </div>
+                    </div>
+                    {/* Middle Panel */}
+                    <div className="bg-white shadow-lg p-4 transform hover:scale-105 transition-transform duration-300">
+                      <Layout className="w-8 h-8 text-secondary mb-3" />
+                      <div className="space-y-2">
+                        <div className="h-2 bg-gray-200 rounded"></div>
+                        <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+                      </div>
+                    </div>
+                    {/* Right Panel */}
+                    <div className="bg-white rounded-r-lg shadow-lg p-4 transform hover:rotate-y-12 transition-transform duration-300">
+                      <Palette className="w-8 h-8 text-accent mb-3" />
+                      <div className="space-y-2">
+                        <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+                        <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 {/* Decorative Elements */}
