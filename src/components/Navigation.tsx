@@ -1,7 +1,13 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,13 +41,34 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
-              >
-                {link.name}
-              </Link>
+              link.subLinks ? (
+                <DropdownMenu key={link.name}>
+                  <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+                    {link.name}
+                    <ChevronDown className="h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    {link.subLinks.map((subLink) => (
+                      <DropdownMenuItem key={subLink.href} asChild>
+                        <Link
+                          to={subLink.href}
+                          className="w-full cursor-pointer"
+                        >
+                          {subLink.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
             <Button className="bg-primary hover:bg-primary/90 text-white">
               Free Consultation
