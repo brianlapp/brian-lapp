@@ -7,7 +7,13 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
+    { 
+      name: "Services",
+      href: "#services",
+      subLinks: [
+        { name: "Branding & Logo", href: "/services/branding-and-logo" },
+      ]
+    },
     { name: "Work", href: "/work" },
     { name: "Contact", href: "/contact" },
   ];
@@ -51,14 +57,29 @@ const Navigation = () => {
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg animate-slide-down">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
+                <div key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                  {link.subLinks && (
+                    <div className="ml-4 mt-2 flex flex-col gap-2">
+                      {link.subLinks.map((subLink) => (
+                        <Link
+                          key={subLink.name}
+                          to={subLink.href}
+                          className="text-sm text-gray-500 hover:text-primary transition-colors"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <Button className="w-full bg-primary hover:bg-primary/90 text-white">
                 Free Consultation
