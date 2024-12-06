@@ -15,11 +15,11 @@ const HeroAlt = () => (
           className="absolute rounded-full bg-primary/20"
           style={{
             left: `${Math.random() * 100}%`,
-            animationDelay: `${i * 0.3}s`,
-            animationDuration: `${3 + i * 0.5}s`,
+            animationDelay: `${i * 0.5}s`,
+            animationDuration: `${8 + i * 0.8}s`,
             width: `${20 + i * 10}px`,
             height: `${20 + i * 10}px`,
-            animation: `rise ${6 + i * 0.5}s infinite ease-in-out`,
+            animation: `rise ${12 + i * 0.8}s infinite ease-in-out`,
             bottom: `-${20 + i * 10}px`,
             zIndex: 10,
           }}
