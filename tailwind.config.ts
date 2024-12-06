@@ -34,7 +34,7 @@ export default {
         },
         muted: {
           DEFAULT: "#fff7ed", // Orange-tinted white
-          foreground: "#9a3412",
+          foreground: "#334155", // Slate-700
         },
         accent: {
           DEFAULT: "#FB923C", // Light orange

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Beaker } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -33,7 +33,8 @@ const Navigation = () => {
     <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold tracking-tight text-primary">
+          <Link to="/" className="flex items-center gap-2 text-2xl font-bold tracking-tight text-primary">
+            <Beaker className="w-6 h-6" />
             BrandingLabs.ca
           </Link>
 
