@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Globe, Server, Shield, FileText, Image, Map, MessageSquare, CheckCircle2 } from "lucide-react";
+import { Globe, Server, Shield, FileText, Image, Map, MessageSquare, CheckCircle2, Beaker } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const WebsiteDevelopment = () => {
@@ -54,6 +54,12 @@ const WebsiteDevelopment = () => {
           <div className="relative mb-16 rounded-xl overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5 p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Beaker className="w-6 h-6 text-primary animate-pulse" />
+                  </div>
+                  <span className="text-sm font-medium text-primary">Web Development Lab</span>
+                </div>
                 <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Website Development
                 </h1>
