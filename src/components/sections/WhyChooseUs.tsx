@@ -9,7 +9,7 @@ const WhyChooseUs = () => (
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              src="/lovable-uploads/00d1f383-79f9-47fb-a004-d30c712f8f8c.png"
               alt="Digital Marketing Team"
               className="rounded-lg shadow-lg"
             />
