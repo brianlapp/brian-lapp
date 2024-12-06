@@ -8,11 +8,11 @@ const HeroAlt = () => (
     <div className="absolute inset-0 bg-grid-slate-200/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
     
     {/* Floating bubbles */}
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {[...Array(12)].map((_, i) => (
         <div
           key={i}
-          className="absolute rounded-full bg-primary/5"
+          className="absolute rounded-full bg-primary/20"
           style={{
             left: `${Math.random() * 100}%`,
             animationDelay: `${i * 0.3}s`,
@@ -21,6 +21,7 @@ const HeroAlt = () => (
             height: `${20 + i * 10}px`,
             animation: `rise ${6 + i * 0.5}s infinite ease-in-out`,
             bottom: `-${20 + i * 10}px`,
+            zIndex: 10,
           }}
         />
       ))}
@@ -34,11 +35,11 @@ const HeroAlt = () => (
             opacity: 0;
           }
           10% {
-            opacity: 0.5;
+            opacity: 0.8;
           }
           50% {
             transform: translateY(-40vh) rotate(180deg);
-            opacity: 0.2;
+            opacity: 0.4;
           }
           100% {
             transform: translateY(-80vh) rotate(360deg);
