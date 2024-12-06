@@ -12,18 +12,41 @@ const HeroAlt = () => (
       {[...Array(12)].map((_, i) => (
         <div
           key={i}
-          className={`absolute w-${4 + (i * 2)} h-${4 + (i * 2)} rounded-full bg-primary/5 animate-float`}
+          className="absolute rounded-full bg-primary/5"
           style={{
             left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
             animationDelay: `${i * 0.3}s`,
             animationDuration: `${3 + i * 0.5}s`,
             width: `${20 + i * 10}px`,
-            height: `${20 + i * 10}px`
+            height: `${20 + i * 10}px`,
+            animation: `rise ${6 + i * 0.5}s infinite ease-in-out`,
+            bottom: `-${20 + i * 10}px`,
           }}
         />
       ))}
     </div>
+    
+    <style>
+      {`
+        @keyframes rise {
+          0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+          }
+          10% {
+            opacity: 0.5;
+          }
+          50% {
+            transform: translateY(-40vh) rotate(180deg);
+            opacity: 0.2;
+          }
+          100% {
+            transform: translateY(-80vh) rotate(360deg);
+            opacity: 0;
+          }
+        }
+      `}
+    </style>
     
     <div className="absolute right-0 top-0 -mt-24 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl" />
     <div className="absolute left-0 bottom-0 -mb-24 h-[400px] w-[400px] rounded-full bg-secondary/5 blur-3xl" />
