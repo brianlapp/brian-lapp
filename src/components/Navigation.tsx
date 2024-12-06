@@ -32,12 +32,13 @@ const Navigation = () => {
     <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
+
           <Link to="/" className="flex items-center gap-2 text-2xl font-bold tracking-tight text-primary">
             BrandingLabs.ca
             <img 
               src="/lovable-uploads/e13f8541-b756-4796-993c-8e71c8f4b780.png" 
               alt="Lab Beaker"
-              className="w-8 h-8"
+              className="w-8 h-8 -rotate-3"
             />
           </Link>
 

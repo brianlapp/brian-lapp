@@ -11,7 +11,7 @@ const WhyChooseUs = () => (
             <img
               src="/lovable-uploads/00d1f383-79f9-47fb-a004-d30c712f8f8c.png"
               alt="Digital Marketing Team"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg"
             />
           </div>
           <div>
