@@ -36,7 +36,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/052b41bf-3735-4e60-b0a2-052911c321aa.png" 
               alt="BrandingLabs.ca"
-              className="h-8"
+              className="h-10"
             />
           </Link>
 
