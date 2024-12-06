@@ -9,15 +9,17 @@ const HeroAlt = () => (
     
     {/* Floating bubbles */}
     <div className="absolute inset-0 overflow-hidden">
-      {[...Array(6)].map((_, i) => (
+      {[...Array(12)].map((_, i) => (
         <div
           key={i}
-          className={`absolute w-${8 + (i * 4)} h-${8 + (i * 4)} rounded-full bg-primary/5 animate-float`}
+          className={`absolute w-${4 + (i * 2)} h-${4 + (i * 2)} rounded-full bg-primary/5 animate-float`}
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            animationDelay: `${i * 0.5}s`,
-            animationDuration: `${4 + i}s`
+            animationDelay: `${i * 0.3}s`,
+            animationDuration: `${3 + i * 0.5}s`,
+            width: `${20 + i * 10}px`,
+            height: `${20 + i * 10}px`
           }}
         />
       ))}

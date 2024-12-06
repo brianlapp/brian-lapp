@@ -7,7 +7,6 @@ import {
   Mail, 
   Megaphone, 
   ScrollText, 
-  CreditCard, 
   Printer 
 } from "lucide-react";
 
@@ -41,12 +40,6 @@ const services = [
     title: "Social Media",
     description: "Strategic social media management to build your brand presence.",
     link: "/services/social-media"
-  },
-  {
-    icon: <CreditCard className="w-12 h-12 text-primary" />,
-    title: "Business Cards",
-    description: "Professional business card designs that make lasting impressions.",
-    link: "/services/business-cards"
   },
   {
     icon: <Printer className="w-12 h-12 text-primary" />,

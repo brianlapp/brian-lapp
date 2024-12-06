@@ -11,7 +11,6 @@ import WebsiteDevelopment from "./pages/services/WebsiteDevelopment";
 import EmailSetup from "./pages/services/EmailSetup";
 import NewsletterSetup from "./pages/services/NewsletterSetup";
 import SocialMedia from "./pages/services/SocialMedia";
-import BusinessCards from "./pages/services/BusinessCards";
 import PrintMedia from "./pages/services/PrintMedia";
 
 const queryClient = new QueryClient();
@@ -31,7 +30,6 @@ const App = () => (
           <Route path="/services/email-setup" element={<EmailSetup />} />
           <Route path="/services/newsletter-setup" element={<NewsletterSetup />} />
           <Route path="/services/social-media" element={<SocialMedia />} />
-          <Route path="/services/business-cards" element={<BusinessCards />} />
           <Route path="/services/print-media" element={<PrintMedia />} />
         </Routes>
       </BrowserRouter>
