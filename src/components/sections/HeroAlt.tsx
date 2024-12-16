@@ -75,15 +75,15 @@ const HeroAlt = () => {
               </p>
             </div>
 
-            <div className={`flex flex-col sm:flex-row gap-4 ${isMobile ? 'justify-center' : ''}`}>
-              <Link to="/services">
-                <Button size="lg" className="text-lg group">
+            <div className={`flex flex-col sm:flex-row ${isMobile ? 'flex-col items-stretch gap-4' : 'gap-4'} ${isMobile ? 'justify-center' : ''}`}>
+              <Link to="/services" className={`${isMobile ? 'w-full' : ''}`}>
+                <Button size="lg" className="text-lg group w-full sm:w-auto">
                   View Our Services 
                   <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="text-lg">
+              <Link to="/contact" className={`${isMobile ? 'w-full' : ''}`}>
+                <Button size="lg" variant="outline" className="text-lg w-full sm:w-auto">
                   Contact Us
                 </Button>
               </Link>
