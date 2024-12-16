@@ -12,12 +12,14 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
   email: z.string().email("Invalid email address"),
+  subject: z.string().min(2, "Subject must be at least 2 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -27,19 +29,25 @@ const Contact = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      phone: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    // In a real application, you would send this to your backend
-    // For now, we'll just show a success toast
-    console.log("Form submitted:", values);
+    const mailtoLink = `mailto:brian.lapp@gmail.com,cory.arsic@gmail.com?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(
+      `Name: ${values.name}\nPhone: ${values.phone}\nEmail: ${values.email}\n\nMessage:\n${values.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
+      title: "Message ready to send!",
+      description: "Your email client has been opened with your message.",
     });
+    
     form.reset();
   };
 
@@ -66,12 +74,38 @@ const Contact = () => {
               />
               <FormField
                 control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your phone number" type="tel" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="your@email.com" {...field} />
+                      <Input placeholder="your@email.com" type="email" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="subject"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Subject</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Message subject" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
