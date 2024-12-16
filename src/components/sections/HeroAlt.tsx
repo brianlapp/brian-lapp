@@ -53,10 +53,10 @@ const HeroAlt = () => (
     <div className="absolute left-0 bottom-0 -mb-24 h-[400px] w-[400px] rounded-full bg-secondary/5 blur-3xl" />
     
     <div className="container relative z-10 max-w-6xl mx-auto px-4 lg:px-8">
-      <div className="flex flex-col gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Content */}
-        <div className="flex flex-col space-y-8 text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary w-fit mx-auto">
+        <div className="flex flex-col space-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary w-fit">
             <Beaker className="w-4 h-4 animate-pulse" />
             Digital Marketing Solutions
           </div>
@@ -71,12 +71,12 @@ const HeroAlt = () => (
                 with Digital Marketing Excellence
               </span>
             </h1>
-            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 leading-relaxed">
               We help small businesses thrive in the digital world with comprehensive marketing solutions tailored to your needs.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/services">
               <Button size="lg" className="text-lg group">
                 View Our Services 
@@ -90,7 +90,7 @@ const HeroAlt = () => (
             </Link>
           </div>
 
-          <div className="flex items-center justify-center gap-8 pt-4">
+          <div className="flex items-center gap-8">
             <div className="flex -space-x-4">
               <img
                 src="/lovable-uploads/62644382-2cd2-40d0-ba6a-97167ed84ad7.png"
@@ -112,6 +112,26 @@ const HeroAlt = () => (
               <span className="font-semibold">500+</span> Happy Clients
             </div>
           </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="relative flex items-center justify-center lg:justify-end">
+          <img
+            src="/lovable-uploads/81c19a7d-aa34-4387-8144-80e0c8eabab3.png"
+            alt="Digital Marketing Growth Illustration"
+            className="w-full max-w-[600px] h-auto object-contain animate-float"
+          />
+          <style>
+            {`
+              @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+              }
+              .animate-float {
+                animation: float 6s ease-in-out infinite;
+              }
+            `}
+          </style>
         </div>
       </div>
     </div>
