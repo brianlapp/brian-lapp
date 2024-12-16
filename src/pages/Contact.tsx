@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
+import { useForm as useFormspree } from '@formspree/react';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -36,19 +37,22 @@ const Contact = () => {
     },
   });
 
+  const [formspreeState, sendToFormspree] = useFormspree("xpzvgknd"); // Replace with your form ID
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // Here you would typically send the data to your backend
-      console.log("Form submitted with values:", values);
+      const result = await sendToFormspree(values);
       
-      // Show success message
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you soon.",
-      });
-      
-      // Reset form
-      form.reset();
+      if (result.response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you soon.",
+        });
+        
+        form.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
@@ -136,7 +140,13 @@ const Contact = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full">Send Message</Button>
+              <Button 
+                type="submit" 
+                className="w-full"
+                disabled={formspreeState.submitting}
+              >
+                {formspreeState.submitting ? 'Sending...' : 'Send Message'}
+              </Button>
             </form>
           </Form>
         </div>
