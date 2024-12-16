@@ -119,7 +119,7 @@ const HeroAlt = () => (
           <img
             src="/lovable-uploads/81c19a7d-aa34-4387-8144-80e0c8eabab3.png"
             alt="Digital Marketing Growth Illustration"
-            className="w-full max-w-[600px] h-auto object-contain animate-float"
+            className="w-full max-w-[600px] h-auto object-contain"
           />
           <style>
             {`
