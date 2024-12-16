@@ -1,4 +1,4 @@
-import { ArrowRight, Beaker } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -56,11 +56,6 @@ const HeroAlt = () => (
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Content */}
         <div className="flex flex-col space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary w-fit">
-            <Beaker className="w-4 h-4 animate-pulse" />
-            Digital Marketing Solutions
-          </div>
-          
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -89,29 +84,6 @@ const HeroAlt = () => (
               </Button>
             </Link>
           </div>
-
-          <div className="flex items-center gap-8">
-            <div className="flex -space-x-4">
-              <img
-                src="/lovable-uploads/62644382-2cd2-40d0-ba6a-97167ed84ad7.png"
-                alt="Client Avatar"
-                className="w-10 h-10 rounded-full border-2 border-white"
-              />
-              <img
-                src="/lovable-uploads/7d075a52-1332-4fb3-a7c2-1ee21e93afd8.png"
-                alt="Client Avatar"
-                className="w-10 h-10 rounded-full border-2 border-white"
-              />
-              <img
-                src="/lovable-uploads/add6edef-3b4a-4de3-aea2-016876855066.png"
-                alt="Client Avatar"
-                className="w-10 h-10 rounded-full border-2 border-white"
-              />
-            </div>
-            <div className="text-sm text-gray-600">
-              <span className="font-semibold">500+</span> Happy Clients
-            </div>
-          </div>
         </div>
 
         {/* Image Section */}
@@ -121,17 +93,6 @@ const HeroAlt = () => (
             alt="Digital Marketing Growth Illustration"
             className="w-full max-w-[600px] h-auto object-contain"
           />
-          <style>
-            {`
-              @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-20px); }
-              }
-              .animate-float {
-                animation: float 6s ease-in-out infinite;
-              }
-            `}
-          </style>
         </div>
       </div>
     </div>
