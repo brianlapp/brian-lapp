@@ -53,7 +53,7 @@ const HeroAlt = () => (
     <div className="absolute left-0 bottom-0 -mb-24 h-[400px] w-[400px] rounded-full bg-secondary/5 blur-3xl" />
     
     <div className="container relative z-10 max-w-6xl mx-auto px-4 lg:px-8">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Content */}
         <div className="flex flex-col space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary w-fit">
@@ -115,7 +115,7 @@ const HeroAlt = () => (
         </div>
 
         {/* Image Section */}
-        <div className="relative flex items-center justify-center lg:justify-end">
+        <div className="relative flex items-center justify-center md:justify-end">
           <img
             src="/lovable-uploads/81c19a7d-aa34-4387-8144-80e0c8eabab3.png"
             alt="Digital Marketing Growth Illustration"
