@@ -72,9 +72,11 @@ const Navigation = () => {
                 </Link>
               )
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-white">
-              Free Consultation
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-primary hover:bg-primary/90 text-white">
+                Free Consultation
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,9 +118,11 @@ const Navigation = () => {
                   )}
                 </div>
               ))}
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                Free Consultation
-              </Button>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white">
+                  Free Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         )}
