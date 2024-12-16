@@ -37,7 +37,8 @@ const Contact = () => {
     },
   });
 
-  const [formspreeState, sendToFormspree] = useFormspree("xpzvgknd"); // Replace with your form ID
+  // Replace YOUR_FORM_ID with the actual form ID from your Formspree dashboard
+  const [formspreeState, sendToFormspree] = useFormspree("YOUR_FORM_ID");
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
