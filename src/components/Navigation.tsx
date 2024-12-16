@@ -1,13 +1,8 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "./ui/button";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import DesktopNav from "./navigation/DesktopNav";
+import MobileNav from "./navigation/MobileNav";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,46 +35,8 @@ const Navigation = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              link.subLinks ? (
-                <DropdownMenu key={link.name}>
-                  <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
-                    {link.name}
-                    <ChevronDown className="h-4 w-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-white border-none shadow-lg">
-                    {link.subLinks.map((subLink) => (
-                      <DropdownMenuItem key={subLink.href} asChild>
-                        <Link
-                          to={subLink.href}
-                          className="w-full cursor-pointer"
-                        >
-                          {subLink.name}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
-                >
-                  {link.name}
-                </Link>
-              )
-            ))}
-            <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90 text-white">
-                Free Consultation
-              </Button>
-            </Link>
-          </div>
+          <DesktopNav navLinks={navLinks} />
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -89,43 +46,11 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg animate-slide-down">
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <div key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                  {link.subLinks && (
-                    <div className="ml-4 mt-2 flex flex-col gap-2">
-                      {link.subLinks.map((subLink) => (
-                        <Link
-                          key={subLink.name}
-                          to={subLink.href}
-                          className="text-sm text-gray-500 hover:text-primary transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subLink.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                  Free Consultation
-                </Button>
-              </Link>
-            </div>
-          </div>
-        )}
+        <MobileNav 
+          navLinks={navLinks} 
+          isOpen={isMenuOpen} 
+          onClose={() => setIsMenuOpen(false)} 
+        />
       </div>
     </nav>
   );
