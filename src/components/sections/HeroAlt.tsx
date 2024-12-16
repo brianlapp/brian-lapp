@@ -7,7 +7,7 @@ const HeroAlt = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section className="relative min-h-[90vh] py-32 lg:py-40 flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/10 to-gray-50/80">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/10 to-gray-50/80">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-slate-200/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
       
@@ -92,11 +92,11 @@ const HeroAlt = () => {
 
           {/* Image Section - Only shown on desktop */}
           {!isMobile && (
-            <div className="relative flex items-center justify-center md:justify-end">
+            <div className="relative flex items-center justify-center md:justify-end h-full">
               <img
-                src="/lovable-uploads/81c19a7d-aa34-4387-8144-80e0c8eabab3.png"
+                src="/lovable-uploads/2be2fef7-b365-421f-a6a1-cb22aed9b05f.png"
                 alt="Digital Marketing Growth Illustration"
-                className="w-full max-w-[600px] h-auto object-contain"
+                className="w-full max-w-[500px] h-auto object-contain absolute top-[-4rem] bottom-0"
               />
             </div>
           )}
