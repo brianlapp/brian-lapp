@@ -41,9 +41,9 @@ const Contact = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const result = await sendToFormspree(values);
+      await sendToFormspree(values);
       
-      if (result.response.ok) {
+      if (formspreeState.succeeded) {
         toast({
           title: "Message sent successfully!",
           description: "We'll get back to you soon.",
