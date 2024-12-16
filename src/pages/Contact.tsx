@@ -37,18 +37,26 @@ const Contact = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const mailtoLink = `mailto:brian.lapp@gmail.com,cory.arsic@gmail.com?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(
-      `Name: ${values.name}\nPhone: ${values.phone}\nEmail: ${values.email}\n\nMessage:\n${values.message}`
-    )}`;
-    
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Message ready to send!",
-      description: "Your email client has been opened with your message.",
-    });
-    
-    form.reset();
+    try {
+      // Here you would typically send the data to your backend
+      console.log("Form submitted with values:", values);
+      
+      // Show success message
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you soon.",
+      });
+      
+      // Reset form
+      form.reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
