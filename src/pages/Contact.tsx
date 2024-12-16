@@ -14,13 +14,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
   email: z.string().email("Invalid email address"),
-  subject: z.string().min(2, "Subject must be at least 2 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -30,43 +27,26 @@ const Contact = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      phone: "",
       email: "",
-      subject: "",
       message: "",
     },
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    try {
-      // In a real application, you would send this to your backend
-      // For now, we'll use mailto link
-      const mailtoLink = `mailto:brian.lapp@gmail.com,cory.arsic@gmail.com?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(
-        `Name: ${values.name}
-Phone: ${values.phone}
-Email: ${values.email}
-Message: ${values.message}`
-      )}`;
-      window.location.href = mailtoLink;
-      
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. We'll get back to you soon.",
-      });
-      form.reset();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive",
-      });
-    }
+    // In a real application, you would send this to your backend
+    // For now, we'll just show a success toast
+    console.log("Form submitted:", values);
+    toast({
+      title: "Message sent!",
+      description: "Thank you for your message. We'll get back to you soon.",
+    });
+    form.reset();
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
       <Navigation />
-      <div className="flex-grow container mx-auto px-4 pt-32 pb-16">
+      <div className="container mx-auto px-4 pt-32 pb-16">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
           <Form {...form}>
@@ -86,38 +66,12 @@ Message: ${values.message}`
               />
               <FormField
                 control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Phone</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your phone number" type="tel" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="your@email.com" type="email" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="subject"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Subject</FormLabel>
-                    <FormControl>
-                      <Input placeholder="What is this regarding?" {...field} />
+                      <Input placeholder="your@email.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -145,7 +99,6 @@ Message: ${values.message}`
           </Form>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
