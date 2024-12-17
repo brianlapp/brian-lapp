@@ -15,7 +15,7 @@ const WhyChooseUs = () => (
             />
           </div>
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose SureSites?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose BrandingLabs?</h2>
             <div className="space-y-4">
               {[
                 "Tailored strategies for small businesses",
