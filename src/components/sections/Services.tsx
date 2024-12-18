@@ -36,7 +36,7 @@ const services = [
   {
     icon: <Megaphone className="w-12 h-12 text-primary" />,
     title: "Social Media",
-    description: "Strategic social media management to build your brand presence.",
+    description: "Strategic social media branding and page setup.",
     link: "/services/social-media"
   },
   {
