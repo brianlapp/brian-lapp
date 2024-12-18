@@ -20,14 +20,14 @@ const Footer = () => (
               </Link>
             </li>
             <li>
-              <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
-                Our Work
+              <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
+                Services
               </Link>
             </li>
             <li>
-              <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-                Services
-              </a>
+              <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
+                Our Work
+              </Link>
             </li>
             <li>
               <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
