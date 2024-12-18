@@ -29,7 +29,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/8411c2de-9df6-423c-93d5-d6d82114939a.png" 
+              src="/lovable-uploads/dfe9de72-b746-4662-ae7b-0e8b5668f671.png" 
               alt="BrandingLabs.ca"
               className="h-10"
             />

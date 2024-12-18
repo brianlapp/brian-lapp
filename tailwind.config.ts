@@ -25,19 +25,19 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#F97316", // Vibrant orange
+          DEFAULT: "#ff5757", // New red color
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#EA580C", // Deeper orange
+          DEFAULT: "#e64545", // Slightly darker red for secondary
           foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#fff7ed", // Orange-tinted white
+          DEFAULT: "#fff5f5", // Red-tinted white
           foreground: "#334155", // Slate-700
         },
         accent: {
-          DEFAULT: "#FB923C", // Light orange
+          DEFAULT: "#ff6b6b", // Light red
           foreground: "#ffffff",
         },
       },
