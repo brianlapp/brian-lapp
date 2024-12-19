@@ -61,7 +61,7 @@ const HeroAlt = () => {
           {/* Content */}
           <div className="flex flex-col space-y-8">
             <div>
-              <h1 className={`text-4xl ${isMobile ? 'text-center' : ''} md:text-5xl lg:text-6xl font-bold leading-tight mb-6`}>
+              <h1 className={`text-3xl xs:text-4xl ${isMobile ? 'text-center px-2' : ''} md:text-5xl lg:text-6xl font-bold leading-tight mb-6`}>
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Grow Your Small Business
                 </span>
@@ -70,7 +70,7 @@ const HeroAlt = () => {
                   with Digital Marketing Excellence
                 </span>
               </h1>
-              <p className={`text-lg text-slate-600 leading-relaxed ${isMobile ? 'text-center' : ''}`}>
+              <p className={`text-lg text-slate-600 leading-relaxed ${isMobile ? 'text-center px-4' : ''}`}>
                 We help small businesses thrive in the digital world with comprehensive marketing solutions tailored to your needs.
               </p>
             </div>
