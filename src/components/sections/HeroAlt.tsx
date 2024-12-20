@@ -13,18 +13,18 @@ const HeroAlt = () => {
       
       {/* Floating bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(12)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-primary/20"
             style={{
               left: `${Math.random() * 100}%`,
               animationDelay: `${i * 0.3}s`,
-              animationDuration: `${6 + i * 0.5}s`,
-              width: isMobile ? `${10 + i * 5}px` : `${20 + i * 10}px`,
-              height: isMobile ? `${10 + i * 5}px` : `${20 + i * 10}px`,
-              animation: `rise ${8 + i * 0.5}s infinite ease-in-out`,
-              bottom: `-${isMobile ? (10 + i * 5) : (20 + i * 10)}px`,
+              animationDuration: `${9 + i * 0.5}s`,
+              width: isMobile ? `${10 + i * 3}px` : `${20 + i * 6}px`,
+              height: isMobile ? `${10 + i * 3}px` : `${20 + i * 6}px`,
+              animation: `rise ${10 + i * 0.5}s infinite ease-in-out`,
+              bottom: `-${isMobile ? (10 + i * 3) : (20 + i * 6)}px`,
               zIndex: 10,
             }}
           />
@@ -35,7 +35,7 @@ const HeroAlt = () => {
         {`
           @keyframes rise {
             0% {
-              transform: translateY(${isMobile ? '40vh' : '0'}) rotate(0deg);
+              transform: translateY(40vh) rotate(0deg);
               opacity: 0;
             }
             10% {
