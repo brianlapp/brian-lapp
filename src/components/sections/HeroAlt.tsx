@@ -42,11 +42,11 @@ const HeroAlt = () => {
               opacity: 0.8;
             }
             50% {
-              transform: translateY(-40vh) rotate(180deg);
+              transform: translateY(-100vh) rotate(180deg);
               opacity: 0.4;
             }
             100% {
-              transform: translateY(-80vh) rotate(360deg);
+              transform: translateY(-150vh) rotate(360deg);
               opacity: 0;
             }
           }
