@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -70,17 +71,25 @@ const ExtraServiceCard = ({
 const Pricing = () => {
   const mainPlans = [
     {
-      title: "Simple Website Setup",
+      title: "Quick-Launch Website Package",
       price: "$349",
-      description: "Perfect for small businesses who need a web presence without the fuss.",
+      description: "Perfect for businesses who need a professional web presence - fast.",
       features: [
-        "We set up a professional, lightweight website for you",
-        "No WordPress headaches or complicated systems",
-        "Domain setup included",
-        "Fast, secure hosting",
-        "SSL certificate included",
-        "Basic 1-3 page site that loads lightning fast",
-        "You get a simple site that just works - we handle all the tech"
+        "Professional 1-3 Page Website: About, Services, Contact",
+        "Lightning-Fast Performance: Loads in milliseconds",
+        "Mobile-First Design: Looks great on all devices",
+        "Domain Name Setup: Your .ca or .com address",
+        "Premium Hosting: Fast, reliable, and secure",
+        "SSL Security: Protected connection for visitors",
+        "Basic Contact Form: Easy way for customers to reach you",
+        "No WordPress complexity",
+        "No technical skills needed",
+        "No hidden costs",
+        "No ongoing maintenance required",
+        "Simple, clean design that just works",
+        "48-hour turnaround with your content",
+        "We handle all the technical setup",
+        "Optional add-ons available: Google Business Profile, Analytics, SEO, Maps"
       ]
     },
     {
