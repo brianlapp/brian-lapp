@@ -145,12 +145,17 @@ const Pricing = () => {
       ]
     },
     {
-      title: "Google Analytics Setup",
+      title: "Website Analytics & Insights Package",
       price: "$199",
       features: [
-        "Track your website's performance",
-        "Setup and integration of Google Analytics",
-        "Monitor traffic, engagement, and conversions"
+        "Complete Google Analytics 4 Setup: Latest tracking technology for comprehensive data",
+        "Custom Dashboard Creation: Easy-to-understand visual reports of your website performance",
+        "Goal Tracking Configuration: Monitor form submissions, sales, and key visitor actions",
+        "User Behavior Analysis: See how visitors navigate through your site",
+        "Traffic Source Tracking: Identify where your visitors are coming from",
+        "Mobile vs Desktop Reports: Understand how different users experience your site",
+        "Initial Performance Review: Initial review session explaining your data",
+        "Future-Proof Setup: Ready for upcoming Google data tracking changes"
       ]
     },
     {
