@@ -121,13 +121,17 @@ const Pricing = () => {
       ]
     },
     {
-      title: "Google Business Setup",
+      title: "Google Business Profile Pro Setup",
       price: "$299",
       features: [
-        "Boost your visibility on Google",
-        "Get your business listed on Google Maps",
-        "Make it easy for customers to find you",
-        "Help gather reviews from satisfied clients"
+        "Complete Business Verification: Official verification of your business with Google",
+        "Strategic Profile Optimization: Keyword-rich description, services, and categories",
+        "Google Maps Integration: Put your business on the map for local searches",
+        "Custom Photo Gallery: Professional arrangement of your business imagery",
+        "Review Generation System: Tools to collect and showcase positive customer feedback",
+        "Local SEO Boost: Enhanced visibility for \"near me\" and local searches",
+        "Mobile Search Optimization: Look great on Google's mobile search results",
+        "Analytics Connection: Track how customers find and interact with your listing"
       ]
     },
     {
