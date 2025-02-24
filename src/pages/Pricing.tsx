@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -105,8 +104,6 @@ const TestimonialCard = ({
 );
 
 const Pricing = () => {
-  const [currency, setCurrency] = useState<'CAD' | 'USD'>('CAD');
-
   const mainPlans = [
     {
       title: "Custom Business Website",
@@ -307,10 +304,6 @@ const Pricing = () => {
                   Free Consultation
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" onClick={() => setCurrency(currency === 'CAD' ? 'USD' : 'CAD')}>
-                <CircleDollarSign className="mr-2" />
-                Switch to {currency === 'CAD' ? 'USD' : 'CAD'}
-              </Button>
             </div>
           </div>
 
@@ -397,4 +390,3 @@ const Pricing = () => {
 };
 
 export default Pricing;
-
