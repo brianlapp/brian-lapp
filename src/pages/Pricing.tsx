@@ -148,6 +148,7 @@ const Pricing = () => {
         "48-hour turnaround",
         "Complete technical setup"
       ],
+      isPopular: true,
       recommendedAddons: [
         { title: "Google Analytics Setup", price: "$199" },
         { title: "Social Media Brand Launch", price: "$299" }
