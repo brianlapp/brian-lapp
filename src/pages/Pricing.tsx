@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -107,13 +108,16 @@ const Pricing = () => {
 
   const extras = [
     {
-      title: "Monthly Site Management",
+      title: "Website Care Plan",
       price: "$99/month",
       features: [
-        "Regular updates and maintenance",
-        "Content changes when needed (up to 4 changes per month)",
-        "Technical support and monitoring",
-        "No WordPress training or headaches - we handle everything"
+        "Regular Maintenance: Security updates, performance optimization, and backups",
+        "Content Updates: Quick changes to text, images, and info (up to 4 per month)",
+        "Technical Monitoring: 24/7 uptime monitoring and issue prevention",
+        "Priority Support: Direct access to our team when you need help",
+        "Monthly Performance Report: See your site's traffic and engagement stats",
+        "SEO Health Check: Ensure your site stays visible in search results",
+        "Hands-Off Management: No training or technical skills needed - we handle everything"
       ]
     },
     {
