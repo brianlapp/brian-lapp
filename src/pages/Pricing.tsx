@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -71,39 +70,48 @@ const ExtraServiceCard = ({
 const Pricing = () => {
   const mainPlans = [
     {
-      title: "Bare-Bones Website",
+      title: "Simple Website Setup",
       price: "$349",
-      description: "Perfect for DIY enthusiasts.",
+      description: "Perfect for small businesses who need a web presence without the fuss.",
       features: [
-        "Build your own drag-and-drop website",
-        "Choose from thousands of website templates",
-        "We handle domain setup",
-        "We handle hosting setup",
-        "SSL certificate installation",
-        "Receive login details and documentation"
+        "We set up a professional, lightweight website for you",
+        "No WordPress headaches or complicated systems",
+        "Domain setup included",
+        "Fast, secure hosting",
+        "SSL certificate included",
+        "Basic 1-3 page site that loads lightning fast",
+        "You get a simple site that just works - we handle all the tech"
       ]
     },
     {
-      title: "Custom Website",
+      title: "Custom Business Website",
       price: "$2,499",
-      description: "A fully personalized website built from scratch.",
+      description: "A fully personalized website built with speed and simplicity in mind.",
       features: [
-        "Custom Website Design: Not a template—a unique site tailored to your brand",
-        "Written Content Creation: Professionally crafted copy for all pages",
-        "Graphics and Images: Custom graphics and licensed stock images",
-        "Responsive Design: Optimized for mobile, tablet, and desktop",
-        "Fast-Loading Pages: Performance-optimized for quick loading",
-        "Navigation and User Experience (UX): Intuitive layout for seamless browsing",
-        "Contact Forms: Functional and user-friendly forms",
-        "Map Integration: Showcase your business location with Google Maps",
-        "Secure Hosting and SSL: Ensures safe and reliable web access",
-        "Social Media Integration: Links and feeds from your social platforms",
-        "Analytics Setup: Google Analytics installation for performance tracking"
+        "Custom Design: Unique site that perfectly matches your brand",
+        "Professional Content: Well-written copy for all pages",
+        "Fast-Loading Pages: Optimized performance without WordPress bloat",
+        "'Set it and forget it': We handle everything - no training needed",
+        "Ongoing Support: Simple updates handled by us (first 3 months free)",
+        "All Technical Management: You focus on your business, we focus on your site",
+        "Canva for design elements",
+        "Loveable.dev, Git, Netlify and Supabase for blazing performance",
+        "Everything from the basic package (domain, hosting, SSL)"
       ]
     }
   ];
 
   const extras = [
+    {
+      title: "Monthly Site Management",
+      price: "$99/month",
+      features: [
+        "Regular updates and maintenance",
+        "Content changes when needed (up to 4 changes per month)",
+        "Technical support and monitoring",
+        "No WordPress training or headaches - we handle everything"
+      ]
+    },
     {
       title: "Google Business Setup",
       price: "$299",
