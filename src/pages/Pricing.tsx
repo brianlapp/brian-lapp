@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -135,6 +134,22 @@ const Pricing = () => {
       ]
     },
     {
+      title: "Professional Business Email System",
+      price: "$249",
+      features: [
+        "Complete Gmail Workspace Setup: Professional email with your domain name",
+        "Multiple Email Addresses: Create up to 5 custom addresses (@yourbusiness.ca)",
+        "Mobile Device Configuration: Setup on your phones and tablets",
+        "Email Signature Design: Professional branded signature for your team",
+        "Spam Protection: Advanced filters and security measures",
+        "Calendar & Contact Integration: Sync across all your devices",
+        "Email Migration: Transfer existing emails to your new system",
+        "15-Minute Tutorial: Quick training on using your new email system",
+        "30 Days Initial Support Included",
+        "Optional Monthly Support ($29/mo): User management, backups, priority support, security monitoring"
+      ]
+    },
+    {
       title: "Social Media Brand Launch Package",
       price: "$299",
       features: [
@@ -161,25 +176,6 @@ const Pricing = () => {
         "Mobile vs Desktop Reports: Understand how different users experience your site",
         "Initial Performance Review: Initial review session explaining your data",
         "Future-Proof Setup: Ready for upcoming Google data tracking changes"
-      ]
-    },
-    {
-      title: "Professional Email Setup",
-      price: "$249",
-      features: [
-        "Get your branded email address",
-        "Create your professional email (info@yourbusiness.ca)",
-        "Hosted through Gmail, the world's best email system"
-      ]
-    },
-    {
-      title: "Email Marketing System",
-      price: "$999",
-      features: [
-        "Build and manage an email marketing platform",
-        "Complete setup of a self-managed system",
-        "Includes branding, welcome email, and template",
-        "Three 30-minute training sessions included"
       ]
     },
     {
@@ -240,4 +236,3 @@ const Pricing = () => {
 };
 
 export default Pricing;
-
