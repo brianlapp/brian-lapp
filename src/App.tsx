@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +14,7 @@ import EmailSetup from "./pages/services/EmailSetup";
 import NewsletterSetup from "./pages/services/NewsletterSetup";
 import SocialMedia from "./pages/services/SocialMedia";
 import PrintMedia from "./pages/services/PrintMedia";
+import Pricing from "./pages/Pricing";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<ServicesShowcase />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/services/branding-and-logo" element={<BrandingAndLogo />} />
           <Route path="/services/website-development" element={<WebsiteDevelopment />} />
           <Route path="/services/email-setup" element={<EmailSetup />} />
