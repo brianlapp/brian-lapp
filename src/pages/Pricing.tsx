@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -197,13 +196,23 @@ const Pricing = () => {
       ]
     },
     {
-      title: "Logo Design",
+      title: "Brand Identity Package",
       price: "$749",
       features: [
-        "Create a memorable brand identity",
-        "Explore logo styles together",
-        "Receive five initial logo concepts",
-        "Finalize with two revisions"
+        "Brand Discovery Session: Deep dive into your vision and values",
+        "Market Research: Analysis of competitors and industry trends",
+        "5 Initial Logo Concepts: Unique design directions to choose from",
+        "2 Revision Rounds: Fine-tune your chosen design",
+        "Web-ready files (PNG, JPG), Print-ready files (PDF, AI, EPS)",
+        "Social media optimized sizes and website favicon",
+        "Color Palette: Primary and secondary colors with codes",
+        "Typography Selection: Font pairs for your brand",
+        "Usage Guidelines: Rules for logo placement and spacing",
+        "Brand Voice: Personality and tone recommendations",
+        "Business Card Design: Simple layout with your new logo",
+        "Email Signature Design: Professional branded signature",
+        "Social Media Profile Images: Properly sized for each platform",
+        "30-Day Support: Minor tweaks and file formats as needed"
       ]
     }
   ];
