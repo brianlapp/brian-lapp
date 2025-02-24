@@ -135,13 +135,18 @@ const Pricing = () => {
       ]
     },
     {
-      title: "Social Media Brand Presence",
+      title: "Social Media Brand Launch Package",
       price: "$299",
       features: [
-        "Establish your professional identity across platforms",
-        "Professional setup and optimization of your Instagram and Facebook profiles",
-        "Brand-consistent visuals and messaging across all platforms",
-        "Custom templates for ongoing posts to maintain your brand identity"
+        "Strategic Profile Optimization: Professional setup of Instagram and Facebook business accounts",
+        "Brand Identity Implementation: Cohesive visual presence across all platforms",
+        "Custom Cover Images & Profile Pictures: Designed specifically for each platform's dimensions",
+        "Bio & About Section Copywriting: Compelling, keyword-rich descriptions that convert",
+        "Content Calendar Starter Kit: Initial content plan with key posting dates",
+        "3 Custom Post Templates: Branded templates you can easily customize for future posts",
+        "Hashtag Strategy Guide: Platform-specific hashtag recommendations to reach your audience",
+        "Cross-Platform Linking: Proper connection between your website and social profiles",
+        "15-Minute Strategy Call: Quick training on how to maintain your new professional presence"
       ]
     },
     {
@@ -235,3 +240,4 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
