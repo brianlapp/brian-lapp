@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -91,13 +90,17 @@ const Pricing = () => {
       features: [
         "Custom Design: Unique site that perfectly matches your brand",
         "Professional Content: Well-written copy for all pages",
-        "Fast-Loading Pages: Optimized performance without WordPress bloat",
-        "'Set it and forget it': We handle everything - no training needed",
+        "Lightning-Fast Performance: Sites that load in milliseconds, not seconds",
+        "Mobile-First Framework: Perfect display on phones, tablets, and desktops",
+        "SEO Foundation: Built with search engines in mind from day one",
+        "Contact Forms & Maps: Easy ways for customers to reach you",
+        "Social Media Integration: Seamless connection to your social platforms",
+        '"Set it and forget it": We handle everything - no training needed',
         "Ongoing Support: Simple updates handled by us (first 3 months free)",
+        "Security Built-in: Protected against common vulnerabilities and threats",
+        "Analytics Setup: Track your visitors and how they use your site",
         "All Technical Management: You focus on your business, we focus on your site",
-        "Canva for design elements",
-        "Loveable.dev, Git, Netlify and Supabase for blazing performance",
-        "Everything from the basic package (domain, hosting, SSL)"
+        "Complete Setup: Includes domain, hosting, SSL, and all technical configurations"
       ]
     }
   ];
@@ -219,4 +222,3 @@ const Pricing = () => {
 };
 
 export default Pricing;
-
