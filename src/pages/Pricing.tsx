@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -147,6 +148,23 @@ const Pricing = () => {
         "15-Minute Tutorial: Quick training on using your new email system",
         "30 Days Initial Support Included",
         "Optional Monthly Support ($29/mo): User management, backups, priority support, security monitoring"
+      ]
+    },
+    {
+      title: "Email Marketing Launch Package",
+      price: "$999",
+      features: [
+        "Strategic Platform Selection: Choose the right tool for your needs (Mailchimp, etc.)",
+        "Brand Integration: Custom-designed email templates matching your website",
+        "Subscriber List Setup: Proper segmentation and organization",
+        "Welcome Email Sequence: 3-email nurture series for new subscribers",
+        "Lead Magnet Setup: One free downloadable to attract subscribers",
+        "Website Integration: Newsletter signup forms and pop-ups",
+        "CASL Compliance: Legal requirements and privacy policy setup",
+        "3 Custom Email Templates: Newsletter, Promotion, and Announcement styles",
+        "Mobile-Responsive Design: Perfect display on all devices",
+        "Reusable Content Blocks: Easy drag-and-drop sections",
+        "A/B Testing Setup: Tools to optimize your email performance"
       ]
     },
     {
