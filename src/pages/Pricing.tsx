@@ -206,6 +206,7 @@ const Pricing = () => {
     {
       title: "Email Marketing Launch Package",
       price: "$999",
+      description: "Complete email marketing setup and automation for your business.",
       features: [
         "Platform Selection & Setup",
         "Custom Email Templates",
@@ -218,6 +219,7 @@ const Pricing = () => {
     {
       title: "Google Business Profile Pro Setup",
       price: "$299",
+      description: "Professional setup and optimization of your Google Business Profile.",
       features: [
         "Business Verification",
         "Profile Optimization",
