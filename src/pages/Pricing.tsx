@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -123,13 +124,13 @@ const Pricing = () => {
       ]
     },
     {
-      title: "Social Media Pages Setup",
+      title: "Social Media Brand Presence",
       price: "$299",
       features: [
-        "Establish a professional presence on social platforms",
-        "Create and optimize Instagram and Facebook pages",
-        "Keep your network updated with branded profiles",
-        "Ready-to-use templates included"
+        "Establish your professional identity across platforms",
+        "Professional setup and optimization of your Instagram and Facebook profiles",
+        "Brand-consistent visuals and messaging across all platforms",
+        "Custom templates for ongoing posts to maintain your brand identity"
       ]
     },
     {
@@ -218,3 +219,4 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
