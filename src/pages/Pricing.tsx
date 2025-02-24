@@ -3,22 +3,32 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, Globe, Sparkles, Zap, CircleDollarSign, Laptop } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const PricingCard = ({ 
   title, 
   price, 
   description, 
-  features 
+  features,
+  isPopular,
+  recommendedAddons = []
 }: { 
   title: string;
   price: string;
   description: string;
   features: string[];
+  isPopular?: boolean;
+  recommendedAddons?: { title: string; price: string }[];
 }) => (
-  <Card className="flex flex-col h-full transition-all hover:shadow-lg">
-    <CardHeader>
+  <Card className={`flex flex-col h-full transition-all hover:shadow-lg ${isPopular ? 'border-primary shadow-lg relative' : ''}`}>
+    {isPopular && (
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+        <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+      </div>
+    )}
+    <CardHeader className={`${isPopular ? 'pt-8' : ''}`}>
       <CardTitle className="text-2xl">{title}</CardTitle>
       <CardDescription className="text-xl font-semibold text-primary">{price}</CardDescription>
     </CardHeader>
@@ -32,6 +42,19 @@ const PricingCard = ({
           </li>
         ))}
       </ul>
+      {recommendedAddons.length > 0 && (
+        <div className="mt-6 p-4 bg-muted rounded-lg">
+          <h4 className="font-medium mb-2">Recommended Add-ons:</h4>
+          <ul className="space-y-1">
+            {recommendedAddons.map((addon, index) => (
+              <li key={index} className="text-sm flex justify-between">
+                <span>{addon.title}</span>
+                <span className="text-primary font-medium">{addon.price}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </CardContent>
     <CardFooter>
       <Link to="/contact" className="w-full">
@@ -41,57 +64,50 @@ const PricingCard = ({
   </Card>
 );
 
-const ExtraServiceCard = ({ 
-  title, 
-  price, 
-  features 
-}: { 
+const PackageCategory = ({
+  title,
+  description,
+  children,
+}: {
   title: string;
-  price: string;
-  features: string[];
+  description: string;
+  children: React.ReactNode;
 }) => (
-  <Card className="transition-all hover:shadow-lg">
-    <CardHeader>
-      <CardTitle className="text-xl">{title}</CardTitle>
-      <CardDescription className="text-lg font-semibold text-primary">{price}</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start gap-2">
-            <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-            <span>{feature}</span>
-          </li>
-        ))}
-      </ul>
-    </CardContent>
-  </Card>
+  <div className="mb-16">
+    <div className="text-center mb-8">
+      <h2 className="text-2xl font-bold mb-2">{title}</h2>
+      <p className="text-gray-600">{description}</p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {children}
+    </div>
+  </div>
+);
+
+const TestimonialCard = ({
+  quote,
+  author,
+  company
+}: {
+  quote: string;
+  author: string;
+  company: string;
+}) => (
+  <div className="bg-white p-6 rounded-xl shadow-md">
+    <p className="text-gray-600 italic mb-4">{quote}</p>
+    <div className="flex items-center gap-2">
+      <div>
+        <p className="font-medium">{author}</p>
+        <p className="text-sm text-gray-500">{company}</p>
+      </div>
+    </div>
+  </div>
 );
 
 const Pricing = () => {
+  const [currency, setCurrency] = useState<'CAD' | 'USD'>('CAD');
+
   const mainPlans = [
-    {
-      title: "Quick-Launch Website Package",
-      price: "$349",
-      description: "Perfect for businesses who need a professional web presence - fast.",
-      features: [
-        "Professional 1-3 Page Website: About, Services, Contact",
-        "Lightning-Fast Performance: Loads in milliseconds",
-        "Mobile-First Design: Looks great on all devices",
-        "Domain Name Setup: Your .ca or .com address",
-        "Premium Hosting: Fast, reliable, and secure",
-        "SSL Security: Protected connection for visitors",
-        "Basic Contact Form: Easy way for customers to reach you",
-        "No WordPress complexity",
-        "No technical skills needed",
-        "No hidden costs",
-        "No ongoing maintenance required",
-        "Simple, clean design that just works",
-        "48-hour turnaround with your content",
-        "We handle all the technical setup",
-        "Optional add-ons available: Google Business Profile, Analytics, SEO, Maps"
-      ]
-    },
     {
       title: "Custom Business Website",
       price: "$2,499",
@@ -99,130 +115,174 @@ const Pricing = () => {
       features: [
         "Custom Design: Unique site that perfectly matches your brand",
         "Professional Content: Well-written copy for all pages",
-        "Lightning-Fast Performance: Sites that load in milliseconds, not seconds",
-        "Mobile-First Framework: Perfect display on phones, tablets, and desktops",
-        "SEO Foundation: Built with search engines in mind from day one",
+        "Lightning-Fast Performance: Sites that load in milliseconds",
+        "Mobile-First Framework: Perfect display on all devices",
+        "SEO Foundation: Built with search engines in mind",
         "Contact Forms & Maps: Easy ways for customers to reach you",
-        "Social Media Integration: Seamless connection to your social platforms",
-        '"Set it and forget it": We handle everything - no training needed',
-        "Ongoing Support: Simple updates handled by us (first 3 months free)",
-        "Security Built-in: Protected against common vulnerabilities and threats",
-        "Analytics Setup: Track your visitors and how they use your site",
-        "All Technical Management: You focus on your business, we focus on your site",
-        "Complete Setup: Includes domain, hosting, SSL, and all technical configurations"
+        "Social Media Integration: Connect to your platforms",
+        '"Set it and forget it": We handle everything',
+        "Ongoing Support: First 3 months free",
+        "Security Built-in: Protected against threats",
+        "Analytics Setup: Track your visitors",
+        "All Technical Management: Focus on your business",
+        "Complete Setup: Domain, hosting, SSL included"
+      ],
+      isPopular: true,
+      recommendedAddons: [
+        { title: "Website Care Plan", price: "$99/mo" },
+        { title: "Google Business Profile", price: "$299" }
+      ]
+    },
+    {
+      title: "Quick-Launch Website Package",
+      price: "$349",
+      description: "Perfect for businesses who need a professional web presence - fast.",
+      features: [
+        "Professional 1-3 Page Website",
+        "Lightning-Fast Performance",
+        "Mobile-First Design",
+        "Domain Name Setup",
+        "Premium Hosting",
+        "SSL Security",
+        "Basic Contact Form",
+        "No WordPress complexity",
+        "No technical skills needed",
+        "No hidden costs",
+        "48-hour turnaround",
+        "Complete technical setup"
+      ],
+      recommendedAddons: [
+        { title: "Google Analytics Setup", price: "$199" },
+        { title: "Social Media Brand Launch", price: "$299" }
+      ]
+    },
+    {
+      title: "Website Care Plan",
+      price: "$99/month",
+      description: "Keep your website secure, updated, and performing at its best.",
+      features: [
+        "Regular Maintenance & Updates",
+        "Security Monitoring",
+        "Performance Optimization",
+        "Content Updates (4/month)",
+        "Technical Support",
+        "Monthly Performance Reports",
+        "SEO Health Monitoring"
       ]
     }
   ];
 
-  const extras = [
+  const brandingPackages = [
     {
-      title: "Website Care Plan",
-      price: "$99/month",
+      title: "Brand Identity Package",
+      price: "$749",
+      description: "Complete brand identity design for your business.",
       features: [
-        "Regular Maintenance: Security updates, performance optimization, and backups",
-        "Content Updates: Quick changes to text, images, and info (up to 4 per month)",
-        "Technical Monitoring: 24/7 uptime monitoring and issue prevention",
-        "Priority Support: Direct access to our team when you need help",
-        "Monthly Performance Report: See your site's traffic and engagement stats",
-        "SEO Health Check: Ensure your site stays visible in search results",
-        "Hands-Off Management: No training or technical skills needed - we handle everything"
+        "Brand Discovery Session",
+        "5 Logo Concepts",
+        "Color Palette & Typography",
+        "Brand Guidelines",
+        "Business Card Design",
+        "Social Media Assets",
+        "Print & Web Files"
+      ]
+    },
+    {
+      title: "Social Media Brand Launch Package",
+      price: "$299",
+      description: "Professional setup of your social media presence.",
+      features: [
+        "Profile Optimization",
+        "Custom Cover Images",
+        "Bio & Content Strategy",
+        "Post Templates",
+        "Hashtag Strategy",
+        "Cross-Platform Linking"
+      ]
+    }
+  ];
+
+  const marketingPackages = [
+    {
+      title: "Email Marketing Launch Package",
+      price: "$999",
+      features: [
+        "Platform Selection & Setup",
+        "Custom Email Templates",
+        "Welcome Sequence",
+        "Lead Magnet Setup",
+        "List Management",
+        "Analytics Integration"
       ]
     },
     {
       title: "Google Business Profile Pro Setup",
       price: "$299",
       features: [
-        "Complete Business Verification: Official verification of your business with Google",
-        "Strategic Profile Optimization: Keyword-rich description, services, and categories",
-        "Google Maps Integration: Put your business on the map for local searches",
-        "Custom Photo Gallery: Professional arrangement of your business imagery",
-        "Review Generation System: Tools to collect and showcase positive customer feedback",
-        "Local SEO Boost: Enhanced visibility for \"near me\" and local searches",
-        "Mobile Search Optimization: Look great on Google's mobile search results",
-        "Analytics Connection: Track how customers find and interact with your listing"
+        "Business Verification",
+        "Profile Optimization",
+        "Photo Gallery Setup",
+        "Review Generation System",
+        "Local SEO Enhancement",
+        "Analytics Integration"
       ]
-    },
+    }
+  ];
+
+  const businessTools = [
     {
-      title: "Professional Business Email System",
+      title: "Professional Business Email",
       price: "$249",
+      description: "Professional email setup with your domain.",
       features: [
-        "Complete Gmail Workspace Setup: Professional email with your domain name",
-        "Multiple Email Addresses: Create up to 5 custom addresses (@yourbusiness.ca)",
-        "Mobile Device Configuration: Setup on your phones and tablets",
-        "Email Signature Design: Professional branded signature for your team",
-        "Spam Protection: Advanced filters and security measures",
-        "Calendar & Contact Integration: Sync across all your devices",
-        "Email Migration: Transfer existing emails to your new system",
-        "15-Minute Tutorial: Quick training on using your new email system",
-        "30 Days Initial Support Included",
-        "Optional Monthly Support ($29/mo): User management, backups, priority support, security monitoring"
+        "Custom Email Addresses",
+        "Gmail Workspace Setup",
+        "Mobile Configuration",
+        "Calendar & Contacts",
+        "Email Migration",
+        "Security Setup"
       ]
     },
     {
-      title: "Email Marketing Launch Package",
-      price: "$999",
-      features: [
-        "Strategic Platform Selection: Choose the right tool for your needs (Mailchimp, etc.)",
-        "Brand Integration: Custom-designed email templates matching your website",
-        "Subscriber List Setup: Proper segmentation and organization",
-        "Welcome Email Sequence: 3-email nurture series for new subscribers",
-        "Lead Magnet Setup: One free downloadable to attract subscribers",
-        "Website Integration: Newsletter signup forms and pop-ups",
-        "CASL Compliance: Legal requirements and privacy policy setup",
-        "3 Custom Email Templates: Newsletter, Promotion, and Announcement styles",
-        "Mobile-Responsive Design: Perfect display on all devices",
-        "Reusable Content Blocks: Easy drag-and-drop sections",
-        "A/B Testing Setup: Tools to optimize your email performance"
-      ]
-    },
-    {
-      title: "Social Media Brand Launch Package",
-      price: "$299",
-      features: [
-        "Strategic Profile Optimization: Professional setup of Instagram and Facebook business accounts",
-        "Brand Identity Implementation: Cohesive visual presence across all platforms",
-        "Custom Cover Images & Profile Pictures: Designed specifically for each platform's dimensions",
-        "Bio & About Section Copywriting: Compelling, keyword-rich descriptions that convert",
-        "Content Calendar Starter Kit: Initial content plan with key posting dates",
-        "3 Custom Post Templates: Branded templates you can easily customize for future posts",
-        "Hashtag Strategy Guide: Platform-specific hashtag recommendations to reach your audience",
-        "Cross-Platform Linking: Proper connection between your website and social profiles",
-        "15-Minute Strategy Call: Quick training on how to maintain your new professional presence"
-      ]
-    },
-    {
-      title: "Website Analytics & Insights Package",
+      title: "Website Analytics & Insights",
       price: "$199",
+      description: "Complete analytics setup and reporting.",
       features: [
-        "Complete Google Analytics 4 Setup: Latest tracking technology for comprehensive data",
-        "Custom Dashboard Creation: Easy-to-understand visual reports of your website performance",
-        "Goal Tracking Configuration: Monitor form submissions, sales, and key visitor actions",
-        "User Behavior Analysis: See how visitors navigate through your site",
-        "Traffic Source Tracking: Identify where your visitors are coming from",
-        "Mobile vs Desktop Reports: Understand how different users experience your site",
-        "Initial Performance Review: Initial review session explaining your data",
-        "Future-Proof Setup: Ready for upcoming Google data tracking changes"
+        "Google Analytics 4 Setup",
+        "Custom Dashboard",
+        "Goal Tracking",
+        "User Behavior Analysis",
+        "Traffic Source Tracking",
+        "Regular Reporting"
       ]
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "The process was incredibly smooth and the results exceeded our expectations. Our new website has already brought in new customers!",
+      author: "Sarah Johnson",
+      company: "Bloom Floral Design"
     },
     {
-      title: "Brand Identity Package",
-      price: "$749",
-      features: [
-        "Brand Discovery Session: Deep dive into your vision and values",
-        "Market Research: Analysis of competitors and industry trends",
-        "5 Initial Logo Concepts: Unique design directions to choose from",
-        "2 Revision Rounds: Fine-tune your chosen design",
-        "Web-ready files (PNG, JPG), Print-ready files (PDF, AI, EPS)",
-        "Social media optimized sizes and website favicon",
-        "Color Palette: Primary and secondary colors with codes",
-        "Typography Selection: Font pairs for your brand",
-        "Usage Guidelines: Rules for logo placement and spacing",
-        "Brand Voice: Personality and tone recommendations",
-        "Business Card Design: Simple layout with your new logo",
-        "Email Signature Design: Professional branded signature",
-        "Social Media Profile Images: Properly sized for each platform",
-        "30-Day Support: Minor tweaks and file formats as needed"
-      ]
+      quote: "Professional, responsive, and delivered exactly what we needed. The website care plan gives us peace of mind.",
+      author: "Michael Chen",
+      company: "Pacific Coast Properties"
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "How long does it take to build a website?",
+      answer: "Quick-Launch websites can be ready in 48 hours with your content. Custom websites typically take 2-3 weeks from start to finish."
+    },
+    {
+      question: "Do I need technical skills to maintain the website?",
+      answer: "No technical skills required! We handle all the technical aspects, updates, and maintenance for you."
+    },
+    {
+      question: "What's included in the Website Care Plan?",
+      answer: "Regular updates, security monitoring, content changes (up to 4 per month), performance optimization, and priority support."
     }
   ];
 
@@ -233,35 +293,98 @@ const Pricing = () => {
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h1>
-            <p className="text-lg text-gray-600">Choose the perfect package for your business needs</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+              Transform Your Business Online
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional web design and digital marketing services at transparent prices
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button size="lg" className="w-full sm:w-auto">
+                  Free Consultation
+                </Button>
+              </Link>
+              <Button variant="outline" size="lg" onClick={() => setCurrency(currency === 'CAD' ? 'USD' : 'CAD')}>
+                <CircleDollarSign className="mr-2" />
+                Switch to {currency === 'CAD' ? 'USD' : 'CAD'}
+              </Button>
+            </div>
           </div>
 
-          {/* Main Plans */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Core Website Packages */}
+          <PackageCategory
+            title="Core Website Packages"
+            description="Choose the perfect website package for your business needs"
+          >
             {mainPlans.map((plan, index) => (
               <PricingCard key={index} {...plan} />
             ))}
+          </PackageCategory>
+
+          {/* Testimonials */}
+          <div className="mb-16 bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-2xl">
+            <h2 className="text-2xl font-bold text-center mb-8">What Our Clients Say</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} />
+              ))}
+            </div>
           </div>
 
-          {/* Extras Section */}
+          {/* Branding & Design */}
+          <PackageCategory
+            title="Branding & Design"
+            description="Build a strong, memorable brand identity"
+          >
+            {brandingPackages.map((pkg, index) => (
+              <PricingCard key={index} {...pkg} />
+            ))}
+          </PackageCategory>
+
+          {/* Marketing Essentials */}
+          <PackageCategory
+            title="Marketing Essentials"
+            description="Powerful tools to grow your online presence"
+          >
+            {marketingPackages.map((pkg, index) => (
+              <PricingCard key={index} {...pkg} />
+            ))}
+          </PackageCategory>
+
+          {/* Business Tools */}
+          <PackageCategory
+            title="Business Tools"
+            description="Essential tools for professional business operations"
+          >
+            {businessTools.map((tool, index) => (
+              <PricingCard key={index} {...tool} />
+            ))}
+          </PackageCategory>
+
+          {/* FAQ Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Additional Services</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {extras.map((extra, index) => (
-                <ExtraServiceCard key={index} {...extra} />
+            <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-md">
+                  <h3 className="font-semibold text-lg mb-2">{faq.question}</h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-2xl">
-            <h2 className="text-2xl font-bold mb-4">Looking for a Custom Package?</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              We can tailor our services to meet your specific business needs.
+          <div className="text-center bg-gradient-to-br from-primary/10 to-secondary/10 p-12 rounded-2xl">
+            <h2 className="text-3xl font-bold mb-4">Need a Custom Solution?</h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Let's discuss your specific requirements and create a tailored package for your business.
             </p>
             <Link to="/contact">
-              <Button size="lg">Contact Us for a Custom Quote</Button>
+              <Button size="lg" className="w-full sm:w-auto">
+                Contact Us for a Custom Quote
+              </Button>
             </Link>
           </div>
         </div>
@@ -272,3 +395,4 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
