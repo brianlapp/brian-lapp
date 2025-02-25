@@ -10,6 +10,13 @@ import { cn } from "@/lib/utils";
 const Work = () => {
   const projects = [
     {
+      title: "Educ8r Classroom Sweepstakes Platform",
+      description: "A full-stack web application that manages a $1,000 classroom sweepstakes campaign, featuring a viral referral system that integrates with Everflow for tracking and BeehiiV for email marketing, allowing teachers to enter and share for additional chances to win classroom supplies.",
+      link: "https://educ8r.freeparentsearch.com/",
+      category: "Web Application",
+      image: "/lovable-uploads/893cbb33-c451-46d9-8ef5-cfc1d5f6ff67.png"
+    },
+    {
       title: "Word Flood",
       description: "A word-building game where players create words by connecting letters while racing against rising flood waters. Players aim to score points by forming longer words before time runs out. Features real-time scoring and leaderboard functionality.",
       link: "https://lovable.dev/projects/6e41d4a2-56b3-41fc-98ae-a386876dfe04",
@@ -118,3 +125,4 @@ const Work = () => {
 };
 
 export default Work;
+
