@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
@@ -31,7 +30,8 @@ export const projects: Project[] = [
     link: "https://lovable.dev/projects/6e41d4a2-56b3-41fc-98ae-a386876dfe04",
     category: "Interactive Game",
     image: "/lovable-uploads/745aec88-dd2f-4d40-8bb9-27af73561b2d.png",
-    type: "frontend"
+    type: "frontend",
+    tags: ["SEO", "Engagement"]
   },
   {
     title: "CarlySpina.com",
@@ -126,4 +126,3 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
 };
 
 export default ProjectGrid;
-
