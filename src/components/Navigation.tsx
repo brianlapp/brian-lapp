@@ -9,38 +9,23 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { 
-      name: "Services",
-      href: "/services",
-      subLinks: [
-        { name: "Branding & Logo", href: "/services/branding-and-logo" },
-        { name: "Website Development", href: "/services/website-development" },
-        { name: "Email Setup", href: "/services/email-setup" },
-        { name: "Newsletter Setup", href: "/services/newsletter-setup" },
-        { name: "Social Media", href: "/services/social-media" },
-        { name: "Print Media", href: "/services/print-media" },
-      ]
-    },
-    { name: "Pricing", href: "/pricing" },
+    { name: "Work", href: "/work" },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <nav className="fixed w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/b5b53779-050d-479d-a063-23e9d018a0dc.png" 
-              alt="BrandingLabs.ca"
-              className="h-10"
-            />
+            <span className="text-xl font-bold text-white">Brian Lapp</span>
           </Link>
 
           <DesktopNav navLinks={navLinks} />
 
           <button
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
