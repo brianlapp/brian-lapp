@@ -14,26 +14,26 @@ const Hero = () => (
     <div className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-accent/20 rounded-full filter blur-[100px] animate-pulse-slow" style={{ animationDelay: '1s' }} />
     
     <div className="container mx-auto px-4 relative z-10">
-      <div className="max-w-3xl">
-        <div className="flex items-center space-x-2 mb-4">
+      <div className="max-w-4xl">
+        <div className="flex items-center space-x-2 mb-6">
           <Badge variant="outline" className="px-3 py-1 border-primary/20 bg-primary/5 text-primary">
             Web Developer & Digital Marketing Expert
           </Badge>
         </div>
         
         <div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-            Hi, I'm Brian Lapp
-            <span className="block text-primary text-2xl md:text-3xl mt-3">
+          <h1 className="text-[5rem] md:text-[7rem] lg:text-[9rem] font-bold mb-8 text-foreground leading-[0.9] tracking-tight">
+            Brian Lapp
+            <span className="block text-primary text-3xl md:text-4xl mt-6">
               Building high-performing websites that convert
             </span>
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Helping businesses stand out with blazing-fast websites, smart design, and AI-powered solutions that deliver real results.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3 text-muted-foreground mt-8">
+        <div className="flex flex-wrap gap-3 text-muted-foreground mt-10">
           <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
             <Globe className="w-4 h-4 text-primary" />
             <span>Web Development</span>
@@ -48,7 +48,7 @@ const Hero = () => (
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 pt-8">
+        <div className="flex flex-col sm:flex-row gap-4 pt-10">
           <Link to="/work">
             <Button size="lg" className="w-full sm:w-auto text-lg">
               View My Work <ArrowRight className="ml-2" />
