@@ -66,7 +66,7 @@ const Hero = () => {
             <div>
               <h1 className="text-[3.5rem] md:text-[7rem] lg:text-[8rem] font-bold mb-4 md:mb-8 text-foreground leading-[0.9] tracking-tight">
                 Brian Lapp
-                <span className="block text-primary text-2xl md:text-4xl mt-4 md:mt-6 tracking-wide">
+                <span className="block text-primary text-2xl md:text-4xl mt-4 md:mt-6">
                   Building high-performing websites that convert
                 </span>
               </h1>
@@ -106,7 +106,6 @@ const Hero = () => {
 
           <div className="hidden lg:block relative">
             <div className="relative w-[140%] aspect-square -translate-x-[20%]">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 to-accent/30 blur-[60px] opacity-30" />
               <svg 
                 ref={svgRef}
                 className="w-full h-full relative z-10"
@@ -144,7 +143,6 @@ const Hero = () => {
                   </g>
                 ))}
               </svg>
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary to-accent opacity-20 z-0 animate-pulse-slow" />
             </div>
           </div>
         </div>
@@ -154,4 +152,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
