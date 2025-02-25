@@ -12,13 +12,13 @@ const EmailSetup = () => {
       <main className="container mx-auto px-4 py-24">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section with Email Preview */}
-          <div className="relative mb-16 rounded-xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
+          <div className="relative mb-16 rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 to-blue-950 p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h1 className="text-4xl font-bold mb-6 text-[#221F26]">
+                <h1 className="text-4xl font-bold mb-6 text-white">
                   Professional Business Email Setup
                 </h1>
-                <p className="text-lg text-[#222222] mb-8">
+                <p className="text-lg text-gray-200 mb-8">
                   Make a professional impression with custom email addresses like info@yourbusiness.com. 
                   Our complete setup service gets you up and running with Google Workspace, giving you 
                   powerful business tools and reliable email that works anywhere.
@@ -33,7 +33,7 @@ const EmailSetup = () => {
                 {/* Email Preview Mock */}
                 <div className="bg-white rounded-lg shadow-xl p-4">
                   <div className="border-b pb-4 mb-4">
-                    <div className="flex items-center gap-2 text-[#221F26]">
+                    <div className="flex items-center gap-2 text-gray-900">
                       <Mail className="w-5 h-5" />
                       <span className="font-medium">you@yourbusiness.com</span>
                     </div>
@@ -49,26 +49,26 @@ const EmailSetup = () => {
 
           {/* What's Included Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-[#221F26]">Complete Business Email Solution</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">Complete Business Email Solution</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="p-8 bg-gray-900/50 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-800">
                 <Mail className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-4 text-[#221F26]">Professional Email</h3>
-                <p className="text-[#222222]">
+                <h3 className="text-xl font-semibold mb-4 text-white">Professional Email</h3>
+                <p className="text-gray-300">
                   Custom email addresses that match your domain name, helping you look professional and build trust with customers.
                 </p>
               </div>
-              <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="p-8 bg-gray-900/50 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-800">
                 <Calendar className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-4 text-[#221F26]">Business Tools</h3>
-                <p className="text-[#222222]">
+                <h3 className="text-xl font-semibold mb-4 text-white">Business Tools</h3>
+                <p className="text-gray-300">
                   Access to Gmail, Google Calendar, Drive, and more - everything you need to run your business efficiently.
                 </p>
               </div>
-              <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="p-8 bg-gray-900/50 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-800">
                 <Smartphone className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-4 text-[#221F26]">Work Anywhere</h3>
-                <p className="text-[#222222]">
+                <h3 className="text-xl font-semibold mb-4 text-white">Work Anywhere</h3>
+                <p className="text-gray-300">
                   Access your email and documents from any device - computer, phone, or tablet, in the office or on the go.
                 </p>
               </div>
@@ -77,7 +77,7 @@ const EmailSetup = () => {
 
           {/* Why Choose Google Workspace */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-[#221F26]">Benefits for Your Business</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">Benefits for Your Business</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-8">
                 <div className="flex gap-6">
@@ -87,8 +87,8 @@ const EmailSetup = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3 text-[#221F26]">Look Professional</h3>
-                    <p className="text-[#222222]">Custom email addresses show customers you're an established business they can trust.</p>
+                    <h3 className="text-xl font-semibold mb-3 text-white">Look Professional</h3>
+                    <p className="text-gray-300">Custom email addresses show customers you're an established business they can trust.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -98,8 +98,8 @@ const EmailSetup = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3 text-[#221F26]">Reliable & Secure</h3>
-                    <p className="text-[#222222]">Enterprise-grade security and 99.9% uptime ensure your business communications never miss a beat.</p>
+                    <h3 className="text-xl font-semibold mb-3 text-white">Reliable & Secure</h3>
+                    <p className="text-gray-300">Enterprise-grade security and 99.9% uptime ensure your business communications never miss a beat.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -109,14 +109,14 @@ const EmailSetup = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3 text-[#221F26]">Easy Team Collaboration</h3>
-                    <p className="text-[#222222]">Share documents, manage calendars, and coordinate with your team effortlessly.</p>
+                    <h3 className="text-xl font-semibold mb-3 text-white">Easy Team Collaboration</h3>
+                    <p className="text-gray-300">Share documents, manage calendars, and coordinate with your team effortlessly.</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-900 p-8 rounded-xl text-white">
+              <div className="bg-gray-900/50 p-8 rounded-xl text-white border border-gray-800">
                 <h3 className="text-2xl font-semibold mb-4">Ready to Get Started?</h3>
-                <p className="text-gray-200 mb-6">
+                <p className="text-gray-300 mb-6">
                   Get professional email addresses for your business, plus all the tools you need to work efficiently. 
                   Our setup service includes everything - you'll be up and running in no time.
                 </p>
@@ -136,3 +136,4 @@ const EmailSetup = () => {
 };
 
 export default EmailSetup;
+
