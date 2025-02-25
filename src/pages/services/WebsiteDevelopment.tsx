@@ -1,8 +1,7 @@
-
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { Button } from "../../components/ui/button";
-import { Globe, Server, Shield, FileText, Image, Map, MessageSquare, CheckCircle2, Beaker, Code, Database, Browser } from "lucide-react";
+import { Globe, Server, Shield, FileText, Image, Map, MessageSquare, CheckCircle2, Beaker, Code, Database, Globe2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const WebsiteDevelopment = () => {
@@ -28,7 +27,7 @@ const WebsiteDevelopment = () => {
       description: "Easy-to-use content management system for updating your website."
     },
     {
-      icon: <Browser className="w-12 h-12 text-primary" />,
+      icon: <Globe2 className="w-12 h-12 text-primary" />,
       title: "Responsive Design",
       description: "Your website will look great on all devices - desktop, tablet, and mobile."
     },
@@ -78,7 +77,7 @@ const WebsiteDevelopment = () => {
                 <div className="bg-[#0f172a] rounded-lg shadow-xl p-6 border border-white/20">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center">
-                      <Browser className="w-8 h-8 text-white" />
+                      <Globe2 className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Your Website</h3>
@@ -151,4 +150,3 @@ const WebsiteDevelopment = () => {
 };
 
 export default WebsiteDevelopment;
-
