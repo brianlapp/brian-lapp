@@ -16,40 +16,40 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Educ8r Classroom Sweepstakes Platform",
-    description: "A full-stack web application that manages a $1,000 classroom sweepstakes campaign, featuring a viral referral system that integrates with Everflow for tracking and BeehiiV for email marketing, allowing teachers to enter and share for additional chances to win classroom supplies.",
+    title: "Educ8r Classroom Sweepstakes",
+    description: "A $1,000 classroom sweepstakes platform featuring a viral referral system, Everflow tracking integration, and BeehiiV email marketing. Built to help teachers win classroom supplies through social sharing.",
     link: "https://educ8r.freeparentsearch.com/",
     category: "Web Application",
     image: "/lovable-uploads/893cbb33-c451-46d9-8ef5-cfc1d5f6ff67.png",
     type: "fullstack"
   },
   {
-    title: "Word Flood",
-    description: "A word-building game where players create words by connecting letters while racing against rising flood waters. Players aim to score points by forming longer words before time runs out. Features real-time scoring and leaderboard functionality.",
+    title: "Word Flood Game",
+    description: "An engaging word-building game where players create words from connecting letters while racing against rising flood waters. Features real-time scoring and leaderboard functionality.",
     link: "https://lovable.dev/projects/6e41d4a2-56b3-41fc-98ae-a386876dfe04",
-    category: "Web Application",
+    category: "Interactive Game",
     image: "/lovable-uploads/745aec88-dd2f-4d40-8bb9-27af73561b2d.png",
     type: "frontend"
   },
   {
-    title: "CarlySpina.com - Holistic Healing & Spiritual Wellness",
-    description: "A professional website for a certified holistic healing practitioner featuring an integrated booking system and comprehensive service offerings including Spinal Energetics, Reiki, and Akashic Records readings.",
+    title: "CarlySpina.com",
+    description: "Professional website for a certified holistic healing practitioner, featuring an integrated booking system for Spinal Energetics, Reiki, and Akashic Records readings.",
     link: "https://carlyspina.com",
     category: "Business Website",
     image: "/lovable-uploads/67ba490d-3ff4-44ab-a0f8-eba4c9e15bac.png",
     type: "frontend"
   },
   {
-    title: "BrandingLabs - Digital Marketing Agency Website",
-    description: "A professional website for a digital marketing agency that offers comprehensive marketing solutions tailored for small businesses, including web development, branding, and social media services.",
+    title: "BrandingLabs",
+    description: "Modern website for a digital marketing agency offering comprehensive solutions for small businesses, including web development, branding, and social media services.",
     link: "https://brandinglabs.ca",
     category: "Business Website",
     image: "/lovable-uploads/241e9c3e-df7d-4f41-af03-c01b6e51f7c9.png",
     type: "frontend"
   },
   {
-    title: "Melville's Plumbing Website",
-    description: "A professional plumbing services website showcasing emergency and specialized plumbing services, built with React and modern web technologies. Features a comprehensive service catalog and interactive contact forms.",
+    title: "Melville's Plumbing",
+    description: "Professional plumbing services website showcasing emergency and specialized services. Features a comprehensive service catalog and interactive contact forms.",
     link: "https://melvillesplumbing.ca",
     category: "Business Website",
     image: "/lovable-uploads/981afe15-f86d-4e9e-a654-6155d49e5d84.png",
@@ -57,9 +57,9 @@ export const projects: Project[] = [
   },
   {
     title: "Marley Co.",
-    description: "A pre-launch landing page for a premium diaper bag backpack brand that combines style with functionality. Features a rotating gallery, premium features showcase, and integrated waitlist system offering a $10 sign-up bonus.",
+    description: "Pre-launch landing page for a premium diaper bag brand. Features a rotating product gallery, features showcase, and waitlist system with $10 sign-up bonus.",
     link: "https://lovable.dev/projects/8ebafb94-5265-48b8-99f1-ee9e6820f23c",
-    category: "E-commerce Landing Page",
+    category: "E-commerce",
     image: "/lovable-uploads/5672dd26-411f-48d7-9d72-cb0529a45bbf.png",
     type: "frontend"
   }
@@ -77,9 +77,9 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {filteredProjects.map((project, index) => (
-        <Card key={index} className="overflow-hidden bg-card border-border hover:border-border/50 transition-colors">
+        <Card key={index} className="overflow-hidden bg-card border-border hover:border-border/50 transition-colors group">
           <div className={cn(
-            "aspect-video w-full overflow-hidden bg-muted",
+            "aspect-video w-full overflow-hidden bg-muted relative group-hover:opacity-95 transition-opacity",
             !project.image && "flex items-center justify-center"
           )}>
             {project.image ? (
@@ -92,18 +92,20 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
               <Code className="w-12 h-12 text-muted-foreground" />
             )}
           </div>
-          <CardHeader>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-sm font-medium text-primary">{project.category}</span>
+          <CardHeader className="space-y-2">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium text-primary/90">{project.category}</span>
             </div>
-            <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-            <CardDescription>{project.description}</CardDescription>
+            <CardTitle className="text-xl leading-tight">{project.title}</CardTitle>
+            <CardDescription className="text-muted-foreground/90 leading-relaxed">
+              {project.description}
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <Button 
               asChild 
               variant="outline" 
-              className="w-full"
+              className="w-full hover:bg-primary/5 hover:border-primary/30"
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
                 View Project <ExternalLink className="ml-2 h-4 w-4" />
@@ -117,3 +119,4 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
 };
 
 export default ProjectGrid;
+
