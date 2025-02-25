@@ -52,14 +52,14 @@ const services = [
 
 const ServicesShowcase = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">What I Offer</h1>
-          <p className="text-xl text-gray-600">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">What I Offer</h1>
+          <p className="text-xl text-muted-foreground">
             I provide tailored digital solutions to help your business stand out and succeed online.
           </p>
         </div>
@@ -69,15 +69,15 @@ const ServicesShowcase = () => {
             <Link
               key={index}
               to={service.link}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-border"
             >
               <div className="mb-6 transform transition-transform group-hover:scale-110 duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-muted-foreground mb-6">
                 {service.description}
               </p>
               <span className="text-primary font-medium inline-flex items-center group-hover:underline">
@@ -94,4 +94,3 @@ const ServicesShowcase = () => {
 };
 
 export default ServicesShowcase;
-
