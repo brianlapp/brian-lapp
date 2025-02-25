@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import ProjectGrid, { projects } from "../components/sections/ProjectGrid";
+import ProjectGrid from "../components/sections/ProjectGrid";
+import { projects } from "../data/projects";
 import { Button } from "../components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Cpu, BrainCircuit, Sparkles, LineChart } from "lucide-react";
