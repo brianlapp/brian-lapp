@@ -11,8 +11,11 @@ const Hero = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Hi, I'm Brian Lapp
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative group">
+              <span className="bg-gradient-to-r from-white via-purple-300 to-purple-500 bg-clip-text text-transparent animate-gradient relative inline-block">
+                Hi, I'm Brian Lapp
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 via-purple-300 to-transparent transform origin-left transition-all duration-300 scale-x-0 group-hover:scale-x-100"></span>
+              </span>
               <span className="block text-gray-400 text-2xl md:text-3xl lg:text-4xl mt-2">
                 Frontend Developer & UI Engineer
               </span>
