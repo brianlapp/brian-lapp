@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,19 +26,19 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#6366f1", // Indigo
+          DEFAULT: "#F97316", // Orange
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#4f46e5", // Darker indigo
+          DEFAULT: "#ea384c", // Red
           foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#0f172a", // Dark blue
+          DEFAULT: "#1A1F2C", // Dark background
           foreground: "#94a3b8", // Slate-400
         },
         accent: {
-          DEFAULT: "#10b981", // Emerald green for accent
+          DEFAULT: "#F97316", // Orange
           foreground: "#ffffff",
         },
       },
