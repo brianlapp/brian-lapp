@@ -1,4 +1,3 @@
-
 import { Project } from "../types/project";
 
 export const projects: Project[] = [
@@ -7,7 +6,7 @@ export const projects: Project[] = [
     description: "A modern single-page website for a unique family retreat focused on digital detoxification. Features an interactive countdown timer, dynamic booking system, and lead capture functionality, all built with React and TypeScript for a seamless user experience.",
     link: "https://lovable.dev/projects/ffbcb268-8c5b-49f1-aafd-635e6263bf68",
     category: "Business Website",
-    image: "/lovable-uploads/075b3cca-4277-4496-ac9e-3d828b218837.png",
+    image: "/lovable-uploads/061e9f7e-0149-412d-b7be-10c794cb97d7.png",
     type: "frontend",
     tags: ["React", "TypeScript", "Interactive"]
   },
@@ -62,4 +61,3 @@ export const projects: Project[] = [
     type: "frontend"
   }
 ];
-
