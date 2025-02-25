@@ -17,6 +17,13 @@ const Work = () => {
       image: "/lovable-uploads/745aec88-dd2f-4d40-8bb9-27af73561b2d.png"
     },
     {
+      title: "CarlySpina.com - Holistic Healing & Spiritual Wellness",
+      description: "A professional website for a certified holistic healing practitioner featuring an integrated booking system and comprehensive service offerings including Spinal Energetics, Reiki, and Akashic Records readings. Built with React, TypeScript, and Tailwind CSS, incorporating SEO optimization and responsive design for optimal user experience.",
+      link: "https://carlyspina.com",
+      category: "Business Website",
+      image: "/lovable-uploads/67ba490d-3ff4-44ab-a0f8-eba4c9e15bac.png"
+    },
+    {
       title: "BrandingLabs - Digital Marketing Agency Website",
       description: "A professional website for a digital marketing agency that offers comprehensive marketing solutions tailored for small businesses, including web development, branding, and social media services. The site features a modern, responsive design with detailed service pages and clear calls-to-action.",
       link: "https://brandinglabs.ca",
@@ -104,4 +111,3 @@ const Work = () => {
 };
 
 export default Work;
-
