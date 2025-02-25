@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 import Hero from "../components/sections/Hero";
 import Footer from "../components/Footer";
 import ProjectGrid from "../components/sections/ProjectGrid";
-import { ArrowRight, BrainCircuit, Code, Database, GitBranch, LucideIcon } from "lucide-react";
+import { ArrowRight, BrainCircuit, Globe, LineChart, Rocket } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -34,9 +34,9 @@ const Index = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-foreground">Featured Projects</h2>
+              <h2 className="text-3xl font-bold mb-4 text-foreground">Featured Work</h2>
               <p className="text-muted-foreground max-w-2xl">
-                A selection of my most impactful AI and full-stack development work
+                High-performing websites and digital solutions that drive real business results
               </p>
             </div>
             <Link to="/work" className="inline-flex items-center text-primary hover:text-primary/80 mt-4 md:mt-0">
@@ -52,27 +52,27 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-foreground">AI & Full-Stack Development</h2>
+            <h2 className="text-3xl font-bold mb-4 text-foreground">Solutions That Drive Growth</h2>
             <p className="text-muted-foreground">
-              Building intelligent, scalable applications with the latest AI technologies and solid development practices
+              From blazing-fast websites to AI-powered automation, I build digital solutions that help businesses scale
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Feature 
+              title="Web Development" 
+              description="Custom, high-performing websites built with modern technologies and optimized for conversion."
+              icon={Globe}
+            />
+            <Feature 
+              title="SEO & Optimization" 
+              description="Data-driven strategies to improve visibility, user experience, and conversion rates."
+              icon={LineChart}
+            />
+            <Feature 
               title="AI Integration" 
-              description="Incorporate machine learning models and AI capabilities into existing applications and workflows."
+              description="Smart automation and AI-powered solutions to streamline your business operations."
               icon={BrainCircuit}
-            />
-            <Feature 
-              title="Full Stack Development" 
-              description="Build end-to-end applications with modern frontend frameworks, API design, and scalable backend systems."
-              icon={Code}
-            />
-            <Feature 
-              title="Data Engineering" 
-              description="Design and implement efficient data pipelines, storage solutions, and analytics systems."
-              icon={Database}
             />
           </div>
           
@@ -91,15 +91,15 @@ const Index = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-foreground">
-              Ready to build something intelligent?
+              Ready to build a site that works as hard as you do?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Let's discuss how AI and full-stack development can solve your business challenges
+              Let's create a digital presence that helps your business stand out and scale
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="w-full sm:w-auto">
-                  Start a Conversation
+                  Start Your Project
                 </Button>
               </Link>
               <Link to="/work">

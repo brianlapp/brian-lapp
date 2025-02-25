@@ -1,5 +1,5 @@
 
-import { ArrowRight, Code, BrainCircuit, Github } from "lucide-react";
+import { ArrowRight, Code, BrainCircuit, Github, Globe, LineChart } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
 import { Badge } from "../../components/ui/badge";
@@ -18,7 +18,7 @@ const Hero = () => (
         <div className="space-y-8">
           <div className="flex items-center space-x-2 mb-4">
             <Badge variant="outline" className="px-3 py-1 border-primary/20 bg-primary/5 text-primary">
-              Full Stack AI Developer
+              Web Developer & Digital Marketing Expert
             </Badge>
           </div>
           
@@ -26,26 +26,26 @@ const Hero = () => (
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
               Hi, I'm Brian Lapp
               <span className="block text-primary text-2xl md:text-3xl mt-3">
-                Building intelligent applications that solve real problems
+                Building high-performing websites that convert
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Specializing in full-stack development with AI integration. I design and build intelligent systems that transform data into insights and actions.
+              Helping businesses stand out with blazing-fast websites, smart design, and AI-powered solutions that deliver real results.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-3 text-muted-foreground">
             <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
+              <Globe className="w-4 h-4 text-primary" />
+              <span>Web Development</span>
+            </div>
+            <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
+              <LineChart className="w-4 h-4 text-primary" />
+              <span>SEO & Conversion</span>
+            </div>
+            <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
               <BrainCircuit className="w-4 h-4 text-primary" />
-              <span>AI/ML Engineering</span>
-            </div>
-            <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
-              <Code className="w-4 h-4 text-primary" />
-              <span>Full Stack Development</span>
-            </div>
-            <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
-              <Github className="w-4 h-4 text-primary" />
-              <span>Open Source Contributor</span>
+              <span>AI Integration</span>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ const Hero = () => (
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg border-primary/50 text-primary hover:bg-primary/10">
-                Let's Talk
+                Let's Build Something
               </Button>
             </Link>
           </div>
