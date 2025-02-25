@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
@@ -97,7 +98,7 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
             <div className="flex items-center gap-2 flex-wrap">
               <span className="text-sm font-medium text-primary">{project.category}</span>
               {project.tags?.map((tag, i) => (
-                <span key={i} className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                <span key={i} className="text-xs px-2 py-1 rounded-full bg-primary text-primary-foreground font-medium">
                   {tag}
                 </span>
               ))}
@@ -125,3 +126,4 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
 };
 
 export default ProjectGrid;
+
