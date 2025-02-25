@@ -1,3 +1,4 @@
+
 import Navigation from "../../components/Navigation";
 import CallToAction from "../../components/sections/CallToAction";
 import { Button } from "../../components/ui/button";
@@ -15,14 +16,14 @@ const PrintMedia = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Print Media Design
+                  Print Design That Gets Results
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Print materials like flyers, brochures, and posters remain powerful tools for getting your message across. I create compelling, professional designs that capture attention and drive action.
+                  Need business cards, flyers, or brochures that stand out? I'll help you create professional print materials that make a lasting impression and bring in more customers.
                 </p>
                 <Link to="/contact">
                   <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Start Your Print Project
+                    Start Your Project
                   </Button>
                 </Link>
               </div>
@@ -84,35 +85,35 @@ const PrintMedia = () => {
 
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">What I Offer</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">How I Can Help</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="p-6 bg-card rounded-lg hover:shadow-lg transition-shadow border border-border/50">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <FileText className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-foreground">Custom Design</h3>
-                <p className="text-muted-foreground">Eye-catching flyers, brochures, and posters that reflect your brand.</p>
+                <p className="text-muted-foreground">Personalized designs that match your brand and attract your ideal customers.</p>
               </div>
               <div className="p-6 bg-card rounded-lg hover:shadow-lg transition-shadow border border-border/50">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Palette className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Branded Consistency</h3>
-                <p className="text-muted-foreground">Perfect alignment with your overall brand identity.</p>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Brand Consistency</h3>
+                <p className="text-muted-foreground">Your print materials will perfectly match your existing brand identity.</p>
               </div>
               <div className="p-6 bg-card rounded-lg hover:shadow-lg transition-shadow border border-border/50">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Layout className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Winning Layouts</h3>
-                <p className="text-muted-foreground">Designs focused on driving action and results.</p>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Effective Layouts</h3>
+                <p className="text-muted-foreground">Strategic designs that guide readers and drive them to take action.</p>
               </div>
               <div className="p-6 bg-card rounded-lg hover:shadow-lg transition-shadow border border-border/50">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Printer className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Quality Printing</h3>
-                <p className="text-muted-foreground">Various paper finishes and sizes to suit your needs.</p>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Print Ready</h3>
+                <p className="text-muted-foreground">High-quality files optimized for your chosen printing method and material.</p>
               </div>
             </div>
           </div>
@@ -122,27 +123,27 @@ const PrintMedia = () => {
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Why Print Media Still Works
+              Why Print Materials Matter
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="bg-card p-6 rounded-lg shadow-sm border border-border/50">
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Tangible Impact</h3>
-                  <p className="text-muted-foreground">A physical flyer or brochure leaves a lasting impression, especially when it's designed professionally.</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Stand Out Locally</h3>
+                  <p className="text-muted-foreground">Professional print materials help you build trust and recognition in your local market.</p>
                 </div>
                 <div className="bg-card p-6 rounded-lg shadow-sm border border-border/50">
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Local Marketing</h3>
-                  <p className="text-muted-foreground">Perfect for reaching local customers and driving foot traffic to your store or office.</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Drive Store Traffic</h3>
+                  <p className="text-muted-foreground">Well-designed flyers and brochures effectively guide customers to your door.</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="bg-card p-6 rounded-lg shadow-sm border border-border/50">
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Versatility</h3>
-                  <p className="text-muted-foreground">Create promotional flyers, event handouts, or business postcards designed to meet your specific needs.</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Multi-Purpose Use</h3>
+                  <p className="text-muted-foreground">From trade shows to direct mail, your materials work hard in multiple scenarios.</p>
                 </div>
                 <div className="bg-card p-6 rounded-lg shadow-sm border border-border/50">
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Engagement</h3>
-                  <p className="text-muted-foreground">Well-designed materials give potential customers something tangible to hold onto, increasing action rates.</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Lasting Impact</h3>
+                  <p className="text-muted-foreground">Physical materials create a tangible connection that digital alone can't match.</p>
                 </div>
               </div>
             </div>
@@ -156,3 +157,4 @@ const PrintMedia = () => {
 };
 
 export default PrintMedia;
+

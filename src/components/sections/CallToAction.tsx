@@ -1,3 +1,4 @@
+
 import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -5,10 +6,10 @@ const CallToAction = () => (
   <section className="py-20 bg-primary text-white">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">
-        Ready to Transform Your Online Presence?
+        Ready to Transform Your Business?
       </h2>
       <p className="text-xl mb-8 max-w-2xl mx-auto">
-        Join hundreds of small businesses that have grown with our digital marketing expertise.
+        Let's work together to grow your business with proven digital marketing strategies.
       </p>
       <Link to="/contact">
         <Button
@@ -24,3 +25,4 @@ const CallToAction = () => (
 );
 
 export default CallToAction;
+
