@@ -5,14 +5,16 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Code, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 const Work = () => {
   const projects = [
     {
-      title: "Portfolio Website",
-      description: "A modern portfolio website built with React, Tailwind CSS, and shadcn/ui components. Features a responsive design, dark mode, and smooth animations.",
-      link: "https://lovable.dev/brian-lapp/portfolio",
-      category: "Personal Website"
+      title: "BrandingLabs - Digital Marketing Agency Website",
+      description: "A professional website for a digital marketing agency that offers comprehensive marketing solutions tailored for small businesses, including web development, branding, and social media services. The site features a modern, responsive design with detailed service pages and clear calls-to-action.",
+      link: "https://brandinglabs.ca",
+      category: "Business Website",
+      image: "/lovable-uploads/9ant9z"
     },
     {
       title: "Agency Website",
@@ -45,8 +47,19 @@ const Work = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden bg-gray-900 border-gray-800 hover:border-gray-700 transition-colors">
-              <div className="aspect-video w-full overflow-hidden bg-gray-800 flex items-center justify-center">
-                <Code className="w-12 h-12 text-gray-600" />
+              <div className={cn(
+                "aspect-video w-full overflow-hidden bg-gray-800",
+                !project.image && "flex items-center justify-center"
+              )}>
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <Code className="w-12 h-12 text-gray-600" />
+                )}
               </div>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-2">
