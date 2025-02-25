@@ -9,7 +9,7 @@ const Hero = () => (
     
     <div className="container mx-auto px-4 relative z-10">
       <div className="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
-        <div className="md:col-span-7 lg:col-span-6 space-y-8">
+        <div className="md:col-span-8 lg:col-span-7 space-y-8">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative group">
               <span className="bg-gradient-to-r from-white via-purple-300 to-purple-500 bg-clip-text text-transparent animate-gradient relative inline-block">
@@ -39,8 +39,8 @@ const Hero = () => (
           </div>
         </div>
 
-        <div className="md:col-span-5 lg:col-span-6 flex justify-center md:justify-end">
-          <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px] group perspective">
+        <div className="md:col-span-4 lg:col-span-5 flex justify-center md:justify-end">
+          <div className="relative w-[280px] h-[280px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] group perspective">
             <div className="relative w-full h-full transform-gpu transition-all duration-500 group-hover:rotate-y-12">
               <img src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png" alt="Brian Lapp" className="rounded-2xl object-cover w-full h-full brightness-90" />
               {/* Code pattern overlay */}
