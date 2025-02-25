@@ -9,8 +9,19 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
+    { 
+      name: "Services",
+      href: "/services",
+      subLinks: [
+        { name: "Website Development", href: "/services/website-development" },
+        { name: "Brand & Logo Design", href: "/services/branding-and-logo" },
+        { name: "Email Setup", href: "/services/email-setup" },
+        { name: "Newsletter Setup", href: "/services/newsletter-setup" },
+        { name: "Social Media", href: "/services/social-media" },
+        { name: "Print Media", href: "/services/print-media" },
+      ]
+    },
     { name: "Projects", href: "/work" },
-    { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
   ];
 

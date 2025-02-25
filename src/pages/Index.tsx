@@ -1,9 +1,8 @@
-
 import Navigation from "../components/Navigation";
 import Hero from "../components/sections/Hero";
 import Footer from "../components/Footer";
 import ProjectGrid from "../components/sections/ProjectGrid";
-import { ArrowRight, BrainCircuit, Globe, LineChart, Camera, Video, Palette, Plus } from "lucide-react";
+import { ArrowRight, BrainCircuit, Globe, LineChart, Camera, Video, Palette, Plus, PenTool, Mail, ScrollText, Share2, Printer } from "lucide-react";
 import type { LucideIcon } from 'lucide-react';
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
@@ -14,21 +13,23 @@ type ServiceProps = {
   icon: LucideIcon;
 };
 
-const Service = ({ title, description, icon: Icon }: ServiceProps) => (
-  <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-card/50 to-card border border-border hover:border-primary/50 transition-all duration-500">
-    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    <div className="relative z-10">
-      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-500">
-        <Icon className="w-7 h-7 text-primary" />
-      </div>
-      <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">{title}</h3>
-      <p className="text-muted-foreground text-lg leading-relaxed mb-6">{description}</p>
-      <div className="flex items-center text-primary">
-        <span className="mr-2 font-medium">Learn more</span>
-        <Plus className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+const Service = ({ title, description, icon: Icon, href }: ServiceProps & { href: string }) => (
+  <Link to={href} className="block">
+    <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-card/50 to-card border border-border hover:border-primary/50 transition-all duration-500">
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="relative z-10">
+        <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-500">
+          <Icon className="w-7 h-7 text-primary" />
+        </div>
+        <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">{title}</h3>
+        <p className="text-muted-foreground text-lg leading-relaxed mb-6">{description}</p>
+        <div className="flex items-center text-primary">
+          <span className="mr-2 font-medium">Learn more</span>
+          <Plus className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+        </div>
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 const Index = () => {
@@ -105,31 +106,37 @@ const Index = () => {
               title="Custom Web Design & Development" 
               description="One-of-a-kind websites that stand out in the digital crowd, built with your favorite CMS platform."
               icon={Globe}
+              href="/services/website-development"
             />
             <Service 
-              title="Photography & Videography" 
-              description="Professional visual content that showcases your products and services in the best light."
-              icon={Camera}
+              title="Brand & Logo Design" 
+              description="Create a memorable brand identity that truly represents your business and resonates with your audience."
+              icon={PenTool}
+              href="/services/branding-and-logo"
             />
             <Service 
-              title="UI/UX Design" 
-              description="Creating seamless user experiences that are visually stunning and optimized for maximum satisfaction."
-              icon={Palette}
+              title="Professional Email Setup" 
+              description="Establish credibility with professional email addresses and powerful collaboration tools."
+              icon={Mail}
+              href="/services/email-setup"
             />
             <Service 
-              title="Website Makeover" 
-              description="Breathe new life into your online presence with strategic redesigns that captivate and convert."
-              icon={BrainCircuit}
+              title="Newsletter Management" 
+              description="Build and grow your audience with engaging newsletter campaigns that drive results."
+              icon={ScrollText}
+              href="/services/newsletter-setup"
             />
             <Service 
-              title="SEO Optimization" 
-              description="Improve your search rankings and attract more qualified traffic with data-driven SEO strategies."
-              icon={LineChart}
+              title="Social Media Branding" 
+              description="Establish a strong presence across key social platforms with cohesive branding and strategy."
+              icon={Share2}
+              href="/services/social-media"
             />
             <Service 
-              title="Video Production" 
-              description="Transform your story into captivating visuals with professional videography and drone footage."
-              icon={Video}
+              title="Print Design" 
+              description="Professional marketing materials that extend your brand to the physical world."
+              icon={Printer}
+              href="/services/print-media"
             />
           </div>
         </div>
@@ -185,4 +192,3 @@ const Index = () => {
 };
 
 export default Index;
-
