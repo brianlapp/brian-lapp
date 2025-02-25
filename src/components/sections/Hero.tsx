@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Badge } from "../../components/ui/badge";
 
 const Hero = () => (
-  <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-background to-card">
+  <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-background to-card pt-24">
     {/* Neural network background pattern */}
     <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
     
