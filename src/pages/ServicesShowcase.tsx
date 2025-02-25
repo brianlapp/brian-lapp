@@ -1,3 +1,4 @@
+
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -13,38 +14,38 @@ import {
 const services = [
   {
     icon: <PenTool className="w-12 h-12 text-primary" />,
-    title: "Branding & Logo Design",
-    description: "Create a memorable brand identity that sets you apart from competitors.",
+    title: "Brand Identity Design",
+    description: "I'll help you develop a memorable brand identity that truly represents your business values.",
     link: "/services/branding-and-logo"
   },
   {
     icon: <Globe className="w-12 h-12 text-primary" />,
-    title: "Website Development",
-    description: "Custom-built, responsive websites that convert visitors into customers.",
+    title: "Custom Website Development",
+    description: "I craft responsive, user-friendly websites that engage your audience and drive results.",
     link: "/services/website-development"
   },
   {
     icon: <Mail className="w-12 h-12 text-primary" />,
-    title: "Email Setup",
-    description: "Professional email solutions with Google Workspace integration.",
+    title: "Professional Email Setup",
+    description: "I'll set up your business email with Google Workspace for a professional online presence.",
     link: "/services/email-setup"
   },
   {
     icon: <ScrollText className="w-12 h-12 text-primary" />,
-    title: "Newsletter Setup",
-    description: "Build and grow your email list with engaging newsletter campaigns.",
+    title: "Newsletter Management",
+    description: "I'll help you build and grow your audience with engaging newsletter campaigns.",
     link: "/services/newsletter-setup"
   },
   {
     icon: <Megaphone className="w-12 h-12 text-primary" />,
-    title: "Social Media",
-    description: "Strategic social media management to build your brand presence.",
+    title: "Social Media Setup",
+    description: "I'll establish your brand presence across key social media platforms.",
     link: "/services/social-media"
   },
   {
     icon: <Printer className="w-12 h-12 text-primary" />,
-    title: "Print Media",
-    description: "High-quality brochures, flyers, and marketing materials.",
+    title: "Print Design",
+    description: "I design professional marketing materials that extend your brand offline.",
     link: "/services/print-media"
   }
 ];
@@ -57,9 +58,9 @@ const ServicesShowcase = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">What I Offer</h1>
           <p className="text-xl text-gray-600">
-            Comprehensive digital solutions to help your business thrive in the modern world.
+            I provide tailored digital solutions to help your business stand out and succeed online.
           </p>
         </div>
 
@@ -80,7 +81,7 @@ const ServicesShowcase = () => {
                 {service.description}
               </p>
               <span className="text-primary font-medium inline-flex items-center group-hover:underline">
-                Read More
+                Learn More
               </span>
             </Link>
           ))}
@@ -93,3 +94,4 @@ const ServicesShowcase = () => {
 };
 
 export default ServicesShowcase;
+
