@@ -35,7 +35,6 @@ const Navigation = () => {
               <Code className="w-5 h-5 text-primary" />
             </div>
             <span className="text-xl font-bold text-foreground">Brian Lapp</span>
-            <span className="hidden sm:inline-block text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">AI Dev</span>
           </Link>
 
           <DesktopNav navLinks={navLinks} />
@@ -60,3 +59,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
