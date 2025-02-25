@@ -1,4 +1,3 @@
-
 import Navigation from "../../components/Navigation";
 import CallToAction from "../../components/sections/CallToAction";
 import { Button } from "../../components/ui/button";
@@ -28,59 +27,55 @@ const PrintMedia = () => {
                 </Link>
               </div>
               <div className="relative">
-                {/* Tri-fold Flyer CSS Graphic with more visual elements */}
+                {/* Tri-fold Flyer CSS Graphic with improved styling */}
                 <div className="relative w-full aspect-[4/3] perspective-1000">
-                  <div className="absolute inset-0 grid grid-cols-3 gap-2 transform hover:-rotate-y-12 transition-transform duration-500">
+                  <div className="absolute inset-0 grid grid-cols-3 gap-4 transform hover:scale-105 transition-all duration-500 ease-in-out">
                     {/* Left Panel */}
-                    <div className="bg-card rounded-l-lg shadow-lg p-4 transform hover:-rotate-y-12 transition-transform duration-300 border border-border/50">
-                      <FileText className="w-8 h-8 text-primary mb-3" />
-                      <div className="space-y-2">
-                        <div className="h-2 bg-muted rounded w-3/4"></div>
-                        <div className="h-2 bg-muted rounded w-1/2"></div>
-                        <div className="mt-4">
-                          <div className="h-20 bg-muted/50 rounded mb-2"></div>
-                          <div className="h-2 bg-muted rounded w-2/3"></div>
-                          <div className="h-2 bg-muted rounded w-1/2 mt-1"></div>
+                    <div className="bg-gradient-to-br from-card/90 to-card rounded-lg shadow-lg p-6 transform hover:-rotate-y-6 transition-all duration-300 border border-border/50 backdrop-blur-sm group">
+                      <FileText className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <div className="space-y-3">
+                        <div className="h-2 bg-muted/60 rounded w-3/4 group-hover:bg-muted/80 transition-colors"></div>
+                        <div className="h-2 bg-muted/60 rounded w-1/2 group-hover:bg-muted/80 transition-colors"></div>
+                        <div className="mt-6">
+                          <div className="h-24 bg-muted/40 rounded mb-3 group-hover:bg-muted/60 transition-colors"></div>
+                          <div className="h-2 bg-muted/60 rounded w-2/3 group-hover:bg-muted/80 transition-colors"></div>
+                          <div className="h-2 bg-muted/60 rounded w-1/2 mt-2 group-hover:bg-muted/80 transition-colors"></div>
                         </div>
                       </div>
                     </div>
                     {/* Middle Panel */}
-                    <div className="bg-card shadow-lg p-4 transform hover:scale-105 transition-transform duration-300 border border-border/50">
-                      <Layout className="w-8 h-8 text-secondary mb-3" />
-                      <div className="space-y-2">
-                        <div className="h-2 bg-muted rounded"></div>
-                        <div className="h-2 bg-muted rounded w-2/3"></div>
-                        <div className="grid grid-cols-2 gap-2 mt-4">
-                          <div className="h-16 bg-muted/50 rounded"></div>
-                          <div className="h-16 bg-muted/50 rounded"></div>
+                    <div className="bg-gradient-to-br from-card/90 to-card rounded-lg shadow-lg p-6 transform hover:scale-110 transition-all duration-300 border border-border/50 backdrop-blur-sm group z-10">
+                      <Layout className="w-8 h-8 text-secondary mb-4 group-hover:scale-110 transition-transform" />
+                      <div className="space-y-3">
+                        <div className="h-2 bg-muted/60 rounded group-hover:bg-muted/80 transition-colors"></div>
+                        <div className="h-2 bg-muted/60 rounded w-2/3 group-hover:bg-muted/80 transition-colors"></div>
+                        <div className="grid grid-cols-2 gap-3 mt-6">
+                          <div className="h-20 bg-muted/40 rounded group-hover:bg-muted/60 transition-colors"></div>
+                          <div className="h-20 bg-muted/40 rounded group-hover:bg-muted/60 transition-colors"></div>
                         </div>
-                        <div className="h-2 bg-muted rounded w-3/4"></div>
-                        <div className="h-2 bg-muted rounded w-1/2"></div>
-                      </div>
-                      {/* Added decorative elements */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-20 h-20 rounded-full bg-primary/5 animate-pulse"></div>
+                        <div className="h-2 bg-muted/60 rounded w-3/4 group-hover:bg-muted/80 transition-colors"></div>
+                        <div className="h-2 bg-muted/60 rounded w-1/2 group-hover:bg-muted/80 transition-colors"></div>
                       </div>
                     </div>
                     {/* Right Panel */}
-                    <div className="bg-card rounded-r-lg shadow-lg p-4 transform hover:rotate-y-12 transition-transform duration-300 border border-border/50">
-                      <Palette className="w-8 h-8 text-accent mb-3" />
-                      <div className="space-y-2">
-                        <div className="h-2 bg-muted rounded w-2/3"></div>
-                        <div className="h-2 bg-muted rounded w-1/2"></div>
-                        <div className="mt-4">
-                          <div className="grid grid-rows-3 gap-2">
-                            <div className="h-8 bg-muted/50 rounded"></div>
-                            <div className="h-8 bg-muted/50 rounded"></div>
-                            <div className="h-8 bg-muted/50 rounded"></div>
+                    <div className="bg-gradient-to-br from-card/90 to-card rounded-lg shadow-lg p-6 transform hover:rotate-y-6 transition-all duration-300 border border-border/50 backdrop-blur-sm group">
+                      <Palette className="w-8 h-8 text-accent mb-4 group-hover:scale-110 transition-transform" />
+                      <div className="space-y-3">
+                        <div className="h-2 bg-muted/60 rounded w-2/3 group-hover:bg-muted/80 transition-colors"></div>
+                        <div className="h-2 bg-muted/60 rounded w-1/2 group-hover:bg-muted/80 transition-colors"></div>
+                        <div className="mt-6">
+                          <div className="grid grid-rows-3 gap-3">
+                            <div className="h-10 bg-muted/40 rounded group-hover:bg-muted/60 transition-colors"></div>
+                            <div className="h-10 bg-muted/40 rounded group-hover:bg-muted/60 transition-colors"></div>
+                            <div className="h-10 bg-muted/40 rounded group-hover:bg-muted/60 transition-colors"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  {/* Added floating decorative elements */}
-                  <div className="absolute -top-8 -right-8 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
-                  <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-secondary/10 rounded-full blur-xl animate-pulse"></div>
+                  {/* Enhanced decorative elements */}
+                  <div className="absolute -top-8 -right-8 w-40 h-40 bg-primary/5 rounded-full blur-2xl animate-pulse"></div>
+                  <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary/5 rounded-full blur-2xl animate-pulse"></div>
                 </div>
               </div>
             </div>
@@ -161,4 +156,3 @@ const PrintMedia = () => {
 };
 
 export default PrintMedia;
-
