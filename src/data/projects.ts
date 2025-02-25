@@ -1,6 +1,16 @@
+
 import { Project } from "../types/project";
 
 export const projects: Project[] = [
+  {
+    title: "Free.ca – Canada's Premier Freebies & Deals Hub",
+    description: "A leading platform that connects Canadians with the latest free samples, giveaways, coupons, and deals across various categories, from beauty and groceries to tech and entertainment. With a user-friendly interface and curated offers, Free.ca helps Canadians save money while discovering new products.",
+    link: "https://free.ca",
+    category: "Web Application",
+    image: "/lovable-uploads/8e178eb0-6301-4d38-a498-6374d970bb47.png",
+    type: "fullstack",
+    tags: ["Deals", "E-commerce", "Lead Generation"]
+  },
   {
     title: "BioHack Your Family - Screen Detox Family Retreat",
     description: "A modern single-page website for a unique family retreat focused on digital detoxification. Features an interactive countdown timer, dynamic booking system, and lead capture functionality, all built with React and TypeScript for a seamless user experience.",
