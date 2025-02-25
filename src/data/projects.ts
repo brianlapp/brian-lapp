@@ -3,6 +3,15 @@ import { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
+    title: "BioHack Your Family - Screen Detox Family Retreat",
+    description: "A modern single-page website for a unique family retreat focused on digital detoxification. Features an interactive countdown timer, dynamic booking system, and lead capture functionality, all built with React and TypeScript for a seamless user experience.",
+    link: "https://lovable.dev/projects/ffbcb268-8c5b-49f1-aafd-635e6263bf68",
+    category: "Business Website",
+    image: "/lovable-uploads/075b3cca-4277-4496-ac9e-3d828b218837.png",
+    type: "frontend",
+    tags: ["React", "TypeScript", "Interactive"]
+  },
+  {
     title: "Educ8r Classroom Sweepstakes",
     description: "A $1,000 classroom sweepstakes platform featuring a viral referral system, Everflow tracking integration, and BeehiiV email marketing. Built to help teachers win classroom supplies through social sharing.",
     link: "https://educ8r.freeparentsearch.com/",
@@ -53,3 +62,4 @@ export const projects: Project[] = [
     type: "frontend"
   }
 ];
+
