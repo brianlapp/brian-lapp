@@ -7,13 +7,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "../../components/ui/dropdown-menu";
-
-type NavLink = {
-  name: string;
-  href: string;
-  subLinks?: { name: string; href: string }[];
-};
+} from "../ui/dropdown-menu";
+import { NavLink } from "../../types/navigation";
 
 type DesktopNavProps = {
   navLinks: NavLink[];

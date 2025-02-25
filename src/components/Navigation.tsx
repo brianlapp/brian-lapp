@@ -4,11 +4,12 @@ import { Menu, X, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 import DesktopNav from "./navigation/DesktopNav";
 import MobileNav from "./navigation/MobileNav";
+import { NavLink } from "../types/navigation";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { 
       name: "Services",
       href: "/services",

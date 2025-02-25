@@ -1,11 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-
-type NavLink = {
-  name: string;
-  href: string;
-  subLinks?: { name: string; href: string }[];
-};
+import { NavLink } from "../../types/navigation";
 
 type MobileNavProps = {
   navLinks: NavLink[];
