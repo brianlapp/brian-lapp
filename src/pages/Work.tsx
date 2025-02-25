@@ -42,7 +42,7 @@ const Work = () => {
       description: "A pre-launch landing page for a premium diaper bag backpack brand that combines style with functionality. Features a rotating gallery, premium features showcase, and integrated waitlist system offering a $10 sign-up bonus. Built with React, TypeScript, and Tailwind CSS, demonstrating expertise in modern web development and e-commerce strategy.",
       link: "https://lovable.dev/projects/8ebafb94-5265-48b8-99f1-ee9e6820f23c",
       category: "E-commerce Landing Page",
-      image: "/lovable-uploads/fec00e82-1d66-4a83-a21f-87a0423a5d10.png"
+      image: "/lovable-uploads/5672dd26-411f-48d7-9d72-cb0529a45bbf.png"
     },
     {
       title: "Agency Website",
