@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../../components/ui/card";
 import { Mail, Users, Repeat, DollarSign } from "lucide-react";
 
 export const NewsletterBenefits = () => {

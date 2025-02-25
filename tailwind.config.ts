@@ -25,19 +25,19 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#ff5757", // New red color
+          DEFAULT: "#6366f1", // Indigo
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#e64545", // Slightly darker red for secondary
+          DEFAULT: "#4f46e5", // Darker indigo
           foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#fff5f5", // Red-tinted white
-          foreground: "#334155", // Slate-700
+          DEFAULT: "#0f172a", // Dark blue
+          foreground: "#94a3b8", // Slate-400
         },
         accent: {
-          DEFAULT: "#ff6b6b", // Light red
+          DEFAULT: "#10b981", // Emerald green for accent
           foreground: "#ffffff",
         },
       },
@@ -83,12 +83,30 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "pulse-slow": {
+          "0%, 100%": {
+            opacity: "0.4",
+          },
+          "50%": {
+            opacity: "0.6",
+          },
+        },
+        "data-flow": {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-down": "fade-down 0.5s ease-out",
         "slide-up": "slide-up 0.5s ease-out",
         "slide-down": "slide-down 0.5s ease-out",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "data-flow": "data-flow 8s linear infinite",
       },
     },
   },

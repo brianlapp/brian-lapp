@@ -1,6 +1,6 @@
-import Navigation from "@/components/Navigation";
-import CallToAction from "@/components/sections/CallToAction";
-import { Button } from "@/components/ui/button";
+import Navigation from "../../components/Navigation";
+import CallToAction from "../../components/sections/CallToAction";
+import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
 import { FileText, Palette, Layout, Printer } from "lucide-react";
 

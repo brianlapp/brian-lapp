@@ -1,7 +1,7 @@
-import Navigation from "@/components/Navigation";
-import CallToAction from "@/components/sections/CallToAction";
+import Navigation from "../../components/Navigation";
+import CallToAction from "../../components/sections/CallToAction";
 import { Check, Facebook, Instagram, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
 
 const SocialMedia = () => {

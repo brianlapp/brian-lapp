@@ -1,10 +1,10 @@
-import Navigation from "@/components/Navigation";
-import CallToAction from "@/components/sections/CallToAction";
-import { Button } from "@/components/ui/button";
+import Navigation from "../../components/Navigation";
+import CallToAction from "../../components/sections/CallToAction";
+import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
 import { Database, Gift } from "lucide-react";
-import { NewsletterPreview } from "@/components/newsletter/NewsletterPreview";
-import { NewsletterBenefits } from "@/components/newsletter/NewsletterBenefits";
+import { NewsletterPreview } from "../../components/newsletter/NewsletterPreview";
+import { NewsletterBenefits } from "../../components/newsletter/NewsletterBenefits";
 
 const NewsletterSetup = () => {
   return (

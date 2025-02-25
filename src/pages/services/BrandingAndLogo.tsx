@@ -1,6 +1,6 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
+import { Button } from "../../components/ui/button";
 import { Palette, PenTool, MessageSquare, Brush, Layers } from "lucide-react";
 import { Link } from "react-router-dom";
 

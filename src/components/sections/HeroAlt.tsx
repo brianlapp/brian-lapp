@@ -1,4 +1,4 @@
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "../../hooks/use-mobile";
 import FloatingBubbles from "../hero/FloatingBubbles";
 import HeroContent from "../hero/HeroContent";
 import HeroBackground from "../hero/HeroBackground";

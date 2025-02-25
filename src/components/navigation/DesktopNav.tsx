@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../../components/ui/dropdown-menu";
 
 type NavLink = {
   name: string;
@@ -23,14 +23,14 @@ const DesktopNav = ({ navLinks }: DesktopNavProps) => (
     {navLinks.map((link) =>
       link.subLinks ? (
         <DropdownMenu key={link.name}>
-          <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+          <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
             {link.name}
             <ChevronDown className="h-4 w-4" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-white border-none shadow-lg">
+          <DropdownMenuContent className="bg-card border-border">
             {link.subLinks.map((subLink) => (
               <DropdownMenuItem key={subLink.href} asChild>
-                <Link to={subLink.href} className="w-full cursor-pointer">
+                <Link to={subLink.href} className="w-full cursor-pointer text-foreground">
                   {subLink.name}
                 </Link>
               </DropdownMenuItem>
@@ -41,15 +41,15 @@ const DesktopNav = ({ navLinks }: DesktopNavProps) => (
         <Link
           key={link.name}
           to={link.href}
-          className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
           {link.name}
         </Link>
       )
     )}
     <Link to="/contact">
-      <Button className="bg-primary hover:bg-primary/90 text-white">
-        Free Consultation
+      <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary/10 hover:text-primary">
+        <Mail className="w-4 h-4 mr-2" /> Let's Connect
       </Button>
     </Link>
   </div>
