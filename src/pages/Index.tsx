@@ -1,3 +1,4 @@
+
 import Navigation from "../components/Navigation";
 import Hero from "../components/sections/Hero";
 import Footer from "../components/Footer";
@@ -44,16 +45,17 @@ const Index = () => {
         <div className="container relative z-10">
           <div className="space-y-8 max-w-4xl">
             <h2 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              About Me
+              Local Business Web Expert
             </h2>
             <p className="text-2xl leading-relaxed text-muted-foreground">
-              As a freelance web developer and digital marketing expert, I specialize in creating 
-              high-performance websites that drive results. With a focus on clean design and 
-              user experience, I help small businesses establish a strong online presence.
+              I specialize in helping small businesses like yours succeed online. With years of experience 
+              in web development and digital marketing, I create high-performance websites that attract 
+              local customers and drive real business growth.
             </p>
             <p className="text-2xl leading-relaxed text-muted-foreground">
-              My approach combines technical expertise with creative problem-solving to deliver 
-              solutions that not only look great but also perform exceptionally well.
+              My approach combines technical expertise with practical business solutions. Every website 
+              I build is designed to generate leads, improve your local visibility, and make it easy 
+              for customers to connect with your business.
             </p>
           </div>
         </div>
@@ -68,10 +70,10 @@ const Index = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
               <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                Recent Work
+                Success Stories
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Crafting digital experiences that propel small businesses forward – your vision, our expertise, limitless possibilities.
+                See how local businesses like yours are growing with professional websites that attract customers and drive sales.
               </p>
             </div>
             <Link to="/work" className="group inline-flex items-center text-primary hover:text-primary/80 mt-6 md:mt-0">
@@ -90,51 +92,51 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="inline-block mb-6">
               <div className="py-1.5 px-6 rounded-full bg-primary/10 text-primary text-lg font-medium">
-                My Services
+                Digital Solutions
               </div>
             </div>
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              Solutions for Small Business Success
+              Essential Tools for Business Growth
             </h2>
             <p className="text-xl text-muted-foreground">
-              From blazing-fast websites to creative content, I deliver comprehensive digital solutions that help local businesses thrive
+              Everything your small business needs to succeed online - from fast-loading websites to professional branding
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Service 
-              title="Custom Web Design & Development" 
-              description="One-of-a-kind websites that stand out in the digital crowd, built with your favorite CMS platform."
+              title="Custom Website Development" 
+              description="Get a professional website that loads fast, ranks well in local searches, and turns visitors into customers."
               icon={Globe}
               href="/services/website-development"
             />
             <Service 
               title="Brand & Logo Design" 
-              description="Create a memorable brand identity that truly represents your business and resonates with your audience."
+              description="Stand out in your local market with professional branding that builds trust and recognition."
               icon={PenTool}
               href="/services/branding-and-logo"
             />
             <Service 
-              title="Professional Email Setup" 
-              description="Establish credibility with professional email addresses and powerful collaboration tools."
+              title="Business Email Setup" 
+              description="Look professional with custom email addresses that match your domain name (you@yourbusiness.com)."
               icon={Mail}
               href="/services/email-setup"
             />
             <Service 
-              title="Newsletter Management" 
-              description="Build and grow your audience with engaging newsletter campaigns that drive results."
+              title="Email Marketing" 
+              description="Keep customers coming back with professional newsletters and automated email campaigns."
               icon={ScrollText}
               href="/services/newsletter-setup"
             />
             <Service 
-              title="Social Media Branding" 
-              description="Establish a strong presence across key social platforms with cohesive branding and strategy."
+              title="Social Media Setup" 
+              description="Attract local customers with professional profiles on Facebook, Instagram, and LinkedIn."
               icon={Share2}
               href="/services/social-media"
             />
             <Service 
-              title="Print Design" 
-              description="Professional marketing materials that extend your brand to the physical world."
+              title="Print Materials" 
+              description="Get professional business cards, brochures, and marketing materials that match your online brand."
               icon={Printer}
               href="/services/print-media"
             />
@@ -149,15 +151,17 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-2xl">
               <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                Why Choose Me?
+                Personal Service, Professional Results
               </h2>
               <p className="text-2xl text-muted-foreground leading-relaxed mb-10">
-                As a solo freelancer, I offer personalized service and attention to detail that you won't find at a larger agency. I'm dedicated to delivering high-quality work that exceeds your expectations and helps you achieve your goals.
+                As your dedicated web partner, I provide the personal attention and expertise your business needs. 
+                No confusing agency teams or complex processes - just direct communication and fast results that help 
+                your business grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link to="/contact">
                   <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-xl bg-primary hover:bg-primary/90 transition-colors">
-                    Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                    Start Growing Online <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/work">
@@ -166,7 +170,7 @@ const Index = () => {
                     variant="outline" 
                     className="w-full sm:w-auto text-lg px-8 py-6 rounded-xl border-primary/30 text-primary hover:bg-primary/10"
                   >
-                    View My Work
+                    View Success Stories
                   </Button>
                 </Link>
               </div>
@@ -176,7 +180,7 @@ const Index = () => {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/30 to-accent/30 blur-[60px] opacity-30"></div>
                 <img
                   src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
-                  alt="Brian Lapp"
+                  alt="Brian Lapp - Web Developer for Small Businesses"
                   className="rounded-3xl object-cover w-full h-full relative z-10 transform hover:scale-[1.02] transition-transform duration-500"
                 />
                 <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-primary to-accent opacity-20 z-0 animate-pulse-slow"></div>
@@ -192,3 +196,4 @@ const Index = () => {
 };
 
 export default Index;
+
