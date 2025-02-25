@@ -16,15 +16,15 @@ const SocialMedia = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Social Media Branding & Page Setup
+                  Professional Social Media Setup for Small Businesses
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Your social media presence is often the first impression customers have of your business. 
-                  A well-branded and cohesive profile can make you stand out and build trust instantly.
+                  Get a polished, professional presence across major social platforms that attracts customers and builds trust. 
+                  Perfect for busy business owners who want to make a strong first impression online.
                 </p>
                 <Link to="/contact">
                   <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Start Your Social Media Journey
+                    Get Your Professional Social Media Setup
                   </Button>
                 </Link>
               </div>
@@ -61,71 +61,71 @@ const SocialMedia = () => {
 
           {/* What's Included Section */}
           <section className="mb-16">
-            <h2 className="text-2xl font-semibold mb-8 text-center text-foreground">What's Included in Our Social Media Branding Service</h2>
+            <h2 className="text-2xl font-semibold mb-8 text-center text-foreground">Complete Social Media Setup Package</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">Page Creation or Update</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">Professional Profile Setup</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Setting up new pages on key platforms (Facebook, Instagram, LinkedIn, etc.) or enhancing your existing profiles.</span>
+                    <span className="text-muted-foreground">Complete setup of your business profiles on Facebook, Instagram, and LinkedIn to attract local customers</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Ensuring your contact information, business hours, and other details are accurate and accessible.</span>
+                    <span className="text-muted-foreground">Optimization of business hours, contact details, and location information for better local search visibility</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">Branded Visuals</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">Brand-Focused Design</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Profile and cover photos designed to align with your brand identity.</span>
+                    <span className="text-muted-foreground">Eye-catching profile photos and cover images that match your business brand</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Custom highlights, story covers, and banners (platform-dependent).</span>
+                    <span className="text-muted-foreground">Custom graphic templates for consistent, professional-looking posts and stories</span>
                   </li>
                 </ul>
               </div>
             </div>
           </section>
 
-          {/* Why Social Media Branding Matters */}
+          {/* Why Social Media Matters */}
           <section className="mb-16">
-            <h2 className="text-2xl font-semibold mb-8 text-center text-foreground">Why Social Media Branding Matters</h2>
+            <h2 className="text-2xl font-semibold mb-8 text-center text-foreground">Benefits for Your Small Business</h2>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="bg-card p-6 rounded-xl border border-border hover:bg-card/80 transition-colors">
-                <h3 className="text-xl font-semibold mb-3 text-foreground">First Impressions Count</h3>
-                <p className="text-muted-foreground">Professionally branded pages give your business credibility and help you make a strong first impression.</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">Attract Local Customers</h3>
+                <p className="text-muted-foreground">Professional profiles help you appear in local searches and attract customers in your area</p>
               </div>
               <div className="bg-card p-6 rounded-xl border border-border hover:bg-card/80 transition-colors">
-                <h3 className="text-xl font-semibold mb-3 text-foreground">Brand Recognition</h3>
-                <p className="text-muted-foreground">Consistent visuals and messaging make your business memorable and build trust with your audience.</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">Build Trust</h3>
+                <p className="text-muted-foreground">Professional social media presence shows customers you're established and trustworthy</p>
               </div>
               <div className="bg-card p-6 rounded-xl border border-border hover:bg-card/80 transition-colors">
-                <h3 className="text-xl font-semibold mb-3 text-foreground">Improved Engagement</h3>
-                <p className="text-muted-foreground">A cohesive, attractive profile encourages users to follow, like, and engage with your business.</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">Save Time</h3>
+                <p className="text-muted-foreground">Get everything set up right the first time, so you can focus on running your business</p>
               </div>
               <div className="bg-card p-6 rounded-xl border border-border hover:bg-card/80 transition-colors">
-                <h3 className="text-xl font-semibold mb-3 text-foreground">Streamlined Content</h3>
-                <p className="text-muted-foreground">With custom templates, posting becomes faster and easier, freeing you to focus on running your business.</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">Easy Updates</h3>
+                <p className="text-muted-foreground">Custom templates make it simple to maintain a professional look on all your posts</p>
               </div>
             </div>
           </section>
 
-          {/* Get Social with Confidence */}
+          {/* Call to Action */}
           <section className="text-center mb-16 bg-card p-12 rounded-2xl border border-border">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">Get Social with Confidence</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Start Growing Your Business Online</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-              We'll ensure your social media pages reflect your brand and set you up for success in the digital space. 
-              Whether you need new pages or a refresh, we're here to help.
+              Get a professional social media presence that helps your small business stand out and attract more local customers. 
+              Our setup package gives you everything you need to look professional online.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Contact Us Today
+                Schedule Your Social Media Setup
               </Button>
             </Link>
           </section>
@@ -137,3 +137,4 @@ const SocialMedia = () => {
 };
 
 export default SocialMedia;
+
