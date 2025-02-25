@@ -11,6 +11,7 @@ export type Project = {
   category: string;
   image: string;
   type: 'ai' | 'fullstack' | 'frontend' | 'data';
+  tags?: string[];
 };
 
 export const projects: Project[] = [
@@ -20,7 +21,8 @@ export const projects: Project[] = [
     link: "https://educ8r.freeparentsearch.com/",
     category: "Web Application",
     image: "/lovable-uploads/893cbb33-c451-46d9-8ef5-cfc1d5f6ff67.png",
-    type: "fullstack"
+    type: "fullstack",
+    tags: ["Lead Generation"]
   },
   {
     title: "Word Flood Game",
@@ -92,8 +94,13 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
             )}
           </div>
           <CardHeader className="space-y-2">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
               <span className="text-sm font-medium text-primary">{project.category}</span>
+              {project.tags?.map((tag, i) => (
+                <span key={i} className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                  {tag}
+                </span>
+              ))}
             </div>
             <CardTitle className="text-xl leading-tight text-foreground">{project.title}</CardTitle>
             <CardDescription className="text-muted-foreground leading-relaxed">
