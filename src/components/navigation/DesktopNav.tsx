@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { ChevronDown, Mail } from "lucide-react";
@@ -27,7 +28,7 @@ const DesktopNav = ({ navLinks }: DesktopNavProps) => (
             {link.name}
             <ChevronDown className="h-4 w-4" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-card border-border">
+          <DropdownMenuContent className="z-[100] bg-background/95 backdrop-blur-md border-border">
             {link.subLinks.map((subLink) => (
               <DropdownMenuItem key={subLink.href} asChild>
                 <Link to={subLink.href} className="w-full cursor-pointer text-foreground">
