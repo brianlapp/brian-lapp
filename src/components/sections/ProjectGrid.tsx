@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
@@ -77,9 +76,9 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {filteredProjects.map((project, index) => (
-        <Card key={index} className="overflow-hidden bg-card border-border hover:border-border/50 transition-colors group">
+        <Card key={index} className="overflow-hidden bg-muted hover:bg-muted/80 transition-colors group border-2 border-muted-foreground/10 hover:border-primary/20">
           <div className={cn(
-            "aspect-video w-full overflow-hidden bg-muted relative group-hover:opacity-95 transition-opacity",
+            "aspect-video w-full overflow-hidden bg-background relative group-hover:opacity-95 transition-opacity",
             !project.image && "flex items-center justify-center"
           )}>
             {project.image ? (
@@ -94,10 +93,10 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
           </div>
           <CardHeader className="space-y-2">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-primary/90">{project.category}</span>
+              <span className="text-sm font-medium text-primary">{project.category}</span>
             </div>
-            <CardTitle className="text-xl leading-tight">{project.title}</CardTitle>
-            <CardDescription className="text-muted-foreground/90 leading-relaxed">
+            <CardTitle className="text-xl leading-tight text-foreground">{project.title}</CardTitle>
+            <CardDescription className="text-muted-foreground leading-relaxed">
               {project.description}
             </CardDescription>
           </CardHeader>
@@ -105,7 +104,7 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
             <Button 
               asChild 
               variant="outline" 
-              className="w-full hover:bg-primary/5 hover:border-primary/30"
+              className="w-full hover:bg-primary/10 hover:border-primary/30 text-foreground border-muted-foreground/20"
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
                 View Project <ExternalLink className="ml-2 h-4 w-4" />
@@ -119,4 +118,3 @@ const ProjectGrid = ({ filter }: ProjectGridProps) => {
 };
 
 export default ProjectGrid;
-
