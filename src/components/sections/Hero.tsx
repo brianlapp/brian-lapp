@@ -8,8 +8,8 @@ const Hero = () => (
     <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
     
     <div className="container mx-auto px-4 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
+      <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="space-y-8 lg:max-w-[60%]">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative group">
               <span className="bg-gradient-to-r from-white via-purple-300 to-purple-500 bg-clip-text text-transparent animate-gradient relative inline-block">
@@ -39,8 +39,8 @@ const Hero = () => (
           </div>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] group perspective">
+        <div className="relative flex justify-center lg:justify-end lg:flex-1">
+          <div className="relative w-[200px] h-[200px] md:w-[280px] md:h-[280px] group perspective">
             <div className="relative w-full h-full transform-gpu transition-all duration-500 group-hover:rotate-y-12">
               <img
                 src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
