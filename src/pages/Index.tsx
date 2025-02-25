@@ -15,20 +15,19 @@ type ServiceProps = {
 };
 
 const Service = ({ title, description, icon: Icon }: ServiceProps) => (
-  <div className="relative p-6 rounded-lg bg-card border border-border group hover:border-primary/50 transition-all">
-    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-      <Icon className="w-6 h-6 text-primary" />
+  <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-card/50 to-card border border-border hover:border-primary/50 transition-all duration-500">
+    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="relative z-10">
+      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-500">
+        <Icon className="w-7 h-7 text-primary" />
+      </div>
+      <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">{title}</h3>
+      <p className="text-muted-foreground text-lg leading-relaxed mb-6">{description}</p>
+      <div className="flex items-center text-primary">
+        <span className="mr-2 font-medium">Learn more</span>
+        <Plus className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+      </div>
     </div>
-    <h3 className="text-xl font-medium mb-2 text-foreground">{title}</h3>
-    <p className="text-muted-foreground mb-4">{description}</p>
-    <div className="flex items-center text-primary">
-      <span className="mr-2">Read more</span>
-      <Plus className="w-4 h-4 group-hover:rotate-90 transition-transform" />
-    </div>
-    
-    {/* Y2K-inspired decorative elements */}
-    <div className="absolute -top-2 -right-2 w-4 h-4 bg-accent/20 rounded-full blur-sm animate-pulse" />
-    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-primary/20 rounded-full blur-sm animate-pulse" style={{ animationDelay: "1s" }} />
   </div>
 );
 
@@ -39,16 +38,19 @@ const Index = () => {
       <Hero />
       
       {/* About Me Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
-        <div className="container">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">About Me</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="container relative z-10">
+          <div className="space-y-8 max-w-4xl">
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              About Me
+            </h2>
+            <p className="text-2xl leading-relaxed text-muted-foreground">
               As a freelance web developer and digital marketing expert, I specialize in creating 
               high-performance websites that drive results. With a focus on clean design and 
               user experience, I help small businesses establish a strong online presence.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-2xl leading-relaxed text-muted-foreground">
               My approach combines technical expertise with creative problem-solving to deliver 
               solutions that not only look great but also perform exceptionally well.
             </p>
@@ -57,21 +59,23 @@ const Index = () => {
       </section>
 
       {/* Featured Work */}
-      <section className="py-20 bg-card relative overflow-hidden">
-        {/* Y2K-inspired background elements */}
+      <section className="py-32 bg-card relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-primary/10 rounded-full filter blur-[100px] animate-pulse-slow" />
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/10 rounded-full filter blur-[120px] animate-pulse-slow" />
         
         <div className="container relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-foreground">Recent Work</h2>
-              <p className="text-muted-foreground max-w-2xl">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                Recent Work
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl">
                 Crafting digital experiences that propel small businesses forward – your vision, our expertise, limitless possibilities.
               </p>
             </div>
-            <Link to="/work" className="inline-flex items-center text-primary hover:text-primary/80 mt-4 md:mt-0">
-              View All Projects <ArrowRight className="ml-2 h-4 w-4" />
+            <Link to="/work" className="group inline-flex items-center text-primary hover:text-primary/80 mt-6 md:mt-0">
+              <span className="text-lg font-medium mr-2">View All Projects</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
           
@@ -80,21 +84,23 @@ const Index = () => {
       </section>
       
       {/* Services */}
-      <section className="py-20 bg-background relative overflow-hidden">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="flex justify-center mb-4">
-              <div className="py-1 px-4 rounded-full bg-primary/10 text-primary text-sm font-medium">
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-block mb-6">
+              <div className="py-1.5 px-6 rounded-full bg-primary/10 text-primary text-lg font-medium">
                 My Services
               </div>
             </div>
-            <h2 className="text-3xl font-bold mb-4 text-foreground">Solutions for Small Business Success</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              Solutions for Small Business Success
+            </h2>
+            <p className="text-xl text-muted-foreground">
               From blazing-fast websites to creative content, I deliver comprehensive digital solutions that help local businesses thrive
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Service 
               title="Custom Web Design & Development" 
               description="One-of-a-kind websites that stand out in the digital crowd, built with your favorite CMS platform."
@@ -130,39 +136,43 @@ const Index = () => {
       </section>
       
       {/* Why Choose Me */}
-      <section className="py-20 bg-card relative overflow-hidden">
+      <section className="py-32 bg-card relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
         <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">
+              <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Why Choose Me?
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-2xl text-muted-foreground leading-relaxed mb-10">
                 As a solo freelancer, I offer personalized service and attention to detail that you won't find at a larger agency. I'm dedicated to delivering high-quality work that exceeds your expectations and helps you achieve your goals.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6">
                 <Link to="/contact">
-                  <Button size="lg" className="w-full sm:w-auto">
-                    Get Started <ArrowRight className="ml-2" />
+                  <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-xl bg-primary hover:bg-primary/90 transition-colors">
+                    Get Started <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/work">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/30 text-primary hover:bg-primary/10">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="w-full sm:w-auto text-lg px-8 py-6 rounded-xl border-primary/30 text-primary hover:bg-primary/10"
+                  >
                     View My Work
                   </Button>
                 </Link>
               </div>
             </div>
             <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/30 to-accent/30 blur-[40px] opacity-30"></div>
+              <div className="relative w-[320px] h-[320px] md:w-[480px] md:h-[480px]">
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/30 to-accent/30 blur-[60px] opacity-30"></div>
                 <img
                   src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
                   alt="Brian Lapp"
-                  className="rounded-2xl object-cover w-full h-full relative z-10"
+                  className="rounded-3xl object-cover w-full h-full relative z-10 transform hover:scale-[1.02] transition-transform duration-500"
                 />
-                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-primary to-accent opacity-20 z-0"></div>
+                <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-primary to-accent opacity-20 z-0 animate-pulse-slow"></div>
               </div>
             </div>
           </div>
@@ -175,3 +185,4 @@ const Index = () => {
 };
 
 export default Index;
+
