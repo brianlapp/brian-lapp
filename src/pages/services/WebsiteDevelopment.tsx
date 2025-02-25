@@ -1,7 +1,8 @@
+
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { Button } from "../../components/ui/button";
-import { Globe, Server, Shield, FileText, Image, Map, MessageSquare, CheckCircle2, Beaker } from "lucide-react";
+import { Globe, Server, Shield, FileText, Image, Map, MessageSquare, CheckCircle2, Beaker, Code, Database, Browser } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const WebsiteDevelopment = () => {
@@ -9,7 +10,7 @@ const WebsiteDevelopment = () => {
     {
       icon: <Globe className="w-12 h-12 text-primary" />,
       title: "Domain Registration",
-      description: "We'll guide you through purchasing the perfect domain name that reflects your business."
+      description: "I'll guide you through purchasing the perfect domain name that reflects your business."
     },
     {
       icon: <Server className="w-12 h-12 text-primary" />,
@@ -22,74 +23,77 @@ const WebsiteDevelopment = () => {
       description: "SSL certificates included to ensure your site is safe and trusted."
     },
     {
-      icon: <FileText className="w-12 h-12 text-primary" />,
-      title: "Content Creation",
-      description: "Professional content writing tailored to your business needs."
+      icon: <Database className="w-12 h-12 text-primary" />,
+      title: "Content Management",
+      description: "Easy-to-use content management system for updating your website."
     },
     {
-      icon: <Image className="w-12 h-12 text-primary" />,
-      title: "Stock Media",
-      description: "High-quality stock images to enhance your website's visual appeal."
+      icon: <Browser className="w-12 h-12 text-primary" />,
+      title: "Responsive Design",
+      description: "Your website will look great on all devices - desktop, tablet, and mobile."
     },
     {
-      icon: <Map className="w-12 h-12 text-primary" />,
-      title: "Map & Contact Integration",
-      description: "Interactive map and user-friendly contact form included."
+      icon: <Code className="w-12 h-12 text-primary" />,
+      title: "Custom Development",
+      description: "Tailored functionality to meet your specific business needs."
     }
   ];
 
   const process = [
-    "Consultation to understand your needs and goals",
-    "Domain registration, hosting, and SSL setup",
-    "Content writing and visual design tailored to your business",
-    "A polished, fully functional website ready to impress"
+    "Initial consultation to understand your goals",
+    "Design and wireframe approval",
+    "Development and content integration",
+    "Testing and launch preparation"
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navigation />
       <main className="container mx-auto px-4 pt-24 pb-12">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section with Website Preview */}
-          <div className="relative mb-16 rounded-xl overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5 p-8">
+          <div className="relative mb-16 rounded-xl overflow-hidden bg-[#1a1f2c] p-8 border border-white/20">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg">
-                    <Beaker className="w-6 h-6 text-primary animate-pulse" />
+                    <Code className="w-6 h-6 text-primary animate-pulse" />
                   </div>
-                  <span className="text-sm font-medium text-primary">Web Development Lab</span>
+                  <span className="text-sm font-medium text-primary">Web Development</span>
                 </div>
-                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   Website Development
                 </h1>
-                <p className="text-lg text-gray-600 mb-8">
-                  Your website is the cornerstone of your online presence—it's where potential customers go to learn about your business, explore your services, and connect with you.
+                <p className="text-lg text-gray-200 mb-8 leading-relaxed">
+                  I create custom websites that not only look great but drive results for your business. From simple landing pages to complex web applications, I'll help you establish a strong online presence.
                 </p>
                 <Link to="/contact">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold">
                     Start Your Website Project
                   </Button>
                 </Link>
               </div>
               <div className="relative">
                 {/* Website Preview Mock */}
-                <div className="bg-white rounded-lg shadow-xl p-4">
-                  <div className="h-8 bg-gray-100 rounded-t-lg flex items-center px-4 gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="border-t border-gray-200">
-                    <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                      <Globe className="w-16 h-16 text-gray-300" />
+                <div className="bg-[#0f172a] rounded-lg shadow-xl p-6 border border-white/20">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center">
+                      <Browser className="w-8 h-8 text-white" />
                     </div>
-                    <div className="p-4">
-                      <div className="h-4 bg-gray-200 rounded w-3/4 mb-3"></div>
-                      <div className="h-3 bg-gray-200 rounded w-full mb-2"></div>
-                      <div className="h-3 bg-gray-200 rounded w-5/6"></div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Your Website</h3>
+                      <p className="text-gray-200">Professional • Modern • Effective</p>
                     </div>
                   </div>
+                  <div className="grid grid-cols-4 gap-3 mb-4">
+                    {Array.from({ length: 4 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 border border-white/10"
+                      />
+                    ))}
+                  </div>
+                  <div className="h-2 w-3/4 bg-gradient-to-r from-primary to-primary/70 rounded-full" />
                 </div>
               </div>
             </div>
@@ -97,45 +101,27 @@ const WebsiteDevelopment = () => {
 
           {/* Features Grid */}
           <section className="mb-16">
-            <h2 className="text-2xl font-semibold mb-8 text-center">What's Included in Our Website Development Service</h2>
+            <h2 className="text-3xl font-semibold mb-8 text-center text-white">What's Included</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Custom Website Design */}
-          <section className="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-2xl">
-            <h2 className="text-2xl font-semibold mb-6">Custom Website Design</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              A clean, modern design customized to your business, featuring up to 5 pages:
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {["Home", "Services Pages (x3)", "Contact"].map((page, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm p-4 rounded-lg">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="font-medium">{page}</span>
-                  </div>
+                <div key={index} className="p-8 bg-[#1a1f2c] rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-white/20">
+                  {feature.icon}
+                  <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                  <p className="text-gray-200">{feature.description}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* The Process */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-semibold mb-8 text-center">The Process</h2>
+          <section className="mb-16 bg-[#1a1f2c] rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-semibold mb-8 text-center text-white">The Process</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {process.map((step, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow h-full">
+                  <div className="bg-[#0f172a] p-6 rounded-lg shadow-lg border border-white/10 hover:border-white/20 transition-colors h-full">
                     <div className="text-primary font-bold text-4xl mb-4">{index + 1}</div>
-                    <p className="text-gray-600">{step}</p>
+                    <p className="text-gray-200">{step}</p>
                   </div>
                   {index < process.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-primary/30"></div>
@@ -146,14 +132,14 @@ const WebsiteDevelopment = () => {
           </section>
 
           {/* Call to Action */}
-          <section className="text-center bg-gradient-to-br from-primary/10 to-secondary/10 p-12 rounded-2xl">
-            <h2 className="text-2xl font-semibold mb-4">Get Online Today!</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Let us help you establish your online presence with a website that works as hard as you do.
+          <section className="text-center bg-[#1a1f2c] rounded-xl p-12 border border-white/20">
+            <h2 className="text-3xl font-semibold mb-4 text-white">Ready to Get Started?</h2>
+            <p className="text-lg text-gray-200 max-w-3xl mx-auto mb-8">
+              Let's create a website that works as hard as you do. I'll help you establish a professional online presence that drives results for your business.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Contact Us Now
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold">
+                Let's Discuss Your Project
               </Button>
             </Link>
           </section>
@@ -165,3 +151,4 @@ const WebsiteDevelopment = () => {
 };
 
 export default WebsiteDevelopment;
+
