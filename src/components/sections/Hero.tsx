@@ -66,7 +66,7 @@ const Hero = () => {
             <div>
               <h1 className="text-[3.5rem] md:text-[7rem] lg:text-[8rem] font-bold mb-4 md:mb-8 text-foreground leading-[0.9] tracking-tight">
                 Brian Lapp
-                <span className="block text-primary text-2xl md:text-4xl mt-4 md:mt-6">
+                <span className="block text-primary text-2xl md:text-4xl mt-4 md:mt-6 tracking-wide">
                   Building high-performing websites that convert
                 </span>
               </h1>
@@ -154,3 +154,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
