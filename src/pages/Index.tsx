@@ -1,9 +1,9 @@
-
 import Navigation from "../components/Navigation";
 import Hero from "../components/sections/Hero";
 import Footer from "../components/Footer";
 import ProjectGrid from "../components/sections/ProjectGrid";
 import { ArrowRight, BrainCircuit, Globe, LineChart, Rocket } from "lucide-react";
+import type { LucideIcon } from 'lucide-react';
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -44,7 +44,7 @@ const Index = () => {
             </Link>
           </div>
           
-          <ProjectGrid limit={3} />
+          <ProjectGrid />
         </div>
       </section>
       
