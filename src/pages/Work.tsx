@@ -50,18 +50,6 @@ const Work = () => {
       link: "https://lovable.dev/projects/8ebafb94-5265-48b8-99f1-ee9e6820f23c",
       category: "E-commerce Landing Page",
       image: "/lovable-uploads/5672dd26-411f-48d7-9d72-cb0529a45bbf.png"
-    },
-    {
-      title: "Agency Website",
-      description: "A professional agency website with service packages, pricing information, and contact forms. Built using React and modern UI components.",
-      link: "https://lovable.dev/brian-lapp/agency",
-      category: "Business Website"
-    },
-    {
-      title: "Interactive Dashboard",
-      description: "A responsive dashboard interface with data visualization, user authentication, and real-time updates using React Query.",
-      link: "https://lovable.dev/brian-lapp/dashboard",
-      category: "Web Application"
     }
   ];
 
