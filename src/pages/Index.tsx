@@ -41,30 +41,17 @@ const Index = () => {
       {/* About Me Section */}
       <section className="py-20 bg-background relative overflow-hidden">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">About Me</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                As a freelance web developer and digital marketing expert, I specialize in creating 
-                high-performance websites that drive results. With a focus on clean design and 
-                user experience, I help small businesses establish a strong online presence.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                My approach combines technical expertise with creative problem-solving to deliver 
-                solutions that not only look great but also perform exceptionally well.
-              </p>
-            </div>
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/30 to-accent/30 blur-[40px] opacity-30"></div>
-                <img
-                  src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
-                  alt="Brian Lapp"
-                  className="rounded-2xl object-cover w-full h-full relative z-10"
-                />
-                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-primary to-accent opacity-20 z-0"></div>
-              </div>
-            </div>
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground">About Me</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              As a freelance web developer and digital marketing expert, I specialize in creating 
+              high-performance websites that drive results. With a focus on clean design and 
+              user experience, I help small businesses establish a strong online presence.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              My approach combines technical expertise with creative problem-solving to deliver 
+              solutions that not only look great but also perform exceptionally well.
+            </p>
           </div>
         </div>
       </section>
@@ -146,24 +133,37 @@ const Index = () => {
       <section className="py-20 bg-card relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
         <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center text-foreground">
-              Why Choose Me?
-            </h2>
-            <p className="text-xl text-muted-foreground text-center mb-8">
-              As a solo freelancer, I offer personalized service and attention to detail that you won't find at a larger agency. I'm dedicated to delivering high-quality work that exceeds your expectations and helps you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Get Started <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-              <Link to="/work">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/30 text-primary hover:bg-primary/10">
-                  View My Work
-                </Button>
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">
+                Why Choose Me?
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                As a solo freelancer, I offer personalized service and attention to detail that you won't find at a larger agency. I'm dedicated to delivering high-quality work that exceeds your expectations and helps you achieve your goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact">
+                  <Button size="lg" className="w-full sm:w-auto">
+                    Get Started <ArrowRight className="ml-2" />
+                  </Button>
+                </Link>
+                <Link to="/work">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/30 text-primary hover:bg-primary/10">
+                    View My Work
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/30 to-accent/30 blur-[40px] opacity-30"></div>
+                <img
+                  src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
+                  alt="Brian Lapp"
+                  className="rounded-2xl object-cover w-full h-full relative z-10"
+                />
+                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-primary to-accent opacity-20 z-0"></div>
+              </div>
             </div>
           </div>
         </div>
