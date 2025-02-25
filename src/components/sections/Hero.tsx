@@ -15,47 +15,47 @@ const Hero = () => (
     
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-4xl">
-        <div className="flex items-center space-x-2 mb-6">
+        <div className="flex items-center space-x-2 mb-4">
           <Badge variant="outline" className="px-3 py-1 border-primary/20 bg-primary/5 text-primary">
             Web Developer & Digital Marketing Expert
           </Badge>
         </div>
         
         <div>
-          <h1 className="text-[5rem] md:text-[7rem] lg:text-[9rem] font-bold mb-8 text-foreground leading-[0.9] tracking-tight">
+          <h1 className="text-[3.5rem] md:text-[7rem] lg:text-[9rem] font-bold mb-4 md:mb-8 text-foreground leading-[0.9] tracking-tight">
             Brian Lapp
-            <span className="block text-primary text-3xl md:text-4xl mt-6">
+            <span className="block text-primary text-2xl md:text-4xl mt-4 md:mt-6">
               Building high-performing websites that convert
             </span>
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Helping businesses stand out with blazing-fast websites, smart design, and AI-powered solutions that deliver real results.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3 text-muted-foreground mt-10">
-          <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
-            <Globe className="w-4 h-4 text-primary" />
+        <div className="flex flex-wrap gap-2 md:gap-3 text-muted-foreground mt-6 md:mt-10">
+          <div className="flex items-center text-xs md:text-sm gap-1 bg-card px-3 py-1 rounded-full">
+            <Globe className="w-3 h-3 md:w-4 md:h-4 text-primary" />
             <span>Web Development</span>
           </div>
-          <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
-            <LineChart className="w-4 h-4 text-primary" />
+          <div className="flex items-center text-xs md:text-sm gap-1 bg-card px-3 py-1 rounded-full">
+            <LineChart className="w-3 h-3 md:w-4 md:h-4 text-primary" />
             <span>SEO & Conversion</span>
           </div>
-          <div className="flex items-center text-sm gap-1 bg-card px-3 py-1 rounded-full">
-            <BrainCircuit className="w-4 h-4 text-primary" />
+          <div className="flex items-center text-xs md:text-sm gap-1 bg-card px-3 py-1 rounded-full">
+            <BrainCircuit className="w-3 h-3 md:w-4 md:h-4 text-primary" />
             <span>AI Integration</span>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 pt-10">
+        <div className="flex flex-col sm:flex-row gap-3 pt-6 md:pt-10">
           <Link to="/work">
-            <Button size="lg" className="w-full sm:w-auto text-lg">
+            <Button size="lg" className="w-full sm:w-auto text-base md:text-lg">
               View My Work <ArrowRight className="ml-2" />
             </Button>
           </Link>
           <Link to="/contact">
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg border-primary/50 text-primary hover:bg-primary/10">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto text-base md:text-lg border-primary/50 text-primary hover:bg-primary/10">
               Let's Build Something
             </Button>
           </Link>
