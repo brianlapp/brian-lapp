@@ -40,13 +40,27 @@ const Hero = () => (
         </div>
 
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
-            <img
-              src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
-              alt="Brian Lapp"
-              className="rounded-2xl object-cover w-full h-full"
-            />
-            <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-gray-500 to-gray-600 opacity-20 blur"></div>
+          <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] group perspective">
+            <div className="relative w-full h-full transform-gpu transition-all duration-500 group-hover:rotate-y-12">
+              <img
+                src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
+                alt="Brian Lapp"
+                className="rounded-2xl object-cover w-full h-full brightness-90"
+              />
+              {/* Code pattern overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-20 rounded-2xl animate-subtle-drift" />
+              
+              {/* Animated code lines */}
+              <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                <div className="code-line" />
+                <div className="code-line" style={{ animationDelay: '2s' }} />
+                <div className="code-line" style={{ animationDelay: '4s' }} />
+              </div>
+              
+              {/* Glowing border effect */}
+              <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-purple-500/30 to-purple-300/30 opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
+            </div>
           </div>
         </div>
       </div>
