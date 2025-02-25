@@ -6,8 +6,8 @@ export const NewsletterPreview = () => {
   return (
     <div className="bg-[#0f172a] rounded-lg shadow-xl p-8 border border-white/10">
       <div className="mb-8 text-center">
-        <h3 className="text-2xl font-semibold mb-2 text-white">Join Our Newsletter</h3>
-        <p className="text-gray-400">Stay updated with our latest news and exclusive offers!</p>
+        <h3 className="text-2xl font-semibold mb-2 text-white">Get Expert Tips</h3>
+        <p className="text-gray-400">Stay updated with the latest digital marketing strategies!</p>
       </div>
       <form className="space-y-4">
         <Input
@@ -29,8 +29,9 @@ export const NewsletterPreview = () => {
         </Button>
       </form>
       <p className="text-xs text-center text-gray-500 mt-4">
-        We respect your privacy. Unsubscribe at any time.
+        Your privacy is important. Unsubscribe anytime.
       </p>
     </div>
   );
 };
+

@@ -1,27 +1,27 @@
 
-import { Mail, Users, Repeat, DollarSign } from "lucide-react";
+import { Mail, Users, Repeat, Mail as MailIcon } from "lucide-react";
 
 export const NewsletterBenefits = () => {
   const benefits = [
     {
       icon: <Mail className="w-8 h-8 text-primary" />,
-      title: "Direct Communication",
-      description: "Connect directly with your audience, bypassing algorithms."
+      title: "Direct Connection",
+      description: "Reach your audience directly in their inbox, no algorithms in the way."
     },
     {
       icon: <Users className="w-8 h-8 text-primary" />,
-      title: "Increased Engagement",
-      description: "Keep customers informed and interested in your offerings."
+      title: "Build Relationships",
+      description: "Turn subscribers into loyal customers through consistent engagement."
     },
     {
       icon: <Repeat className="w-8 h-8 text-primary" />,
-      title: "Customer Retention",
-      description: "Nurture relationships for repeat business."
+      title: "Stay Top of Mind",
+      description: "Regular updates keep your business in customers' thoughts."
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-primary" />,
-      title: "Cost-Effective",
-      description: "Best ROI compared to other marketing channels."
+      icon: <MailIcon className="w-8 h-8 text-primary" />,
+      title: "Measurable Results",
+      description: "Track opens, clicks, and engagement to improve your strategy."
     }
   ];
 
@@ -39,3 +39,4 @@ export const NewsletterBenefits = () => {
     </div>
   );
 };
+
