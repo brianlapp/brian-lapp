@@ -1,3 +1,4 @@
+
 import Navigation from "../components/Navigation";
 import Hero from "../components/sections/Hero";
 import Footer from "../components/Footer";
@@ -40,7 +41,7 @@ const Index = () => {
       <section className="py-32 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
         <div className="container relative z-10">
-          <div className="space-y-8 max-w-4xl mx-auto text-center">
+          <div className="space-y-8 max-w-4xl">
             <h2 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               About Me
             </h2>
@@ -184,3 +185,4 @@ const Index = () => {
 };
 
 export default Index;
+
