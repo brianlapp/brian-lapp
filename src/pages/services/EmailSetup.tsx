@@ -19,9 +19,9 @@ const EmailSetup = () => {
                   Professional Business Email Setup
                 </h1>
                 <p className="text-lg text-gray-200 mb-8">
-                  Make a professional impression with custom email addresses like info@yourbusiness.com. 
-                  Our complete setup service gets you up and running with Google Workspace, giving you 
-                  powerful business tools and reliable email that works anywhere.
+                  Let me help you make a professional impression with custom email addresses like info@yourbusiness.com. 
+                  I'll set up your Google Workspace account, giving you powerful business tools and reliable email that 
+                  works anywhere.
                 </p>
                 <Link to="/contact">
                   <Button size="lg" className="bg-primary hover:bg-primary/90">
@@ -55,27 +55,27 @@ const EmailSetup = () => {
                 <Mail className="w-12 h-12 text-primary mb-6" />
                 <h3 className="text-xl font-semibold mb-4 text-white">Professional Email</h3>
                 <p className="text-gray-300">
-                  Custom email addresses that match your domain name, helping you look professional and build trust with customers.
+                  I'll set up custom email addresses that match your domain name, helping you look professional and build trust with customers.
                 </p>
               </div>
               <div className="p-8 bg-gray-900/50 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-800">
                 <Calendar className="w-12 h-12 text-primary mb-6" />
                 <h3 className="text-xl font-semibold mb-4 text-white">Business Tools</h3>
                 <p className="text-gray-300">
-                  Access to Gmail, Google Calendar, Drive, and more - everything you need to run your business efficiently.
+                  I'll configure your access to Gmail, Google Calendar, Drive, and more - everything you need to run your business efficiently.
                 </p>
               </div>
               <div className="p-8 bg-gray-900/50 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-800">
                 <Smartphone className="w-12 h-12 text-primary mb-6" />
                 <h3 className="text-xl font-semibold mb-4 text-white">Work Anywhere</h3>
                 <p className="text-gray-300">
-                  Access your email and documents from any device - computer, phone, or tablet, in the office or on the go.
+                  I'll make sure you can access your email and documents from any device - computer, phone, or tablet, in the office or on the go.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Why Choose Google Workspace */}
+          {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center text-white">Benefits for Your Business</h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -99,7 +99,7 @@ const EmailSetup = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-white">Reliable & Secure</h3>
-                    <p className="text-gray-300">Enterprise-grade security and 99.9% uptime ensure your business communications never miss a beat.</p>
+                    <p className="text-gray-300">I'll ensure your setup has enterprise-grade security and 99.9% uptime so your business communications never miss a beat.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -110,19 +110,19 @@ const EmailSetup = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-white">Easy Team Collaboration</h3>
-                    <p className="text-gray-300">Share documents, manage calendars, and coordinate with your team effortlessly.</p>
+                    <p className="text-gray-300">I'll show you how to share documents, manage calendars, and coordinate with your team effortlessly.</p>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-900/50 p-8 rounded-xl text-white border border-gray-800">
                 <h3 className="text-2xl font-semibold mb-4">Ready to Get Started?</h3>
                 <p className="text-gray-300 mb-6">
-                  Get professional email addresses for your business, plus all the tools you need to work efficiently. 
-                  Our setup service includes everything - you'll be up and running in no time.
+                  Let me help you set up professional email addresses for your business, plus configure all the tools you need to work efficiently. 
+                  I'll guide you through the entire process and ensure everything is working perfectly.
                 </p>
                 <Link to="/contact">
                   <Button size="lg" className="w-full bg-white text-gray-900 hover:bg-gray-100">
-                    Contact Us Today
+                    Contact Me Today
                   </Button>
                 </Link>
               </div>
