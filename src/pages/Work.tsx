@@ -1,23 +1,74 @@
 
 import Navigation from "@/components/Navigation";
-import ProjectGrid from "@/components/sections/ProjectGrid";
 import Footer from "@/components/Footer";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Code, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Work = () => {
+  const projects = [
+    {
+      title: "Portfolio Website",
+      description: "A modern portfolio website built with React, Tailwind CSS, and shadcn/ui components. Features a responsive design, dark mode, and smooth animations.",
+      link: "https://lovable.dev/brian-lapp/portfolio",
+      category: "Personal Website"
+    },
+    {
+      title: "Agency Website",
+      description: "A professional agency website with service packages, pricing information, and contact forms. Built using React and modern UI components.",
+      link: "https://lovable.dev/brian-lapp/agency",
+      category: "Business Website"
+    },
+    {
+      title: "Interactive Dashboard",
+      description: "A responsive dashboard interface with data visualization, user authentication, and real-time updates using React Query.",
+      link: "https://lovable.dev/brian-lapp/dashboard",
+      category: "Web Application"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-950">
       <Navigation />
       
-      {/* Hero Section */}
       <div className="container mx-auto px-4 pt-32 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">My Work with Lovable AI</h1>
-          <p className="text-xl text-gray-400 mb-12">
-            Explore a collection of web applications built using Lovable AI - showcasing the power of AI-assisted development.
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            My Work
+          </h1>
+          <p className="text-xl text-gray-400">
+            Explore my recent projects built with React, Tailwind CSS, and modern web technologies.
           </p>
         </div>
 
-        <ProjectGrid />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <Card key={index} className="overflow-hidden bg-gray-900 border-gray-800 hover:border-gray-700 transition-colors">
+              <div className="aspect-video w-full overflow-hidden bg-gray-800 flex items-center justify-center">
+                <Code className="w-12 h-12 text-gray-600" />
+              </div>
+              <CardHeader>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-sm font-medium text-primary">{project.category}</span>
+                </div>
+                <CardTitle className="text-xl mb-2 text-white">{project.title}</CardTitle>
+                <CardDescription className="text-gray-400">{project.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  className="w-full border-gray-800 text-white hover:bg-gray-800"
+                >
+                  <Link to={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                    View Project <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
 
       <Footer />

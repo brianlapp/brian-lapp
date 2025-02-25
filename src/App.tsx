@@ -15,6 +15,7 @@ import NewsletterSetup from "./pages/services/NewsletterSetup";
 import SocialMedia from "./pages/services/SocialMedia";
 import PrintMedia from "./pages/services/PrintMedia";
 import Pricing from "./pages/Pricing";
+import Work from "./pages/Work";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/services" element={<ServicesShowcase />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/work" element={<Work />} />
           <Route path="/services/branding-and-logo" element={<BrandingAndLogo />} />
           <Route path="/services/website-development" element={<WebsiteDevelopment />} />
           <Route path="/services/email-setup" element={<EmailSetup />} />
