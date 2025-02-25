@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -8,6 +9,13 @@ import { cn } from "@/lib/utils";
 
 const Work = () => {
   const projects = [
+    {
+      title: "Word Flood",
+      description: "A word-building game where players create words by connecting letters while racing against rising flood waters. Players aim to score points by forming longer words before time runs out. Features real-time scoring and leaderboard functionality.",
+      link: "https://lovable.dev/projects/6e41d4a2-56b3-41fc-98ae-a386876dfe04",
+      category: "Web Application",
+      image: "/lovable-uploads/745aec88-dd2f-4d40-8bb9-27af73561b2d.png"
+    },
     {
       title: "BrandingLabs - Digital Marketing Agency Website",
       description: "A professional website for a digital marketing agency that offers comprehensive marketing solutions tailored for small businesses, including web development, branding, and social media services. The site features a modern, responsive design with detailed service pages and clear calls-to-action.",
