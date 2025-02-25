@@ -1,4 +1,4 @@
-import { Card, CardContent } from "../../components/ui/card";
+
 import { Mail, Users, Repeat, DollarSign } from "lucide-react";
 
 export const NewsletterBenefits = () => {
@@ -28,12 +28,12 @@ export const NewsletterBenefits = () => {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       {benefits.map((benefit, index) => (
-        <div key={index} className="text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+        <div key={index} className="p-6 rounded-lg bg-[#0f172a] border border-white/10 shadow-xl hover:scale-105 transition-transform duration-300">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/20 mb-4">
             {benefit.icon}
           </div>
-          <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-          <p className="text-gray-600">{benefit.description}</p>
+          <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
+          <p className="text-gray-400">{benefit.description}</p>
         </div>
       ))}
     </div>
