@@ -49,25 +49,25 @@ const EmailSetup = () => {
 
           {/* What's Included Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Complete Business Email Solution</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-slate-800">Complete Business Email Solution</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                 <Mail className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Professional Email</h3>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800">Professional Email</h3>
                 <p className="text-gray-700">
                   Custom email addresses that match your domain name, helping you look professional and build trust with customers.
                 </p>
               </div>
               <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                 <Calendar className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Business Tools</h3>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800">Business Tools</h3>
                 <p className="text-gray-700">
                   Access to Gmail, Google Calendar, Drive, and more - everything you need to run your business efficiently.
                 </p>
               </div>
               <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                 <Smartphone className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Work Anywhere</h3>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800">Work Anywhere</h3>
                 <p className="text-gray-700">
                   Access your email and documents from any device - computer, phone, or tablet, in the office or on the go.
                 </p>
@@ -77,7 +77,7 @@ const EmailSetup = () => {
 
           {/* Why Choose Google Workspace */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Benefits for Your Business</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-slate-800">Benefits for Your Business</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-8">
                 <div className="flex gap-6">
@@ -87,7 +87,7 @@ const EmailSetup = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900">Look Professional</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-slate-800">Look Professional</h3>
                     <p className="text-gray-700">Custom email addresses show customers you're an established business they can trust.</p>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ const EmailSetup = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900">Reliable & Secure</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-slate-800">Reliable & Secure</h3>
                     <p className="text-gray-700">Enterprise-grade security and 99.9% uptime ensure your business communications never miss a beat.</p>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const EmailSetup = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900">Easy Team Collaboration</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-slate-800">Easy Team Collaboration</h3>
                     <p className="text-gray-700">Share documents, manage calendars, and coordinate with your team effortlessly.</p>
                   </div>
                 </div>
