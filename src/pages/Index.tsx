@@ -38,6 +38,37 @@ const Index = () => {
       <Navigation />
       <Hero />
       
+      {/* About Me Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-foreground">About Me</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                As a freelance web developer and digital marketing expert, I specialize in creating 
+                high-performance websites that drive results. With a focus on clean design and 
+                user experience, I help small businesses establish a strong online presence.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                My approach combines technical expertise with creative problem-solving to deliver 
+                solutions that not only look great but also perform exceptionally well.
+              </p>
+            </div>
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/30 to-accent/30 blur-[40px] opacity-30"></div>
+                <img
+                  src="/lovable-uploads/1d279200-b1bc-4eab-acd3-f509a876f64e.png"
+                  alt="Brian Lapp"
+                  className="rounded-2xl object-cover w-full h-full relative z-10"
+                />
+                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-primary to-accent opacity-20 z-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Work */}
       <section className="py-20 bg-card relative overflow-hidden">
         {/* Y2K-inspired background elements */}
