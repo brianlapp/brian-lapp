@@ -15,12 +15,13 @@ const Hero = () => {
 
       const nodes = svg.querySelectorAll('.node');
       nodes.forEach((node) => {
-        const radius = 15 + Math.random() * 10;
-        const speed = 15000 + Math.random() * 5000;
+        const radius = 30 + Math.random() * 40; // Increased radius range
+        const speed = 20000 + Math.random() * 10000;
         const startAngle = Math.random() * Math.PI * 2;
         
-        const centerX = 50 + Math.random() * 10;
-        const centerY = 50 + Math.random() * 10;
+        // Expanded center points for wider distribution
+        const centerX = Math.random() * 100;
+        const centerY = Math.random() * 100;
         const x = centerX + radius * Math.cos(startAngle);
         const y = centerY + radius * Math.sin(startAngle);
         
@@ -33,12 +34,12 @@ const Hero = () => {
         ], {
           duration: speed,
           fill: 'forwards',
-          easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          easing: 'cubic-bezier(0.4, 0, 0.6, 1)',
         });
       });
     };
 
-    const interval = setInterval(animateNodes, 20000);
+    const interval = setInterval(animateNodes, 25000);
     animateNodes();
 
     return () => clearInterval(interval);
@@ -104,46 +105,46 @@ const Hero = () => {
           </div>
 
           <div className="hidden lg:block relative">
-            <div className="relative w-full aspect-square">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/30 to-accent/30 blur-[60px] opacity-30" />
+            <div className="relative w-[140%] aspect-square -translate-x-[20%]">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 to-accent/30 blur-[60px] opacity-30" />
               <svg 
                 ref={svgRef}
                 className="w-full h-full relative z-10"
-                viewBox="0 0 100 100"
+                viewBox="0 0 140 100"
                 style={{ filter: 'drop-shadow(0 0 10px rgba(255,87,87,0.2))' }}
               >
-                {Array.from({ length: 25 }).map((_, i) => (
+                {Array.from({ length: 35 }).map((_, i) => (
                   <g key={i}>
                     <circle
                       className="node"
-                      cx={`${Math.random() * 100}%`}
+                      cx={`${Math.random() * 140}%`}
                       cy={`${Math.random() * 100}%`}
-                      r={0.8 + Math.random() * 0.4}
+                      r={0.6 + Math.random() * 0.4}
                       fill={i % 2 ? '#ff5757' : '#10b981'}
                       opacity={0.4 + Math.random() * 0.2}
                     />
-                    {Array.from({ length: 2 }).map((_, j) => (
+                    {Array.from({ length: 3 }).map((_, j) => (
                       <path
                         key={j}
-                        d={`M ${Math.random() * 100} ${Math.random() * 100} Q ${50 + Math.random() * 20} ${50 + Math.random() * 20} ${Math.random() * 100} ${Math.random() * 100}`}
+                        d={`M ${Math.random() * 140} ${Math.random() * 100} Q ${70 + Math.random() * 40} ${50 + Math.random() * 30} ${Math.random() * 140} ${Math.random() * 100}`}
                         stroke={j % 2 ? '#ff5757' : '#10b981'}
-                        strokeWidth="0.2"
+                        strokeWidth="0.15"
                         fill="none"
-                        opacity="0.15"
+                        opacity="0.1"
                       >
                         <animate
                           attributeName="opacity"
-                          values="0.05;0.2;0.05"
-                          dur={`${3 + Math.random() * 2}s`}
+                          values="0.05;0.15;0.05"
+                          dur={`${4 + Math.random() * 3}s`}
                           repeatCount="indefinite"
-                          begin={`${Math.random() * 3}s`}
+                          begin={`${Math.random() * 4}s`}
                         />
                       </path>
                     ))}
                   </g>
                 ))}
               </svg>
-              <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-primary to-accent opacity-20 z-0 animate-pulse-slow" />
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary to-accent opacity-20 z-0 animate-pulse-slow" />
             </div>
           </div>
         </div>
@@ -153,4 +154,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
