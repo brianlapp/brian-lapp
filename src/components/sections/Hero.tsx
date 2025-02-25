@@ -17,7 +17,7 @@ const Hero = () => (
       <div className="max-w-4xl">
         <div className="flex items-center space-x-2 mb-4">
           <Badge variant="outline" className="px-3 py-1 border-primary/20 bg-primary/5 text-primary">
-            Web Developer & Digital Marketing Expert
+            <Code className="w-3 h-3 md:w-4 md:h-4 mr-1" /> Web Developer & Digital Marketing Expert
           </Badge>
         </div>
         
