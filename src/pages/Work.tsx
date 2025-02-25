@@ -24,6 +24,13 @@ const Work = () => {
       image: "/lovable-uploads/241e9c3e-df7d-4f41-af03-c01b6e51f7c9.png"
     },
     {
+      title: "Marley Co.",
+      description: "A pre-launch landing page for a premium diaper bag backpack brand that combines style with functionality. Features a rotating gallery, premium features showcase, and integrated waitlist system offering a $10 sign-up bonus. Built with React, TypeScript, and Tailwind CSS, demonstrating expertise in modern web development and e-commerce strategy.",
+      link: "https://lovable.dev/projects/8ebafb94-5265-48b8-99f1-ee9e6820f23c",
+      category: "E-commerce Landing Page",
+      image: "/lovable-uploads/fec00e82-1d66-4a83-a21f-87a0423a5d10.png"
+    },
+    {
       title: "Agency Website",
       description: "A professional agency website with service packages, pricing information, and contact forms. Built using React and modern UI components.",
       link: "https://lovable.dev/brian-lapp/agency",
@@ -97,3 +104,4 @@ const Work = () => {
 };
 
 export default Work;
+
