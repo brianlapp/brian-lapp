@@ -15,23 +15,34 @@ const Hero = () => {
 
       const nodes = svg.querySelectorAll('.node');
       nodes.forEach((node) => {
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
+        // Create more organic movement with slight randomization
+        const radius = 15 + Math.random() * 10; // Random orbit radius
+        const speed = 15000 + Math.random() * 5000; // Random speed
+        const startAngle = Math.random() * Math.PI * 2;
+        
+        // Calculate target position using sine/cosine for circular motion
+        const centerX = 50 + Math.random() * 10;
+        const centerY = 50 + Math.random() * 10;
+        const x = centerX + radius * Math.cos(startAngle);
+        const y = centerY + radius * Math.sin(startAngle);
+        
+        // Get current position
         const currentX = parseFloat(node.getAttribute('cx') || '0');
         const currentY = parseFloat(node.getAttribute('cy') || '0');
         
+        // Animate with custom easing
         node.animate([
           { cx: currentX + '%', cy: currentY + '%' },
           { cx: x + '%', cy: y + '%' }
         ], {
-          duration: 15000,
+          duration: speed,
           fill: 'forwards',
-          easing: 'ease-in-out'
+          easing: 'cubic-bezier(0.4, 0, 0.2, 1)', // Smooth easing function
         });
       });
     };
 
-    const interval = setInterval(animateNodes, 15000);
+    const interval = setInterval(animateNodes, 20000); // Slightly longer interval for more natural feel
     animateNodes(); // Initial animation
 
     return () => clearInterval(interval);
@@ -108,37 +119,35 @@ const Hero = () => {
                   background: 'radial-gradient(circle at center, rgba(255,87,87,0.1) 0%, transparent 70%)'
                 }}
               >
-                {/* Generate nodes */}
-                {Array.from({ length: 20 }).map((_, i) => (
+                {/* Generate nodes with more varied sizes and connections */}
+                {Array.from({ length: 25 }).map((_, i) => (
                   <g key={i}>
                     <circle
                       className="node"
                       cx={`${Math.random() * 100}%`}
                       cy={`${Math.random() * 100}%`}
-                      r="1"
+                      r={0.8 + Math.random() * 0.4} // Slightly varied sizes
                       fill={i % 2 ? '#ff5757' : '#10b981'}
-                      opacity="0.7"
+                      opacity={0.6 + Math.random() * 0.2} // Varied opacity
                     />
-                    {/* Connect nodes with lines */}
-                    {Array.from({ length: 3 }).map((_, j) => (
-                      <line
+                    {/* Connect nodes with curved lines */}
+                    {Array.from({ length: 2 }).map((_, j) => (
+                      <path
                         key={j}
-                        x1={`${Math.random() * 100}%`}
-                        y1={`${Math.random() * 100}%`}
-                        x2={`${Math.random() * 100}%`}
-                        y2={`${Math.random() * 100}%`}
+                        d={`M ${Math.random() * 100} ${Math.random() * 100} Q ${50 + Math.random() * 20} ${50 + Math.random() * 20} ${Math.random() * 100} ${Math.random() * 100}`}
                         stroke={j % 2 ? '#ff5757' : '#10b981'}
                         strokeWidth="0.2"
+                        fill="none"
                         opacity="0.2"
                       >
                         <animate
                           attributeName="opacity"
-                          values="0.2;0.5;0.2"
-                          dur="3s"
+                          values="0.1;0.3;0.1"
+                          dur={`${3 + Math.random() * 2}s`}
                           repeatCount="indefinite"
                           begin={`${Math.random() * 3}s`}
                         />
-                      </line>
+                      </path>
                     ))}
                   </g>
                 ))}
