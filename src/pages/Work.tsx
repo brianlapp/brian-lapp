@@ -14,7 +14,7 @@ const Work = () => {
       description: "A professional website for a digital marketing agency that offers comprehensive marketing solutions tailored for small businesses, including web development, branding, and social media services. The site features a modern, responsive design with detailed service pages and clear calls-to-action.",
       link: "https://brandinglabs.ca",
       category: "Business Website",
-      image: "/lovable-uploads/9ant9z"
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Agency Website",
