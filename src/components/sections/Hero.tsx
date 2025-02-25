@@ -1,10 +1,13 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-const Hero = () => <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-gray-950 to-gray-900">
+
+const Hero = () => (
+  <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-gray-950 to-gray-900">
     <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
     
-    <div className="container mx-auto px-4 relative z-10">
+    <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <div>
@@ -48,11 +51,11 @@ const Hero = () => <section className="relative min-h-[90vh] flex items-center b
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <div className="code-line" />
                 <div className="code-line" style={{
-                animationDelay: '2s'
-              }} />
+                  animationDelay: '2s'
+                }} />
                 <div className="code-line" style={{
-                animationDelay: '4s'
-              }} />
+                  animationDelay: '4s'
+                }} />
               </div>
               
               {/* Glowing border effect */}
@@ -62,5 +65,7 @@ const Hero = () => <section className="relative min-h-[90vh] flex items-center b
         </div>
       </div>
     </div>
-  </section>;
+  </section>
+);
+
 export default Hero;
