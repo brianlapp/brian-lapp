@@ -4,7 +4,7 @@ import { Project } from "../types/project";
 export const projects: Project[] = [
   {
     title: "menu.ca – Restaurant SaaS Platform",
-    description: "A full-stack SaaS platform serving 500+ restaurants across Canada. Features online ordering, combo builder, tip system, multi-location support, and a tablet POS app. Built with Next.js 14, Neon PostgreSQL, Railway, and React Native.",
+    description: "A 12-year-old restaurant platform acquired and rebuilt for the AI era, now serving 500+ restaurants across Canada. Features online ordering, combo builder, tip system, multi-location support, and a tablet POS app. Rebuilt with Next.js 14, Neon PostgreSQL, Railway, and React Native.",
     link: "https://menu.ca",
     category: "SaaS Platform",
     image: "/lovable-uploads/menu-ca-preview.png",

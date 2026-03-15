@@ -87,7 +87,7 @@ const Index = () => {
               I Build Products That Ship
             </h2>
             <p className="text-2xl leading-relaxed text-muted-foreground">
-              I'm a founder and full-stack developer who builds SaaS products from zero to production. My flagship project, menu.ca, is a restaurant ordering platform serving 500+ locations across Canada — complete with online ordering, combo builders, tip systems, and a custom tablet POS built in React Native.
+              I'm a full-stack developer who ships production SaaS. My team acquired menu.ca — a 12-year-old restaurant platform — and I've been leading the rebuild for the AI era. It now serves 500+ locations across Canada with online ordering, combo builders, tip systems, and a custom tablet POS built in React Native.
             </p>
             <p className="text-2xl leading-relaxed text-muted-foreground">
               My stack spans Next.js, React Native, Neon PostgreSQL, and Railway. I ship fast, iterate relentlessly, and build the kind of software that handles real traffic and real transactions every day.
