@@ -84,17 +84,13 @@ const Index = () => {
         <div className="container relative z-10">
           <div className="space-y-8 max-w-4xl">
             <h2 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              Local Business Web Expert
+              I Build Products That Ship
             </h2>
             <p className="text-2xl leading-relaxed text-muted-foreground">
-              I specialize in helping small businesses like yours succeed online. With years of experience 
-              in web development and digital marketing, I create high-performance websites that attract 
-              local customers and drive real business growth.
+              I'm a founder and full-stack developer who builds SaaS products from zero to production. My flagship project, menu.ca, is a restaurant ordering platform serving 500+ locations across Canada — complete with online ordering, combo builders, tip systems, and a custom tablet POS built in React Native.
             </p>
             <p className="text-2xl leading-relaxed text-muted-foreground">
-              My approach combines technical expertise with practical business solutions. Every website 
-              I build is designed to generate leads, improve your local visibility, and make it easy 
-              for customers to connect with your business.
+              My stack spans Next.js, React Native, Neon PostgreSQL, and Railway. I ship fast, iterate relentlessly, and build the kind of software that handles real traffic and real transactions every day.
             </p>
           </div>
         </div>

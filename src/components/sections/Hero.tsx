@@ -59,7 +59,7 @@ const Hero = () => {
           <div className="max-w-4xl">
             <div className="flex items-center space-x-2 mb-4">
               <Badge variant="outline" className="px-3 py-1 border-primary/20 bg-primary/5 text-primary">
-                <Code className="w-3 h-3 md:w-4 md:h-4 mr-1" /> Web Developer & Digital Marketing Expert
+                <Code className="w-3 h-3 md:w-4 md:h-4 mr-1" /> Founder & Full-Stack Developer
               </Badge>
             </div>
             
@@ -67,22 +67,22 @@ const Hero = () => {
               <h1 className="text-[3.5rem] md:text-[7rem] lg:text-[8rem] font-bold mb-4 md:mb-8 text-foreground leading-[0.9] tracking-tight">
                 Brian Lapp
                 <span className="block text-primary text-2xl md:text-4xl mt-4 md:mt-6 tracking-wide">
-                  Building high-performing websites that convert
+                  Founder & Full-Stack Developer
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                Helping businesses stand out with blazing-fast websites, smart design, and AI-powered solutions that deliver real results.
+                I build SaaS products and high-performance web apps. Creator of menu.ca — a restaurant platform serving 500+ locations across Canada.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2 md:gap-3 text-muted-foreground mt-6 md:mt-10">
               <div className="flex items-center text-xs md:text-sm gap-1 bg-card px-3 py-1 rounded-full">
                 <Globe className="w-3 h-3 md:w-4 md:h-4 text-primary" />
-                <span>Web Development</span>
+                <span>SaaS Products</span>
               </div>
               <div className="flex items-center text-xs md:text-sm gap-1 bg-card px-3 py-1 rounded-full">
                 <LineChart className="w-3 h-3 md:w-4 md:h-4 text-primary" />
-                <span>SEO & Conversion</span>
+                <span>Full-Stack Development</span>
               </div>
               <div className="flex items-center text-xs md:text-sm gap-1 bg-card px-3 py-1 rounded-full">
                 <BrainCircuit className="w-3 h-3 md:w-4 md:h-4 text-primary" />

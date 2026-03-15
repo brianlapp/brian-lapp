@@ -3,6 +3,24 @@ import { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
+    title: "menu.ca – Restaurant SaaS Platform",
+    description: "A full-stack SaaS platform serving 500+ restaurants across Canada. Features online ordering, combo builder, tip system, multi-location support, and a tablet POS app. Built with Next.js 14, Neon PostgreSQL, Railway, and React Native.",
+    link: "https://menu.ca",
+    category: "SaaS Platform",
+    image: "/lovable-uploads/menu-ca-preview.png",
+    type: "fullstack",
+    tags: ["SaaS", "Next.js", "React Native", "PostgreSQL"]
+  },
+  {
+    title: "Neon Tablet Order App – Restaurant POS",
+    description: "A React Native tablet POS app built for restaurant table-side ordering. Features real-time kitchen printing, combo support, split orders, and seamless menu.ca integration. Deployed to Android tablets via local builds.",
+    link: "https://github.com/Work-Local-Inc/Neon-TabletOrderApp",
+    category: "Mobile App",
+    image: "/lovable-uploads/neon-tablet-preview.png",
+    type: "fullstack",
+    tags: ["React Native", "Expo", "Android", "POS"]
+  },
+  {
     title: "Free.ca – Canada's Premier Freebies & Deals Hub",
     description: "A leading platform that connects Canadians with the latest free samples, giveaways, coupons, and deals across various categories, from beauty and groceries to tech and entertainment. With a user-friendly interface and curated offers, Free.ca helps Canadians save money while discovering new products.",
     link: "https://free.ca",
